@@ -30,4 +30,10 @@ public class StrategyAwardTest {
         List<StrategyAward> strategyAwards = strategyAwardDao.queryStrategyAwardList();
         log.info("策略奖品有{}", JSON.toJSONString(strategyAwards));
     }
+
+    @Test
+    public void test_queryStrategyAwardListByStrategyId(){
+        List<StrategyAward> strategyAwards = strategyAwardDao.queryStrategyAwardListByStrategyId(100001L);
+        log.info("策略ID为{},策略奖品有{}", 100001, JSON.toJSONString(strategyAwards));
+    }
 }

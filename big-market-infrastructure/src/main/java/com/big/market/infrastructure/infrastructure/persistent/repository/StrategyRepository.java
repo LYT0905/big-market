@@ -1,0 +1,101 @@
+package com.big.market.infrastructure.infrastructure.persistent.repository;
+
+import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
+import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
+import com.big.market.infrastructure.infrastructure.persistent.dao.IStrategyAwardDao;
+import com.big.market.infrastructure.infrastructure.persistent.po.StrategyAward;
+import com.big.market.infrastructure.infrastructure.persistent.redis.IRedisService;
+import com.big.market.infrastructure.types.common.Constants;
+import org.redisson.api.RMap;
+import org.springframework.stereotype.Repository;
+import org.springframework.util.CollectionUtils;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * @author LYT0905
+ * @Description: 策略服务仓储实现
+ * @Date: 2024/07/14 10:50:33
+ */
+
+@Repository
+public class StrategyRepository implements IStrategyRepository {
+
+    @Resource
+    private IRedisService redisService;
+    @Resource
+    private IStrategyAwardDao strategyAwardDao;
+
+    /**
+     * 查询某策略id下所有策略奖品配置信息
+     * @param strategyId 策略id
+     */
+    @Override
+    public List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId) {
+        // 首先判断redis中是否存在
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_KEY + strategyId;
+        List<StrategyAwardEntity> strategyAwardEntities = redisService.getValue(cacheKey);
+        // 存在返回
+        if (!CollectionUtils.isEmpty(strategyAwardEntities)){
+            return strategyAwardEntities;
+        }
+        // 从数据库中查询
+        List<StrategyAward> strategyAwards = strategyAwardDao.queryStrategyAwardListByStrategyId(strategyId);
+        // 如果没有直接返回null
+        if (CollectionUtils.isEmpty(strategyAwards)){
+            return null;
+        }
+        // 因为没有走缓存，所以这个肯定为空
+        strategyAwardEntities = new ArrayList<>(strategyAwards.size());
+        // 进行赋值
+        for (StrategyAward strategyAward : strategyAwards) {
+            StrategyAwardEntity strategyAwardEntity = StrategyAwardEntity.builder()
+                    .awardCount(strategyAward.getAwardCount())
+                    .awardId(strategyAward.getAwardId())
+                    .awardRate(strategyAward.getAwardRate())
+                    .awardCountSurplus(strategyAward.getAwardCountSurplus())
+                    .strategyId(strategyAward.getStrategyId())
+                    .build();
+            strategyAwardEntities.add(strategyAwardEntity);
+        }
+        redisService.setValue(cacheKey, strategyAwardEntities);
+        return strategyAwardEntities;
+    }
+
+    /**
+     * 存储到redis
+     * @param strategyId 策略id
+     * @param  shuffleStrategyAwardSearchRateTablesSize  策略概率范围
+     * @param shuffleStrategyAwardSearchRateTables 存储了乱序概率的map
+     */
+    @Override
+    public void storeStrategyAwardSearchRateTables(Long strategyId, int  shuffleStrategyAwardSearchRateTablesSize, HashMap<Integer, Integer> shuffleStrategyAwardSearchRateTables) {
+        // 存储抽奖范围概率值, 如10000,用于生成1000的范围随机数
+        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId,  shuffleStrategyAwardSearchRateTablesSize);
+        // 存储概率查找表
+        RMap<Integer, Integer> cacheRateTable = redisService.getMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId);
+        cacheRateTable.putAll(shuffleStrategyAwardSearchRateTables);
+    }
+
+    /**
+     * 获取随机范围
+     * @param strategyId 策略id
+     */
+    @Override
+    public int getRandomRange(Long strategyId) {
+        return redisService.getValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId);
+    }
+
+    /**
+     * 获取策略奖品
+     * @param strategyId 策略id
+     * @param rateKey 概率范围
+     */
+    @Override
+    public Integer getStrategyAwardAssemble(Long strategyId, int rateKey) {
+        return redisService.getFromMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId, rateKey);
+    }
+}
