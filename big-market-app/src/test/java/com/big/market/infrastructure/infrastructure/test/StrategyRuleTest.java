@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.test;
+package com.big.market.infrastructure.infrastructure.test;
 
 import com.alibaba.fastjson.JSON;
 import com.big.market.infrastructure.infrastructure.persistent.dao.IStrategyRuleDao;

@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.test;
+package com.big.market.infrastructure.infrastructure.test;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
