@@ -2,6 +2,7 @@ package com.big.market.infrastructure.infrastructure.persistent.dao;
 
 import com.big.market.infrastructure.infrastructure.persistent.po.StrategyRule;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -12,5 +13,15 @@ import java.util.List;
  */
 @Mapper
 public interface IStrategyRuleDao {
+    /**
+     * 查找所有策略规则
+     */
     List<StrategyRule> queryStrategyList();
+
+    /**
+     * 根据策略id和抽奖规则类型查找策略
+     * @param strategyId 策略id
+     * @param ruleModel  抽奖规则类型
+     */
+    StrategyRule queryStrategyRuleEntity(@Param("strategyId") Long strategyId, @Param("ruleModel") String ruleModel);
 }

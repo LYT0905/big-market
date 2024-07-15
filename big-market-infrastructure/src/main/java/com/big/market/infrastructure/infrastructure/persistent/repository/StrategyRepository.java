@@ -1,9 +1,15 @@
 package com.big.market.infrastructure.infrastructure.persistent.repository;
 
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
+import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
+import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.infrastructure.persistent.dao.IStrategyAwardDao;
+import com.big.market.infrastructure.infrastructure.persistent.dao.IStrategyDao;
+import com.big.market.infrastructure.infrastructure.persistent.dao.IStrategyRuleDao;
+import com.big.market.infrastructure.infrastructure.persistent.po.Strategy;
 import com.big.market.infrastructure.infrastructure.persistent.po.StrategyAward;
+import com.big.market.infrastructure.infrastructure.persistent.po.StrategyRule;
 import com.big.market.infrastructure.infrastructure.persistent.redis.IRedisService;
 import com.big.market.infrastructure.types.common.Constants;
 import org.redisson.api.RMap;
@@ -28,6 +34,10 @@ public class StrategyRepository implements IStrategyRepository {
     private IRedisService redisService;
     @Resource
     private IStrategyAwardDao strategyAwardDao;
+    @Resource
+    private IStrategyDao strategyDao;
+    @Resource
+    private IStrategyRuleDao strategyRuleDao;
 
     /**
      * 查询某策略id下所有策略奖品配置信息
@@ -67,16 +77,16 @@ public class StrategyRepository implements IStrategyRepository {
 
     /**
      * 存储到redis
-     * @param strategyId 策略id
+     * @param key 策略id
      * @param  shuffleStrategyAwardSearchRateTablesSize  策略概率范围
      * @param shuffleStrategyAwardSearchRateTables 存储了乱序概率的map
      */
     @Override
-    public void storeStrategyAwardSearchRateTables(Long strategyId, int  shuffleStrategyAwardSearchRateTablesSize, HashMap<Integer, Integer> shuffleStrategyAwardSearchRateTables) {
+    public void storeStrategyAwardSearchRateTables(String key, int  shuffleStrategyAwardSearchRateTablesSize, HashMap<Integer, Integer> shuffleStrategyAwardSearchRateTables) {
         // 存储抽奖范围概率值, 如10000,用于生成1000的范围随机数
-        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId,  shuffleStrategyAwardSearchRateTablesSize);
+        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key,  shuffleStrategyAwardSearchRateTablesSize);
         // 存储概率查找表
-        RMap<Integer, Integer> cacheRateTable = redisService.getMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId);
+        RMap<Integer, Integer> cacheRateTable = redisService.getMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + key);
         cacheRateTable.putAll(shuffleStrategyAwardSearchRateTables);
     }
 
@@ -85,17 +95,72 @@ public class StrategyRepository implements IStrategyRepository {
      * @param strategyId 策略id
      */
     @Override
-    public int getRandomRange(Long strategyId) {
-        return redisService.getValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId);
+    public int getRateRange(Long strategyId) {
+        return getRateRange(String.valueOf(strategyId));
+    }
+
+    /**
+     * 获取随机范围
+     * @param key 策略id
+     */
+    @Override
+    public int getRateRange(String key) {
+        return redisService.getValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key);
     }
 
     /**
      * 获取策略奖品
-     * @param strategyId 策略id
+     * @param key 策略id
      * @param rateKey 概率范围
      */
     @Override
-    public Integer getStrategyAwardAssemble(Long strategyId, int rateKey) {
-        return redisService.getFromMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId, rateKey);
+    public Integer getStrategyAwardAssemble(String key, int rateKey) {
+        return redisService.getFromMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + key, rateKey);
+    }
+
+    /**
+     * 根据策略id查找策略实体
+     * @param strategyId 策略id
+     * @return
+     */
+    @Override
+    public StrategyEntity queryStrategyEntityByStrategyId(Long strategyId) {
+        String cacheKey = Constants.RedisKey.STRATEGY_KEY + strategyId;
+        StrategyEntity strategyEntity = redisService.getValue(cacheKey);
+        if (strategyEntity != null){
+            return strategyEntity;
+        }
+        Strategy strategy = strategyDao.queryStrategyEntityByStrategyId(strategyId);
+        strategyEntity = StrategyEntity.builder()
+                .ruleModels(strategy.getRuleModels())
+                .strategyDesc(strategy.getStrategyDesc())
+                .strategyId(strategy.getStrategyId())
+                .build();
+        redisService.setValue(cacheKey, strategyEntity);
+        return strategyEntity;
+    }
+
+    /**
+     * 根据策略id和抽奖规则类型查找策略
+     * @param strategyId 策略id
+     * @param ruleModel  抽奖规则类型
+     */
+    @Override
+    public StrategyRuleEntity queryStrategyRuleEntity(Long strategyId, String ruleModel) {
+        String cacheKey = Constants.RedisKey.STRATEGY_RULE_KEY + strategyId + "_" + ruleModel;
+        StrategyRuleEntity strategyRuleEntity = redisService.getValue(cacheKey);
+        if (strategyRuleEntity != null){
+            return strategyRuleEntity;
+        }
+        StrategyRule strategyRule = strategyRuleDao.queryStrategyRuleEntity(strategyId, ruleModel);
+        strategyRuleEntity = StrategyRuleEntity.builder()
+                .awardId(strategyRule.getAwardId())
+                .ruleDesc(strategyRule.getRuleDesc())
+                .ruleValue(strategyRule.getRuleValue())
+                .ruleType(strategyRule.getRuleType())
+                .ruleModel(strategyRule.getRuleModel())
+                .strategyId(strategyRule.getStrategyId())
+                .build();
+        return strategyRuleEntity;
     }
 }

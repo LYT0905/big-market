@@ -1,8 +1,10 @@
 package com.big.market.infrastructure.domain.test;
 
 import com.big.market.infrastructure.domain.strategy.service.IStrategyArmoryService;
+import com.big.market.infrastructure.domain.strategy.service.IStrategyDispatchService;
 import com.big.market.infrastructure.infrastructure.persistent.redis.IRedisService;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.redisson.api.RMap;
@@ -19,6 +21,8 @@ public class StrategyTest {
 
     @Resource
     private IStrategyArmoryService strategyArmory;
+    @Resource
+    private IStrategyDispatchService strategyDispatchService;
 
     /**
      * 策略ID；100001L、100002L 装配的时候创建策略表写入到 Redis Map 中
@@ -34,13 +38,24 @@ public class StrategyTest {
      */
     @Test
     public void test_getAssembleRandomVal() {
-        log.info("测试结果：{} - 奖品ID值", strategyArmory.getRandomAwardId(100001L));
-        log.info("测试结果：{} - 奖品ID值", strategyArmory.getRandomAwardId(100001L));
-        log.info("测试结果：{} - 奖品ID值", strategyArmory.getRandomAwardId(100001L));
-        log.info("测试结果：{} - 奖品ID值", strategyArmory.getRandomAwardId(100001L));
-        log.info("测试结果：{} - 奖品ID值", strategyArmory.getRandomAwardId(100001L));
-        log.info("测试结果：{} - 奖品ID值", strategyArmory.getRandomAwardId(100001L));
+        log.info("测试结果：{} - 奖品ID值", strategyDispatchService.getRandomAwardId(100001L));
+        log.info("测试结果：{} - 奖品ID值", strategyDispatchService.getRandomAwardId(100001L));
+        log.info("测试结果：{} - 奖品ID值", strategyDispatchService.getRandomAwardId(100001L));
+        log.info("测试结果：{} - 奖品ID值", strategyDispatchService.getRandomAwardId(100001L));
+        log.info("测试结果：{} - 奖品ID值", strategyDispatchService.getRandomAwardId(100001L));
+        log.info("测试结果：{} - 奖品ID值", strategyDispatchService.getRandomAwardId(100001L));
 
+    }
+
+    /**
+     * 根据策略ID+权重值，从装配的策略中随机获取奖品ID值
+     */
+    @Test
+    public void test_getRandomAwardId_ruleWeightValue() {
+        log.info("测试结果：{} - 3000 策略配置", strategyDispatchService.getRandomAwardId(100001L, "3000:102,103"));
+        log.info("测试结果：{} - 4000 策略配置", strategyDispatchService.getRandomAwardId(100001L, "4000:102,103,104,105"));
+        log.info("测试结果：{} - 5000 策略配置", strategyDispatchService.getRandomAwardId(100001L, "5000:102,103,104,105,106,107"));
+        log.info("测试结果：{} - 6000 策略配置", strategyDispatchService.getRandomAwardId(100001L, "6000:102,103,104,105,106,107,108,109"));
     }
 
     @Resource

@@ -31,4 +31,10 @@ public class StrategyRuleTest {
         List<StrategyRule> strategyRules = strategyRuleDao.queryStrategyList();
         log.info("策略规则有{}", JSON.toJSONString(strategyRules));
     }
+
+    @Test
+    public void test_queryStrategyRuleEntity(){
+        StrategyRule strategyRule = strategyRuleDao.queryStrategyRuleEntity(100001L, "rule_weight");
+        log.info("策略规则有{}", strategyRule);
+    }
 }

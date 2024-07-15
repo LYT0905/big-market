@@ -34,6 +34,12 @@ public class StrategyTest {
         List<Strategy> strategies = strategyDao.queryStrategyList();
         log.info("策略有{}", JSON.toJSONString(strategies));
     }
+
+    @Test
+    public void test_queryStrategyEntityByStrategyId(){
+        Strategy strategy = strategyDao.queryStrategyEntityByStrategyId(100001L);
+        log.info("策略为{}", strategy);
+    }
 }
 
 

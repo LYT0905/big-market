@@ -1,6 +1,8 @@
 package com.big.market.infrastructure.domain.strategy.repository;
 
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
+import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
+import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,22 +21,41 @@ public interface IStrategyRepository {
 
     /**
      * 存储到redis
-     * @param strategyId 策略id
+     * @param key 策略id
      * @param shuffleStrategyAwardSearchRateTablesSize  策略概率范围
      * @param shuffleStrategyAwardSearchRateTables 存储了乱序概率的table
      */
-    void storeStrategyAwardSearchRateTables(Long strategyId, int shuffleStrategyAwardSearchRateTablesSize, HashMap<Integer, Integer> shuffleStrategyAwardSearchRateTables);
+    void storeStrategyAwardSearchRateTables(String key, int shuffleStrategyAwardSearchRateTablesSize, HashMap<Integer, Integer> shuffleStrategyAwardSearchRateTables);
 
     /**
-     * 获取随机范围
+     * 获取概率范围
      * @param strategyId 策略id
      */
-    int getRandomRange(Long strategyId);
+    int getRateRange(Long strategyId);
+
+    /**
+     * 获取概率范围
+     * @param key 策略id
+     */
+    int getRateRange(String key);
 
     /**
      * 获取策略奖品
-     * @param strategyId 策略id
+     * @param key 策略id
      * @param rateKey 概率范围
      */
-    Integer getStrategyAwardAssemble(Long strategyId, int rateKey);
+    Integer getStrategyAwardAssemble(String key, int rateKey);
+
+    /**
+     * 根据策略id查找策略实体
+     * @param strategyId 策略id
+     */
+    StrategyEntity queryStrategyEntityByStrategyId(Long strategyId);
+
+    /**
+     * 根据策略id和抽奖规则类型查找策略
+     * @param strategyId 策略id
+     * @param ruleModel  抽奖规则类型
+     */
+    StrategyRuleEntity queryStrategyRuleEntity(Long strategyId, String ruleModel);
 }
