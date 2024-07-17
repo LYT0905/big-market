@@ -163,4 +163,19 @@ public class StrategyRepository implements IStrategyRepository {
                 .build();
         return strategyRuleEntity;
     }
+
+    /**
+     * 查找规则值(rule_value)
+     * @param strategyId 策略id
+     * @param awardId    奖品id
+     * @param ruleModel  规则模型
+     */
+    @Override
+    public String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel) {
+        StrategyRule strategyRule = new StrategyRule();
+        strategyRule.setStrategyId(strategyId);
+        strategyRule.setAwardId(awardId);
+        strategyRule.setRuleModel(ruleModel);
+        return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
 }

@@ -1,10 +1,9 @@
 package com.big.market.infrastructure.domain.test;
 
-import com.big.market.infrastructure.domain.strategy.service.IStrategyArmoryService;
-import com.big.market.infrastructure.domain.strategy.service.IStrategyDispatchService;
+import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyArmoryService;
+import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
 import com.big.market.infrastructure.infrastructure.persistent.redis.IRedisService;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.redisson.api.RMap;

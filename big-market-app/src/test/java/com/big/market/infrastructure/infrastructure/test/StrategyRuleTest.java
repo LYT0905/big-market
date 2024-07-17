@@ -37,4 +37,14 @@ public class StrategyRuleTest {
         StrategyRule strategyRule = strategyRuleDao.queryStrategyRuleEntity(100001L, "rule_weight");
         log.info("策略规则有{}", strategyRule);
     }
+
+    @Test
+    public void test_queryStrategyRuleValue(){
+        StrategyRule strategyRule = new StrategyRule();
+        strategyRule.setRuleModel("rule_blacklist");
+        strategyRule.setStrategyId(100001L);
+//        strategyRule.setAwardId(null);
+        String ruleValue = strategyRuleDao.queryStrategyRuleValue(strategyRule);
+        log.info("规则值为{}", ruleValue);
+    }
 }

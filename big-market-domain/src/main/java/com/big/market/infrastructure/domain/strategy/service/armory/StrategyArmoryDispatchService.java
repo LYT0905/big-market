@@ -1,9 +1,11 @@
-package com.big.market.infrastructure.domain.strategy.service;
+package com.big.market.infrastructure.domain.strategy.service.armory;
 
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
+import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyArmoryService;
+import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
 import com.big.market.infrastructure.types.enums.ResponseCode;
 import com.big.market.infrastructure.types.exception.AppException;
 import io.netty.util.internal.StringUtil;

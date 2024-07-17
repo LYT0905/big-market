@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.domain.strategy.service;
+package com.big.market.infrastructure.domain.strategy.service.armory;
 
 /**
  * @author LYT0905

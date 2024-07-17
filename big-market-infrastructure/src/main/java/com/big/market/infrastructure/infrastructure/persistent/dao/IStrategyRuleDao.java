@@ -24,4 +24,9 @@ public interface IStrategyRuleDao {
      * @param ruleModel  抽奖规则类型
      */
     StrategyRule queryStrategyRuleEntity(@Param("strategyId") Long strategyId, @Param("ruleModel") String ruleModel);
+
+    /**
+     * 查找规则值(rule_value)
+     */
+    String queryStrategyRuleValue(StrategyRule strategyRule);
 }
