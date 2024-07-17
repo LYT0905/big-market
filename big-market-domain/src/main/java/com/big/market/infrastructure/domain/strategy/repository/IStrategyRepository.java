@@ -3,6 +3,7 @@ package com.big.market.infrastructure.domain.strategy.repository;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
+import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleModelVO;
 
 import java.util.HashMap;
 import java.util.List;
@@ -66,4 +67,11 @@ public interface IStrategyRepository {
      * @param ruleModel  规则模型
      */
     String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel);
+
+    /**
+     * 根据策略id和奖品id查找规则模型
+     * @param strategyId 策略id
+     * @param awardId  奖品id
+     */
+    StrategyRuleModelVO queryStrategyRuleModels(Long strategyId, Integer awardId);
 }

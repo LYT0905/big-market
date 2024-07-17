@@ -3,6 +3,7 @@ package com.big.market.infrastructure.infrastructure.persistent.repository;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
+import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleModelVO;
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.infrastructure.persistent.dao.IStrategyAwardDao;
 import com.big.market.infrastructure.infrastructure.persistent.dao.IStrategyDao;
@@ -177,5 +178,21 @@ public class StrategyRepository implements IStrategyRepository {
         strategyRule.setAwardId(awardId);
         strategyRule.setRuleModel(ruleModel);
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    /**
+     * 根据策略id和奖品id查找规则模型
+     * @param strategyId 策略id
+     * @param awardId  奖品id
+     */
+    @Override
+    public StrategyRuleModelVO queryStrategyRuleModels(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyRuleModels(strategyAward);
+        return StrategyRuleModelVO.builder()
+                .ruleModels(ruleModels)
+                .build();
     }
 }

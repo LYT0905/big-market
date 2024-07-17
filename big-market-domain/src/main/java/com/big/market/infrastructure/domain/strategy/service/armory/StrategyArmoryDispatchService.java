@@ -103,6 +103,13 @@ public class StrategyArmoryDispatchService implements IStrategyArmoryService, IS
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
 
         // 获取范围，是千分位、万分位或者十分位(1 % 0.0001)
+        if (BigDecimal.ZERO.compareTo(minRate) == 0){
+            // minRate 是 0，将其最后一个精度位加 1
+            //String minRateStr = minRate.toPlainString();
+            int scale = minRate.scale();
+            minRate = minRate.add(BigDecimal.ONE.movePointLeft(scale));
+            //minRate = minRate.add(BigDecimal.valueOf(0.1));
+        }
         BigDecimal rangeRate = totalRate.divide(minRate, 0, RoundingMode.CEILING);
 
         // 生成策略

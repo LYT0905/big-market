@@ -49,4 +49,12 @@ public class RuleActionEntity<T extends RuleActionEntity.RaffleEntity> {
          */
         private Integer awardId;
     }
+
+
+    /**
+     * 抽奖中奖品规则过滤
+     */
+    static public class RaffleMiddleEntity extends RaffleEntity{
+
+    }
 }
