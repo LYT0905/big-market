@@ -5,7 +5,9 @@ import com.big.market.infrastructure.domain.strategy.model.entity.RuleActionEnti
 import com.big.market.infrastructure.domain.strategy.model.entity.RuleMatterEntity;
 import com.big.market.infrastructure.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
+import com.big.market.infrastructure.domain.strategy.service.AbstractRaffleStrategy;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
+import com.big.market.infrastructure.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import com.big.market.infrastructure.domain.strategy.service.rule.filter.ILogicFilter;
 import com.big.market.infrastructure.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import lombok.extern.slf4j.Slf4j;
@@ -26,13 +28,13 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
-public class DefaultRaffleStrategy extends AbstractRaffleStrategy{
+public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
 
     @Resource
     private DefaultLogicFactory defaultLogicFactory;
 
-    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatchService strategyDispatchService) {
-        super(repository, strategyDispatchService);
+    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatchService strategyDispatchService, DefaultChainFactory defaultChainFactory) {
+        super(repository, strategyDispatchService, defaultChainFactory);
     }
 
     @Override

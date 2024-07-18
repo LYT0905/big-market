@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.domain.strategy.service.raffle;
+package com.big.market.infrastructure.domain.strategy.service;
 
 import com.big.market.infrastructure.domain.strategy.model.entity.RaffleAwardEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.RaffleFactorEntity;
@@ -9,6 +9,8 @@ import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleMo
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.domain.strategy.service.IRaffleStrategy;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
+import com.big.market.infrastructure.domain.strategy.service.rule.chain.ILogicChain;
+import com.big.market.infrastructure.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import com.big.market.infrastructure.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import com.big.market.infrastructure.types.enums.ResponseCode;
 import com.big.market.infrastructure.types.exception.AppException;
@@ -28,10 +30,13 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
     protected IStrategyRepository repository;
     // 策略调度服务 -> 只负责抽奖处理，通过新增接口的方式，隔离职责，不需要使用方关心或者调用抽奖的初始化
     protected IStrategyDispatchService strategyDispatchService;
+    // 默认责任链构建工厂
+    protected DefaultChainFactory defaultChainFactory;
 
-    public AbstractRaffleStrategy(IStrategyRepository repository, IStrategyDispatchService strategyDispatchService) {
+    public AbstractRaffleStrategy(IStrategyRepository repository, IStrategyDispatchService strategyDispatchService, DefaultChainFactory defaultChainFactory) {
         this.repository = repository;
         this.strategyDispatchService = strategyDispatchService;
+        this.defaultChainFactory = defaultChainFactory;
     }
 
 
@@ -43,32 +48,9 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         if (null == strategyId || StringUtils.isBlank(userId)) {
             throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());
         }
-        // 查询策略
-        StrategyEntity strategyEntity = repository.queryStrategyEntityByStrategyId(strategyId);
-        // 抽奖前 - 规则过滤
-        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = this.doCheckRaffleBeforeLogic(
-                RaffleFactorEntity.builder().userId(userId).strategyId(strategyId).build(),
-                strategyEntity.ruleModels());
-        // 如果被规则接管
-        if (RuleLogicCheckTypeVO.TAKE_OVER.getCode().equals(ruleActionEntity.getCode())) {
-            if (DefaultLogicFactory.LogicModel.RULE_BLACKLIST.getCode().equals(ruleActionEntity.getRuleModel())) {
-                // 黑名单返回固定的奖品ID
-                return RaffleAwardEntity.builder()
-                        .awardId(ruleActionEntity.getData().getAwardId())
-                        .build();
-            } else if (DefaultLogicFactory.LogicModel.RULE_WEIGHT.getCode().equals(ruleActionEntity.getRuleModel())) {
-                // 权重根据返回的信息进行抽奖
-                RuleActionEntity.RaffleBeforeEntity raffleBeforeEntity = ruleActionEntity.getData();
-                String ruleWeightValueKey = raffleBeforeEntity.getRuleWeightValueKey();
-                Integer awardId = strategyDispatchService.getRandomAwardId(strategyId, ruleWeightValueKey);
-                return RaffleAwardEntity.builder()
-                        .awardId(awardId)
-                        .build();
-            }
-        }
-
-        // 没有被规则接管走默认抽奖流程
-        Integer awardId = strategyDispatchService.getRandomAwardId(strategyId);
+        // 使用责任链模式
+        ILogicChain logicChain = defaultChainFactory.openLogicChain(strategyId);
+        Integer awardId = logicChain.logic(userId, strategyId);
 
         // 查询奖品规则「抽奖中（拿到奖品ID时，过滤规则）、抽奖后（扣减完奖品库存后过滤，抽奖中拦截和无库存则走兜底）」
         StrategyRuleModelVO strategyRuleModelVO = repository.queryStrategyRuleModels(strategyId, awardId);
