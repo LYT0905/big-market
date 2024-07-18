@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.domain.strategy.service.rule;
+package com.big.market.infrastructure.domain.strategy.service.rule.filter;
 
 import com.big.market.infrastructure.domain.strategy.model.entity.RuleMatterEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.RuleActionEntity;

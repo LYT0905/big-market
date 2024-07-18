@@ -5,8 +5,8 @@ import com.big.market.infrastructure.domain.strategy.model.entity.RaffleAwardEnt
 import com.big.market.infrastructure.domain.strategy.model.entity.RaffleFactorEntity;
 import com.big.market.infrastructure.domain.strategy.service.IRaffleStrategy;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyArmoryService;
-import com.big.market.infrastructure.domain.strategy.service.rule.impl.RuleLockLogicFilter;
-import com.big.market.infrastructure.domain.strategy.service.rule.impl.RuleWeightLogicFilter;
+import com.big.market.infrastructure.domain.strategy.service.rule.filter.impl.RuleLockLogicFilter;
+import com.big.market.infrastructure.domain.strategy.service.rule.filter.impl.RuleWeightLogicFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;

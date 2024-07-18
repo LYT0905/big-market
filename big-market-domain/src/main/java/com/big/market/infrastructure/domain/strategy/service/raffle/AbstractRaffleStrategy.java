@@ -9,7 +9,7 @@ import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleMo
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.domain.strategy.service.IRaffleStrategy;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
-import com.big.market.infrastructure.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import com.big.market.infrastructure.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import com.big.market.infrastructure.types.enums.ResponseCode;
 import com.big.market.infrastructure.types.exception.AppException;
 import io.micrometer.core.instrument.util.StringUtils;
