@@ -64,7 +64,7 @@ create table strategy_rule(
                               award_id bigint(8) default null comment '抽奖奖品ID【规则类型为策略，则不需要奖品ID】',
                               `rule_type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '抽象规则类型；1-策略规则、2-奖品规则',
                               `rule_model` varchar(16) NOT NULL COMMENT '抽奖规则类型【rule_random - 随机值计算、rule_lock - 抽奖几次后解锁、rule_luck_award - 幸运奖(兜底奖品)】',
-                              rule_value varchar(64) not null comment '抽奖规则比值',
+                              rule_value varchar(256) not null comment '抽奖规则比值',
                               rule_desc varchar(128) not null comment '抽奖规则描述',
                               create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
                               update_time datetime not null default CURRENT_TIMESTAMP on update current_timestamp comment '更新时间',
