@@ -88,7 +88,7 @@ public class StrategyRepository implements IStrategyRepository {
     @Override
     public void storeStrategyAwardSearchRateTables(String key, int  shuffleStrategyAwardSearchRateTablesSize, HashMap<Integer, Integer> shuffleStrategyAwardSearchRateTables) {
         // 存储抽奖范围概率值, 如10000,用于生成1000的范围随机数
-        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key,  shuffleStrategyAwardSearchRateTablesSize);
+        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key,  shuffleStrategyAwardSearchRateTablesSize, 86400000L);
         // 存储概率查找表
         RMap<Integer, Integer> cacheRateTable = redisService.getMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + key);
         cacheRateTable.putAll(shuffleStrategyAwardSearchRateTables);
