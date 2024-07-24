@@ -2,6 +2,7 @@ package com.big.market.infrastructure.domain.strategy.service.rule.chain.impl;
 
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.domain.strategy.service.rule.chain.AbstractLogicChain;
+import com.big.market.infrastructure.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import com.big.market.infrastructure.types.common.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -22,7 +23,7 @@ public class RuleBlackListLogicChain extends AbstractLogicChain {
     private IStrategyRepository repository;
 
     @Override
-    public Integer logic(String userId, Long strategyId) {
+    public DefaultChainFactory.StrategyAwardVO logic(String userId, Long strategyId) {
         log.info("抽奖责任链-黑名单开始 userId: {} strategyId: {} ruleModel: {}", userId, strategyId, ruleModel());
         String ruleValue = repository.queryStrategyRuleValue(strategyId, ruleModel());
         // 此时黑名单拆分应该是 split[0] = 100 split[1] = user01, user02, user03
@@ -36,7 +37,10 @@ public class RuleBlackListLogicChain extends AbstractLogicChain {
             // 如果用户是黑名单里的一员
             if (userBlackId.equals(userId)) {
                 log.info("抽奖责任链-黑名单接管 userId: {} strategyId: {} ruleModel: {} awardId: {}", userId, strategyId, ruleModel(), awardId);
-                return awardId;
+                return DefaultChainFactory.StrategyAwardVO.builder()
+                        .awardId(awardId)
+                        .logicModel(ruleModel())
+                        .build();
             }
         }
         // 过滤其他责任链
@@ -50,6 +54,7 @@ public class RuleBlackListLogicChain extends AbstractLogicChain {
      */
     @Override
     protected String ruleModel() {
-        return "rule_blacklist";
+        return DefaultChainFactory.LogicModel.RULE_BLACKLIST.getCode();
+
     }
 }

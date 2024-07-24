@@ -1,0 +1,164 @@
+24-07-22.22:13:56.592 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 25412 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:13:56.593 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-07-22.22:13:57.444 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:13:57.447 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:13:57.486 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+24-07-22.22:13:58.738 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:13:59.323 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:13:59.787 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:14:02.349 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:14:02.415 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.241 seconds (JVM running for 7.663)
+24-07-22.22:20:58.072 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_lock code:0000
+24-07-22.22:21:24.159 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0xaf83dc2b, L:/192.168.43.65:51052 - R:8.138.41.137/8.138.41.137:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://8.138.41.137:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-07-22.22:22:59.676 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x6249cc43, L:/192.168.43.65:51051 - R:8.138.41.137/8.138.41.137:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://8.138.41.137:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-07-22.22:23:22.455 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0xdb52417d, L:/192.168.43.65:51053 - R:8.138.41.137/8.138.41.137:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://8.138.41.137:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-07-22.22:23:26.985 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0xb4f7feed, L:/192.168.43.65:51054 - R:8.138.41.137/8.138.41.137:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://8.138.41.137:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-07-22.22:23:47.705 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x0ceed6ab, L:/192.168.43.65:51056 - R:8.138.41.137/8.138.41.137:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://8.138.41.137:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-07-22.22:23:47.705 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
+24-07-22.22:26:22.306 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
+24-07-22.22:26:53.436 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":101,"awardRuleValue":"1,100"}
+24-07-22.22:35:46.007 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 19932 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:35:46.009 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-22.22:35:46.976 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:35:46.979 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:35:47.025 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+24-07-22.22:35:48.401 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:35:48.994 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:35:49.409 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:35:52.023 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:35:52.273 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.879 seconds (JVM running for 8.116)
+24-07-22.22:35:52.598 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-22.22:35:53.892 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-22.22:36:08.958 [main            ] INFO  StrategyTest           - 测试结果：false
+24-07-22.22:36:08.972 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-22.22:36:08.979 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-22.22:36:34.549 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 16456 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:36:34.550 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-22.22:36:35.510 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:36:35.513 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:36:35.553 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+24-07-22.22:36:36.838 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:36:37.443 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:36:37.790 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:36:40.447 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:36:40.519 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.424 seconds (JVM running for 7.648)
+24-07-22.22:37:07.637 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 28044 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:37:07.638 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-22.22:37:08.461 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:37:08.464 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:37:08.503 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+24-07-22.22:37:09.771 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:37:10.390 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:37:10.860 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:37:13.414 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:37:13.498 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.311 seconds (JVM running for 7.43)
+24-07-22.22:38:40.299 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 9464 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:38:40.300 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-22.22:38:41.145 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:38:41.148 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:38:41.188 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+24-07-22.22:38:42.464 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:38:43.055 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:38:43.435 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:38:45.925 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:38:46.018 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.151 seconds (JVM running for 7.219)
+24-07-22.22:40:10.009 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 7040 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:40:10.009 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-22.22:40:10.869 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:40:10.872 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:40:10.912 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+24-07-22.22:40:12.192 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:40:12.779 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:40:13.216 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:40:15.719 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:40:15.786 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.218 seconds (JVM running for 7.293)
+24-07-22.22:40:26.020 [main            ] INFO  StrategyTest           - 测试结果：false
+24-07-22.22:40:46.634 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 27928 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:40:46.635 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-22.22:40:47.654 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:40:47.658 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:40:47.700 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+24-07-22.22:40:49.021 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:40:49.657 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:40:50.071 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:40:53.001 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:40:53.070 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.893 seconds (JVM running for 7.992)
+24-07-22.22:40:53.394 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-22.22:40:54.646 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-22.22:41:03.520 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-22.22:41:03.638 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-22.22:42:55.193 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 22132 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:42:55.194 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-22.22:42:56.068 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:42:56.071 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:42:56.111 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+24-07-22.22:42:57.398 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:42:58.023 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:42:58.431 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:43:01.075 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:43:01.143 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.394 seconds (JVM running for 7.537)
+24-07-22.22:43:09.101 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-22.22:43:10.537 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-22.22:43:11.668 [main            ] INFO  StrategyTest           - 测试结果：true
+24-07-22.22:43:11.681 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-22.22:43:11.700 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-22.22:46:48.878 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 20844 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-07-22.22:46:48.880 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-22.22:46:49.705 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-22.22:46:49.708 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-22.22:46:49.750 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+24-07-22.22:46:51.061 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-22.22:46:51.674 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:46:52.224 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-07-22.22:46:54.853 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-22.22:46:54.929 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.474 seconds (JVM running for 7.536)
+24-07-22.22:46:55.254 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-22.22:46:56.498 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-22.22:47:07.764 [main            ] INFO  StrategyTest           - 测试结果：true
+24-07-22.22:47:07.782 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-22.22:47:07.790 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

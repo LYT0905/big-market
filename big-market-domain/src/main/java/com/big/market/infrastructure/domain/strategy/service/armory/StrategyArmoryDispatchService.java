@@ -6,6 +6,7 @@ import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEn
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyArmoryService;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
+import com.big.market.infrastructure.types.common.Constants;
 import com.big.market.infrastructure.types.enums.ResponseCode;
 import com.big.market.infrastructure.types.exception.AppException;
 import io.netty.util.internal.StringUtil;
@@ -64,7 +65,7 @@ public class StrategyArmoryDispatchService implements IStrategyArmoryService, IS
             List<Integer> ruleWeightValues = ruleWeightValuesMap.get(key);
             ArrayList<StrategyAwardEntity> strategyAwardEntitiesClone = new ArrayList<>(strategyAwardEntities);
             strategyAwardEntitiesClone.removeIf(entity -> !ruleWeightValues.contains(entity.getAwardId()));
-            assembleLotteryStrategy(String.valueOf(strategyId).concat("_").concat(key), strategyAwardEntitiesClone);
+            assembleLotteryStrategy(String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(key), strategyAwardEntitiesClone);
         }
         return true;
     }

@@ -24,17 +24,4 @@ public class StrategyRuleModelVO {
 
     private String ruleModels;
 
-    /**
-     * 获取抽奖中规则
-     */
-    public String[] raffleCenterRuleModelList(){
-        List<String> result = new ArrayList<>();
-        String[] ruleModelValues = ruleModels.split(Constants.SPLIT);
-        for (String ruleModelValue : ruleModelValues) {
-            if (DefaultLogicFactory.LogicModel.isMiddle(ruleModelValue)){
-                result.add(ruleModelValue);
-            }
-        }
-        return result.toArray(new String[0]);
-    }
 }

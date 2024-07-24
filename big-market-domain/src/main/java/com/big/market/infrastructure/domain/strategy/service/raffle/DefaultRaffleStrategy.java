@@ -1,24 +1,18 @@
 package com.big.market.infrastructure.domain.strategy.service.raffle;
 
-import com.big.market.infrastructure.domain.strategy.model.entity.RaffleFactorEntity;
-import com.big.market.infrastructure.domain.strategy.model.entity.RuleActionEntity;
-import com.big.market.infrastructure.domain.strategy.model.entity.RuleMatterEntity;
-import com.big.market.infrastructure.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
+
+import com.big.market.infrastructure.domain.strategy.model.valobj.RuleTreeVO;
+import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleModelVO;
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.domain.strategy.service.AbstractRaffleStrategy;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
+import com.big.market.infrastructure.domain.strategy.service.rule.chain.ILogicChain;
 import com.big.market.infrastructure.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
-import com.big.market.infrastructure.domain.strategy.service.rule.filter.ILogicFilter;
-import com.big.market.infrastructure.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
+import com.big.market.infrastructure.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
+import com.big.market.infrastructure.domain.strategy.service.rule.tree.factory.engine.IDecisionTreeEngine;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * @author LYT0905
@@ -30,92 +24,44 @@ import java.util.stream.Collectors;
 @Slf4j
 public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
 
-    @Resource
-    private DefaultLogicFactory defaultLogicFactory;
 
-    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatchService strategyDispatchService, DefaultChainFactory defaultChainFactory) {
-        super(repository, strategyDispatchService, defaultChainFactory);
+    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatchService strategyDispatchService, DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory) {
+        super(repository, strategyDispatchService, defaultChainFactory, defaultTreeFactory);
     }
 
+    /**
+     * 抽奖计算，责任链抽象方法
+     * @param userId 用户id
+     * @param strategyId 奖品id
+     */
     @Override
-    protected RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> doCheckRaffleBeforeLogic(RaffleFactorEntity raffleFactorEntity, String... logics) {
-        if (logics == null || 0 == logics.length) {
-            return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()
-                    .code(RuleLogicCheckTypeVO.ALLOW.getCode())
-                    .info(RuleLogicCheckTypeVO.ALLOW.getInfo())
+    protected DefaultChainFactory.StrategyAwardVO raffleLogicChain(String userId, Long strategyId) {
+        ILogicChain logicChain = defaultChainFactory.openLogicChain(strategyId);
+         return logicChain.logic(userId, strategyId);
+    }
+
+    /**
+     * 抽奖结果过滤，决策树抽象方法
+     * @param userId 用户id
+     * @param awardId 奖品id
+     * @param strategyId 策略id
+     * @return 过滤结果【奖品ID，会根据抽奖次数判断、库存判断、兜底兜里返回最终的可获得奖品信息】
+     */
+    @Override
+    protected DefaultTreeFactory.StrategyAwardVO raffleLogicTree(String userId, Long strategyId, Integer awardId) {
+        StrategyRuleModelVO strategyRuleModelVO = repository.queryStrategyRuleModels(strategyId, awardId);
+        if (strategyRuleModelVO == null){
+            return DefaultTreeFactory.StrategyAwardVO.builder()
+                    .awardId(awardId)
                     .build();
         }
-        Map<String, ILogicFilter<RuleActionEntity.RaffleBeforeEntity>> logicFilterMap = defaultLogicFactory.openLogicFilter();
-
-        // 黑名单规则优先过滤
-        String ruleBackList = Arrays.stream(logics)
-                .filter(str -> str.contains(DefaultLogicFactory.LogicModel.RULE_BLACKLIST.getCode()))
-                .findFirst()
-                .orElse(null);
-        if (StringUtils.isNotBlank(ruleBackList)){
-            ILogicFilter<RuleActionEntity.RaffleBeforeEntity> logicFilter = logicFilterMap.get(DefaultLogicFactory.LogicModel.RULE_BLACKLIST.getCode());
-            RuleMatterEntity ruleMatterEntity = new RuleMatterEntity();
-            ruleMatterEntity.setUserId(raffleFactorEntity.getUserId());
-            ruleMatterEntity.setAwardId(raffleFactorEntity.getAwardId());
-            ruleMatterEntity.setStrategyId(raffleFactorEntity.getStrategyId());
-            ruleMatterEntity.setRuleModel(DefaultLogicFactory.LogicModel.RULE_BLACKLIST.getCode());
-            RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = logicFilter.filter(ruleMatterEntity);
-            // 如果被规则接管了代表用户是黑名单，直接返回
-            if (!RuleLogicCheckTypeVO.ALLOW.getCode().equals(ruleActionEntity.getCode())){
-                return ruleActionEntity;
-            }
+        RuleTreeVO ruleTreeVO = repository.queryRuleTreeVOByTreeId(strategyRuleModelVO.getRuleModels());
+        if (ruleTreeVO == null){
+            throw new RuntimeException("存在抽奖策略配置的规则模型 Key，未在库表 rule_tree、rule_tree_node、rule_tree_line 配置对应的规则树信息 " + strategyRuleModelVO.getRuleModels());
         }
-
-        // 后续逻辑判断
-        List<String> ruleList = Arrays.stream(logics)
-                .filter(str -> !str.contains(DefaultLogicFactory.LogicModel.RULE_BLACKLIST.getCode()))
-                .collect(Collectors.toList());
-        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = null;
-        for (String ruleModel : ruleList) {
-            ILogicFilter<RuleActionEntity.RaffleBeforeEntity> logicFilter = logicFilterMap.get(ruleModel);
-            RuleMatterEntity ruleMatterEntity = new RuleMatterEntity();
-            ruleMatterEntity.setUserId(raffleFactorEntity.getUserId());
-            ruleMatterEntity.setAwardId(raffleFactorEntity.getAwardId());
-            ruleMatterEntity.setStrategyId(raffleFactorEntity.getStrategyId());
-            ruleMatterEntity.setRuleModel(ruleModel);
-            ruleActionEntity = logicFilter.filter(ruleMatterEntity);
-            // 非放行结果则顺序过滤
-            log.info("抽奖前规则过滤 userId: {} ruleModel: {} code: {} info: {}", raffleFactorEntity.getUserId(), ruleModel, ruleActionEntity.getCode(), ruleActionEntity.getInfo());
-            if (!RuleLogicCheckTypeVO.ALLOW.getCode().equals(ruleActionEntity.getCode())) {
-                return ruleActionEntity;
-            }
-
-        }
-
-        return ruleActionEntity;
+        IDecisionTreeEngine decisionTreeEngine = defaultTreeFactory.openLogicTree(ruleTreeVO);
+        return decisionTreeEngine.process(userId, strategyId, awardId);
     }
 
-    @Override
-    protected RuleActionEntity<RuleActionEntity.RaffleMiddleEntity> doCheckRaffleMiddleLogic(RaffleFactorEntity raffleFactorEntity, String... logics) {
-        if (logics == null || 0 == logics.length) {
-            return RuleActionEntity.<RuleActionEntity.RaffleMiddleEntity>builder()
-                    .code(RuleLogicCheckTypeVO.ALLOW.getCode())
-                    .info(RuleLogicCheckTypeVO.ALLOW.getInfo())
-                    .build();
-        }
-        Map<String, ILogicFilter<RuleActionEntity.RaffleMiddleEntity>> logicFilterMap = defaultLogicFactory.openLogicFilter();
 
-        RuleActionEntity<RuleActionEntity.RaffleMiddleEntity> ruleActionEntity = null;
-
-        for (String ruleModel : logics) {
-            ILogicFilter<RuleActionEntity.RaffleMiddleEntity> raffleMiddleEntityILogicFilter = logicFilterMap.get(ruleModel);
-            RuleMatterEntity ruleMatterEntity = new RuleMatterEntity();
-            ruleMatterEntity.setStrategyId(raffleFactorEntity.getStrategyId());
-            ruleMatterEntity.setUserId(raffleFactorEntity.getUserId());
-            ruleMatterEntity.setRuleModel(ruleModel);
-            ruleMatterEntity.setAwardId(raffleFactorEntity.getAwardId());
-            ruleActionEntity = raffleMiddleEntityILogicFilter.filter(ruleMatterEntity);
-            // 非放行结果则顺序过滤
-            log.info("抽奖中规则过滤 userId: {} ruleModel: {} code: {} info: {}", raffleFactorEntity.getUserId(), ruleModel, ruleActionEntity.getCode(), ruleActionEntity.getInfo());
-            if (!RuleLogicCheckTypeVO.ALLOW.getCode().equals(ruleActionEntity.getCode())){
-                return ruleActionEntity;
-            }
-        }
-        return ruleActionEntity;
-    }
 }

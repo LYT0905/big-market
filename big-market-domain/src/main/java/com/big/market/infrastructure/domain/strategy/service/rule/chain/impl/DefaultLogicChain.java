@@ -2,6 +2,7 @@ package com.big.market.infrastructure.domain.strategy.service.rule.chain.impl;
 
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
 import com.big.market.infrastructure.domain.strategy.service.rule.chain.AbstractLogicChain;
+import com.big.market.infrastructure.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -21,14 +22,18 @@ public class DefaultLogicChain extends AbstractLogicChain {
 
     /**
      * 默认规则，直接抽奖
-     * @param userId  用户id
-     * @param strategyId  策略id
+     *
+     * @param userId     用户id
+     * @param strategyId 策略id
      * @return 奖品id
      */
     @Override
-    public Integer logic(String userId, Long strategyId) {
+    public DefaultChainFactory.StrategyAwardVO logic(String userId, Long strategyId) {
         Integer awardId = dispatchService.getRandomAwardId(strategyId);
-        return awardId;
+        return DefaultChainFactory.StrategyAwardVO.builder()
+                .awardId(awardId)
+                .logicModel(ruleModel())
+                .build();
     }
 
     /**
@@ -37,6 +42,6 @@ public class DefaultLogicChain extends AbstractLogicChain {
      */
     @Override
     protected String ruleModel() {
-        return "default";
+        return DefaultChainFactory.LogicModel.RULE_DEFAULT.getCode();
     }
 }

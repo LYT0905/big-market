@@ -3,6 +3,7 @@ package com.big.market.infrastructure.domain.strategy.repository;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
+import com.big.market.infrastructure.domain.strategy.model.valobj.RuleTreeVO;
 import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleModelVO;
 
 import java.util.HashMap;
@@ -81,4 +82,11 @@ public interface IStrategyRepository {
      * @param awardId  奖品id
      */
     StrategyRuleModelVO queryStrategyRuleModels(Long strategyId, Integer awardId);
+
+    /**
+     * 根据树id查找规则树
+     * @param treeId 树id
+     * @return 规则树
+     */
+    RuleTreeVO queryRuleTreeVOByTreeId(String treeId);
 }
