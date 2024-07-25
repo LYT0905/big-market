@@ -6,7 +6,6 @@ import com.big.market.infrastructure.domain.strategy.model.entity.RaffleFactorEn
 import com.big.market.infrastructure.domain.strategy.service.IRaffleStrategy;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyArmoryService;
 import com.big.market.infrastructure.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
-import com.big.market.infrastructure.domain.strategy.service.rule.filter.impl.RuleLockLogicFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,8 +32,6 @@ public class RaffleStrategyTest {
 
     @Resource
     private IStrategyArmoryService strategyArmory;
-    @Resource
-    private RuleLockLogicFilter ruleLockLogicFilter;
 
     @Before
     public void setUp() {

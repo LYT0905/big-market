@@ -1,14 +1,11 @@
 package com.big.market.infrastructure.domain.strategy.model.valobj;
 
-import com.big.market.infrastructure.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
-import com.big.market.infrastructure.types.common.Constants;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author LYT0905
