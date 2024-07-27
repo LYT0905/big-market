@@ -4,6 +4,7 @@ import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardE
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
 import com.big.market.infrastructure.domain.strategy.model.valobj.RuleTreeVO;
+import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleModelVO;
 
 import java.util.HashMap;
@@ -89,4 +90,39 @@ public interface IStrategyRepository {
      * @return 规则树
      */
     RuleTreeVO queryRuleTreeVOByTreeId(String treeId);
+
+    /**
+     * 对奖品库存信息进行装配
+     * @param cacheKey 缓存key
+     * @param awardCount  奖品库存
+     */
+    void cacheStrategyAwardCount(String cacheKey, Integer awardCount);
+
+    /**
+     * 扣减库存
+     * @param cacheKey 缓存key
+     * @return 库存是否扣减成功
+     */
+    Boolean subtractionAwardCount(String cacheKey);
+
+    /**
+     * 奖品库存信息消费
+     * @param strategyAwardStockKeyVO  策略奖品库存key标识对象
+     */
+    void awardStockConsumeSendQueue(StrategyAwardStockKeyVO strategyAwardStockKeyVO);
+
+    /**
+     * 获取奖品库存消耗队列
+     *
+     * @return 奖品库存Key信息
+     */
+    StrategyAwardStockKeyVO takeQueueValue();
+
+    /**
+     * 更新奖品库存消耗记录
+     *
+     * @param strategyId 策略ID
+     * @param awardId    奖品ID
+     */
+    void updateStrategyAwardStock(Long strategyId, Integer awardId);
 }

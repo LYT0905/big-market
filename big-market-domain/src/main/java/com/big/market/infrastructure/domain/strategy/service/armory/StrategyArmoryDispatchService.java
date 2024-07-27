@@ -4,8 +4,6 @@ import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardE
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
-import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyArmoryService;
-import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
 import com.big.market.infrastructure.types.common.Constants;
 import com.big.market.infrastructure.types.enums.ResponseCode;
 import com.big.market.infrastructure.types.exception.AppException;
@@ -44,6 +42,16 @@ public class StrategyArmoryDispatchService implements IStrategyArmoryService, IS
         if (CollectionUtils.isEmpty(strategyAwardEntities)){
             return false;
         }
+
+        // 对库存进行装配
+        for (StrategyAwardEntity strategyAwardEntity : strategyAwardEntities) {
+            Integer awardId = strategyAwardEntity.getAwardId();
+            // 库存
+            Integer awardCount = strategyAwardEntity.getAwardCount();
+            cacheStrategyAwardCount(strategyId, awardId, awardCount);
+        }
+
+
         // 全量初始化
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
         // 权重策略配置 - 适用于 rule_weight 权重规则配置
@@ -68,6 +76,17 @@ public class StrategyArmoryDispatchService implements IStrategyArmoryService, IS
             assembleLotteryStrategy(String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(key), strategyAwardEntitiesClone);
         }
         return true;
+    }
+
+    /**
+     * 对奖品库存信息进行装配
+     * @param strategyId 策略id
+     * @param awardId    奖品id
+     * @param awardCount  奖品库存
+     */
+    private void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount) {
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + strategyId + Constants.UNDERLINE + awardId;
+        strategyRepository.cacheStrategyAwardCount(cacheKey, awardCount);
     }
 
     /**
@@ -135,5 +154,17 @@ public class StrategyArmoryDispatchService implements IStrategyArmoryService, IS
 
         // 存到redis
         strategyRepository.storeStrategyAwardSearchRateTables(strategyId, shuffleStrategyAwardSearchRateTables.size(), shuffleStrategyAwardSearchRateTables);
+    }
+
+    /**
+     * 扣减库存
+     * @param strategyId 策略id
+     * @param awardId 奖品id
+     * @return 库存是否扣减成功
+     */
+    @Override
+    public Boolean subtractionAwardCount(Long strategyId, Integer awardId) {
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + strategyId + Constants.UNDERLINE + awardId;
+        return strategyRepository.subtractionAwardCount(cacheKey);
     }
 }

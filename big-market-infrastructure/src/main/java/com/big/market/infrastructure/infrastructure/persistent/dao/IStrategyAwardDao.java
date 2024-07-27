@@ -22,4 +22,10 @@ public interface IStrategyAwardDao {
      * 根据策略id和奖品id查找规则模型
      */
     String queryStrategyRuleModels(StrategyAward strategyAward);
+
+    /**
+     * 更新奖品库存消耗记录
+     *
+     */
+    void updateStrategyAwardStock(StrategyAward strategyAward);
 }

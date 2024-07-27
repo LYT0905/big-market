@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.annotation.Resource;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * 抽奖策略测试
@@ -36,9 +37,9 @@ public class RaffleStrategyTest {
     @Before
     public void setUp() {
         // 策略装配 100001、100002、100003
-        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
-        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100002L));
-        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
+//        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
+//        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100002L));
+//        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
         log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100004L));
         // 通过反射 mock 规则中的值
         ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", 0L);
@@ -55,6 +56,22 @@ public class RaffleStrategyTest {
 
         log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
         log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
+    }
+
+
+    @Test
+    public void test_decrStock() throws InterruptedException {
+        for (int i = 0; i < 3; i++) {
+            RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
+                    .userId("lyt")
+                    .strategyId(100004L)
+                    .build();
+            RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);
+            log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
+            log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
+        }
+        // 等待 UpdateAwardStockJob 消费队列
+        new CountDownLatch(1).await();
     }
 
     @Test

@@ -2,6 +2,7 @@ package com.big.market.infrastructure.domain.strategy.service.raffle;
 
 
 import com.big.market.infrastructure.domain.strategy.model.valobj.RuleTreeVO;
+import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleModelVO;
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.domain.strategy.service.AbstractRaffleStrategy;
@@ -63,5 +64,25 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
         return decisionTreeEngine.process(userId, strategyId, awardId);
     }
 
+    /**
+     * 获取奖品库存消耗队列
+     *
+     * @return 奖品库存Key信息
+     * @throws InterruptedException 异常
+     */
+    @Override
+    public StrategyAwardStockKeyVO takeQueueValue() throws InterruptedException {
+        return repository.takeQueueValue();
+    }
 
+    /**
+     * 更新奖品库存消耗记录
+     *
+     * @param strategyId 策略ID
+     * @param awardId    奖品ID
+     */
+    @Override
+    public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
+        repository.updateStrategyAwardStock(strategyId, awardId);
+    }
 }

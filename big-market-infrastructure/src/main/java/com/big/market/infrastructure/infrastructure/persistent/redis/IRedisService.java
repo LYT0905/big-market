@@ -245,4 +245,24 @@ public interface IRedisService {
      */
     <T> RBloomFilter<T> getBloomFilter(String key);
 
+    /**
+     * 获取长整型
+     * @param key 键
+     * @return 长整型数值
+     */
+    Long getAtomicLong(String key);
+
+    /**
+     * 设置长整型
+     * @param key 键
+     * @param awardCount 奖品库存
+     */
+    void setAtomicLong(String key, Integer awardCount);
+
+    /**
+     * 加锁
+     * @param key 键
+     * @return 加锁是否成功
+     */
+    Boolean setNx(String key);
 }

@@ -46,4 +46,12 @@ public class StrategyAwardTest {
         log.info("规则模型有{}", ruleModels);
     }
 
+    @Test
+    public void test_updateStrategyAwardStock(){
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(100001L);
+        strategyAward.setAwardId(104);
+        strategyAwardDao.updateStrategyAwardStock(strategyAward);
+    }
+
 }
