@@ -2,6 +2,7 @@ package com.big.market.infrastructure.domain.strategy.service;
 
 import com.big.market.infrastructure.domain.strategy.model.entity.RaffleAwardEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.RaffleFactorEntity;
+import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
 import com.big.market.infrastructure.domain.strategy.repository.IStrategyRepository;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;
 import com.big.market.infrastructure.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
@@ -18,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 
 @Slf4j
-public abstract class AbstractRaffleStrategy implements IRaffleStrategy, IRaffleStock {
+public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
 
     // 策略仓储服务 -> domain层像一个大厨，仓储层提供米面粮油
     protected IStrategyRepository repository;
@@ -49,9 +50,9 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy, IRaffle
         // 2. 责任链抽奖计算【这步拿到的是初步的抽奖ID，之后需要根据ID处理抽奖】注意；黑名单、权重等非默认抽奖的直接返回抽奖结果
         DefaultChainFactory.StrategyAwardVO logicChainStrategyAwardVO = raffleLogicChain(userId, strategyId);
         if (!DefaultChainFactory.LogicModel.RULE_DEFAULT.getCode().equals(logicChainStrategyAwardVO.getLogicModel())){
-            return RaffleAwardEntity.builder()
-                    .awardId(logicChainStrategyAwardVO.getAwardId())
-                    .build();
+
+            return buildRaffleAwardEntity(strategyId, logicChainStrategyAwardVO.getAwardId(), null);
+
         }
 
         // 3. 规则树抽奖过滤【奖品ID，会根据抽奖次数判断、库存判断、兜底兜里返回最终的可获得奖品信息】
@@ -59,12 +60,23 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy, IRaffle
         log.info("抽奖策略计算-规则树 {} {} {} {}", userId, strategyId, logicTreeStrategyAwardVO.getAwardId(), logicTreeStrategyAwardVO.getAwardRuleValue());
 
 
+        return buildRaffleAwardEntity(strategyId, logicTreeStrategyAwardVO.getAwardId(), logicTreeStrategyAwardVO.getAwardRuleValue());
 
+    }
+
+    /**
+     * 统一返回，抽取出来
+     * @param strategyId 策略id
+     * @param awardId    奖品id
+     * @param awardConfig 奖品配置信息
+     */
+    private RaffleAwardEntity buildRaffleAwardEntity(Long strategyId, Integer awardId, String awardConfig){
+        StrategyAwardEntity strategyAwardEntity = repository.queryStrategyAwardEntity(strategyId, awardId);
         return RaffleAwardEntity.builder()
-                .awardId(logicTreeStrategyAwardVO.getAwardId())
-                .awardConfig(logicTreeStrategyAwardVO.getAwardRuleValue())
+                .sort(strategyAwardEntity.getSort())
+                .awardId(awardId)
+                .awardConfig(awardConfig)
                 .build();
-
     }
 
     /**

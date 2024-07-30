@@ -49,9 +49,18 @@ public class StrategyAwardTest {
     @Test
     public void test_updateStrategyAwardStock(){
         StrategyAward strategyAward = new StrategyAward();
-        strategyAward.setStrategyId(100001L);
-        strategyAward.setAwardId(104);
+        strategyAward.setStrategyId(100004L);
+        strategyAward.setAwardId(102);
         strategyAwardDao.updateStrategyAwardStock(strategyAward);
+    }
+
+    @Test
+    public void test_queryStrategyAwardSurplus(){
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(100004L);
+        strategyAward.setAwardId(102);
+        Integer surplus = strategyAwardDao.queryStrategyAwardSurplus(strategyAward);;
+        log.info("奖品库存为{}", surplus);
     }
 
 }

@@ -28,4 +28,18 @@ public interface IStrategyAwardDao {
      *
      */
     void updateStrategyAwardStock(StrategyAward strategyAward);
+
+    /**
+     * 根据策略id和奖品id查找奖品信息
+     * @param strategyId 策略id
+     * @param awardId   奖品id
+     */
+    StrategyAward queryStrategyAward(@Param("strategyId") Long strategyId, @Param("awardId") Integer awardId);
+
+    /**
+     * 根据策略id和奖品id查找库存
+     * @param strategyAward
+     * @return
+     */
+    Integer queryStrategyAwardSurplus(StrategyAward strategyAward);
 }
