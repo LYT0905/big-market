@@ -2,7 +2,7 @@ version: '3.8'
 # 命令执行 docker-compose -f docker-compose-app.yml up -d
 services:
   big-market-app:
-    image: liangyutao/big-market-app:1.0
+    image: lyt0905/big-market-app:1.0
     container_name: big-market-app
     restart: always
     ports:
@@ -11,7 +11,7 @@ services:
       - TZ=PRC
       - SERVER_PORT=8091
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=123456
+      - SPRING_DATASOURCE_PASSWORD=Vt!4uNp?z6B*
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/big_market?serverTimezone=UTC&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Shanghai
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=com.mysql.cj.jdbc.Driver
       - SPRING_HIKARI_POOL_NAME=Retail_HikariCP
@@ -26,16 +26,16 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-  chatgpt-web:
+  big-market-web:
     container_name: big-market-front-app
-    image: liangyutao/big-market-front-app:1.0
+    image: lyt0905/big-market-front-app:1.0
     restart: always
     networks:
       - my-network
     ports:
       - 3000:3000
     environment:
-      - API_HOST_URL=http://117.72.37.243:8091
+      - API_HOST_URL=http://8.138.41.137:8091
       - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     healthcheck:
       test: [ "CMD", "wget", "--spider", "-q", "http://0.0.0.0:3000/" ]
