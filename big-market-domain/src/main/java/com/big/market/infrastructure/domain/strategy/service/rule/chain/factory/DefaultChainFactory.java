@@ -5,9 +5,11 @@ import com.big.market.infrastructure.domain.strategy.repository.IStrategyReposit
 import com.big.market.infrastructure.domain.strategy.service.rule.chain.ILogicChain;
 import lombok.*;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author LYT0905
@@ -17,33 +19,51 @@ import java.util.Map;
 
 @Service
 public class DefaultChainFactory {
-
-    private final Map<String, ILogicChain> logicChainMap;
+    // 原型模式获取对象
+    private final ApplicationContext applicationContext;
+    // 存放策略链，策略ID -> 责任链
+    private final Map<Long, ILogicChain> logicChainMap;
     private final IStrategyRepository repository;
 
-    public DefaultChainFactory(Map<String, ILogicChain> logicChainMap, IStrategyRepository repository) {
-        this.logicChainMap = logicChainMap;
+    public DefaultChainFactory(ApplicationContext applicationContext, IStrategyRepository repository) {
+        this.applicationContext = applicationContext;
+        this.logicChainMap = new ConcurrentHashMap<>();
         this.repository = repository;
     }
 
+    /**
+     * 通过策略ID，构建责任链
+     *
+     * @param strategyId 策略ID
+     * @return LogicChain
+     */
     public ILogicChain openLogicChain(Long strategyId){
+        ILogicChain cacheLogicChain = logicChainMap.get(strategyId);
+        if (cacheLogicChain != null){
+            return cacheLogicChain;
+        }
+
         StrategyEntity strategy = repository.queryStrategyEntityByStrategyId(strategyId);
         String[] ruleModels = strategy.ruleModels();
         // 如果没有规则就走默认责任链逻辑
         if (ruleModels == null || ruleModels.length == 0){
-            return logicChainMap.get("default");
+            ILogicChain ruleDefaultLogicChain = applicationContext.getBean(LogicModel.RULE_DEFAULT.getCode(), ILogicChain.class);
+            // 写入缓存
+            logicChainMap.put(strategyId, ruleDefaultLogicChain);
+            return ruleDefaultLogicChain;
         }
         // 获取第一个规则
-        ILogicChain logicChain = logicChainMap.get(ruleModels[0]);
+        ILogicChain logicChain = applicationContext.getBean(ruleModels[0], ILogicChain.class);
         ILogicChain current = logicChain;
         // 开始进行构建
         for (int i = 1; i < ruleModels.length; i++){
-            ILogicChain nextChain = logicChainMap.get(ruleModels[i]);
+            ILogicChain nextChain = applicationContext.getBean(ruleModels[i], ILogicChain.class);
             current = current.appendNext(nextChain);
         }
         // 最后添加一个默认的责任
-        current.appendNext(logicChainMap.get("default"));
-
+        current.appendNext(applicationContext.getBean(LogicModel.RULE_DEFAULT.getCode(), ILogicChain.class));
+        // 写入缓存
+        logicChainMap.put(strategyId, logicChain);
         return logicChain;
     }
 

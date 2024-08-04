@@ -2,7 +2,7 @@ package com.big.market.infrastructure.domain.strategy.service.rule.chain;
 
 /**
  * @author LYT0905
- * @Description: 抽象类责任链
+ * @Description: 抽奖策略责任链，判断走那种抽奖策略。如；默认抽象、权重抽奖、黑名单抽奖
  * @Date: 2024/07/18 10:21:03
  */
 public abstract class AbstractLogicChain implements ILogicChain{

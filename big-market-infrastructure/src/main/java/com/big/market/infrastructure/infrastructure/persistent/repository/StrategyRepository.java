@@ -93,13 +93,32 @@ public class StrategyRepository implements IStrategyRepository {
      * @param shuffleStrategyAwardSearchRateTables 存储了乱序概率的map
      */
     @Override
-    public void storeStrategyAwardSearchRateTables(String key, int  shuffleStrategyAwardSearchRateTablesSize, HashMap<Integer, Integer> shuffleStrategyAwardSearchRateTables) {
+    public void storeStrategyAwardSearchRateTables(String key, int shuffleStrategyAwardSearchRateTablesSize, HashMap<Integer, Integer> shuffleStrategyAwardSearchRateTables) {
         // 存储抽奖范围概率值, 如10000,用于生成1000的范围随机数
-        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key,  shuffleStrategyAwardSearchRateTablesSize, 86400000L);
+        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key, shuffleStrategyAwardSearchRateTablesSize, 86400000L);
+
         // 存储概率查找表
         RMap<Integer, Integer> cacheRateTable = redisService.getMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + key);
-        cacheRateTable.putAll(shuffleStrategyAwardSearchRateTables);
+
+        // 分批插入数据
+        final int batchSize = 1000; // 设置合适的批量大小
+        List<Map.Entry<Integer, Integer>> entries = new ArrayList<>(shuffleStrategyAwardSearchRateTables.entrySet());
+        for (int i = 0; i < entries.size(); i += batchSize) {
+            int end = Math.min(i + batchSize, entries.size());
+            Map<Integer, Integer> batch = new HashMap<>();
+            for (int j = i; j < end; j++) {
+                Map.Entry<Integer, Integer> entry = entries.get(j);
+                batch.put(entry.getKey(), entry.getValue());
+            }
+            try {
+                cacheRateTable.putAll(batch);
+            } catch (Exception e) {
+                // 记录错误日志
+                log.error("Error while putting data into Redis: " + e.getMessage(), e);
+            }
+        }
     }
+
 
     /**
      * 获取随机范围

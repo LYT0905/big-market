@@ -6,6 +6,8 @@ import com.big.market.infrastructure.domain.strategy.service.rule.chain.Abstract
 import com.big.market.infrastructure.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import com.big.market.infrastructure.types.common.Constants;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -21,6 +23,7 @@ import java.util.Map;
 
 @Slf4j
 @Component("rule_weight")
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class RuleWeightLogicChain extends AbstractLogicChain {
 
     @Resource
@@ -28,7 +31,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
     @Resource
     private IStrategyDispatchService dispatchService;
     // 根据用户ID查询用户抽奖消耗的积分值，本章节我们先写死为固定的值。后续需要从数据库中查询。
-    public Long userScore = 0L;
+    public Long userScore = 400000L;
 
     /**
      * 权重责任链过滤；
@@ -41,7 +44,8 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
         String ruleValue = repository.queryStrategyRuleValue(strategyId, ruleModel());
         Map<Long, String> analyticalValueGroup = getAnalyticalValue(ruleValue);
         if (null == analyticalValueGroup || analyticalValueGroup.isEmpty()) {
-           return null;
+            log.warn("抽奖责任链-权重告警【策略配置权重，但ruleValue未配置相应值】 userId: {} strategyId: {} ruleModel: {}", userId, strategyId, ruleModel());
+            return next().logic(userId, strategyId);
         }
 
         // 2. 转换Keys值，并默认排序
