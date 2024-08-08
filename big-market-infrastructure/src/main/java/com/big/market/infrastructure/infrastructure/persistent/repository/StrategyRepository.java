@@ -100,8 +100,8 @@ public class StrategyRepository implements IStrategyRepository {
         // 存储概率查找表
         RMap<Integer, Integer> cacheRateTable = redisService.getMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + key);
 
-        // 分批插入数据
-        final int batchSize = 1000; // 设置合适的批量大小
+        // 分批插入数据，避免一次性插入过多数据，导致 redis 报 "ERR Protocol error: invalid multibulk length" 错误
+        final int batchSize = 6000; // 设置合适的批量大小
         List<Map.Entry<Integer, Integer>> entries = new ArrayList<>(shuffleStrategyAwardSearchRateTables.entrySet());
         for (int i = 0; i < entries.size(); i += batchSize) {
             int end = Math.min(i + batchSize, entries.size());
