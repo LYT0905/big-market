@@ -11,8 +11,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.codinghub.sdk</groupId>
-            <artifactId>openai-code-review-sdk</artifactId>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-jdbc-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
