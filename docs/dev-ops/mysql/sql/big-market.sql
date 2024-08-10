@@ -45,6 +45,375 @@ INSERT INTO `award` VALUES (1,101,'user_credit_random','1,100','用户积分【�
 UNLOCK TABLES;
 
 --
+-- Table structure for table `raffle_activity`
+--
+
+DROP TABLE IF EXISTS `raffle_activity`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity` (
+                                   `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                   `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                   `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
+                                   `activity_desc` varchar(128) NOT NULL COMMENT '活动描述',
+                                   `begin_date_time` datetime NOT NULL COMMENT '开始时间',
+                                   `end_date_time` datetime NOT NULL COMMENT '结束时间',
+                                   `stock_count` int NOT NULL COMMENT '库存总量',
+                                   `stock_count_surplus` int NOT NULL COMMENT '剩余库存',
+                                   `activity_count_id` bigint NOT NULL COMMENT '活动参与次数配置',
+                                   `strategy_id` bigint NOT NULL COMMENT '抽奖策略ID',
+                                   `state` varchar(8) NOT NULL COMMENT '活动状态',
+                                   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+                                   PRIMARY KEY (`id`),
+                                   UNIQUE KEY `uq_activity_id` (`activity_id`),
+                                   KEY `idx_begin_date_time` (`begin_date_time`),
+                                   KEY `idx_end_date_time` (`end_date_time`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity`
+--
+
+LOCK TABLES `raffle_activity` WRITE;
+/*!40000 ALTER TABLE `raffle_activity` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_account_0`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_account_0`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_account_0` (
+                                             `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                             `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                             `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                             `total_count` int NOT NULL COMMENT '总次数',
+                                             `total_count_surplus` int NOT NULL COMMENT '总次数-剩余',
+                                             `day_count` int NOT NULL COMMENT '日次数',
+                                             `day_count_surplus` int NOT NULL COMMENT '日次数-剩余',
+                                             `month_count` int NOT NULL COMMENT '月次数',
+                                             `month_count_surplus` int NOT NULL COMMENT '月次数-剩余',
+                                             `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                             `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                             PRIMARY KEY (`id`),
+                                             UNIQUE KEY `uq_user_id_activity_id` (`user_id`,`activity_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动账户表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_account_0`
+--
+
+LOCK TABLES `raffle_activity_account_0` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_account_0` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_account_0` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_account_1`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_account_1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_account_1` (
+                                             `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                             `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                             `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                             `total_count` int NOT NULL COMMENT '总次数',
+                                             `total_count_surplus` int NOT NULL COMMENT '总次数-剩余',
+                                             `day_count` int NOT NULL COMMENT '日次数',
+                                             `day_count_surplus` int NOT NULL COMMENT '日次数-剩余',
+                                             `month_count` int NOT NULL COMMENT '月次数',
+                                             `month_count_surplus` int NOT NULL COMMENT '月次数-剩余',
+                                             `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                             `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                             PRIMARY KEY (`id`),
+                                             UNIQUE KEY `uq_user_id_activity_id` (`user_id`,`activity_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动账户表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_account_1`
+--
+
+LOCK TABLES `raffle_activity_account_1` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_account_1` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_account_1` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_account_2`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_account_2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_account_2` (
+                                             `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                             `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                             `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                             `total_count` int NOT NULL COMMENT '总次数',
+                                             `total_count_surplus` int NOT NULL COMMENT '总次数-剩余',
+                                             `day_count` int NOT NULL COMMENT '日次数',
+                                             `day_count_surplus` int NOT NULL COMMENT '日次数-剩余',
+                                             `month_count` int NOT NULL COMMENT '月次数',
+                                             `month_count_surplus` int NOT NULL COMMENT '月次数-剩余',
+                                             `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                             `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                             PRIMARY KEY (`id`),
+                                             UNIQUE KEY `uq_user_id_activity_id` (`user_id`,`activity_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动账户表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_account_2`
+--
+
+LOCK TABLES `raffle_activity_account_2` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_account_2` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_account_2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_account_flow_0`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_account_flow_0`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_account_flow_0` (
+                                                  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                                  `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                                  `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                                  `total_count` int NOT NULL COMMENT '总次数',
+                                                  `day_count` int NOT NULL COMMENT '日次数',
+                                                  `month_count` int NOT NULL COMMENT '月次数',
+                                                  `flow_id` varchar(32) NOT NULL COMMENT '流水ID - 生成的唯一ID',
+                                                  `flow_channel` varchar(12) NOT NULL DEFAULT 'activity' COMMENT '流水渠道（activity-活动领取、sale-购买、redeem-兑换、free-免费赠送）',
+                                                  `biz_id` varchar(12) NOT NULL COMMENT '业务ID（外部透传，活动ID、订单ID）',
+                                                  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                                  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                                  PRIMARY KEY (`id`),
+                                                  UNIQUE KEY `uq_biz_id` (`biz_id`),
+                                                  UNIQUE KEY `uq_flow_id` (`flow_id`),
+                                                  KEY `idx_user_id_activity_id` (`user_id`,`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动账户流水表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_account_flow_0`
+--
+
+LOCK TABLES `raffle_activity_account_flow_0` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_account_flow_0` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_account_flow_0` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_account_flow_1`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_account_flow_1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_account_flow_1` (
+                                                  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                                  `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                                  `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                                  `total_count` int NOT NULL COMMENT '总次数',
+                                                  `day_count` int NOT NULL COMMENT '日次数',
+                                                  `month_count` int NOT NULL COMMENT '月次数',
+                                                  `flow_id` varchar(32) NOT NULL COMMENT '流水ID - 生成的唯一ID',
+                                                  `flow_channel` varchar(12) NOT NULL DEFAULT 'activity' COMMENT '流水渠道（activity-活动领取、sale-购买、redeem-兑换、free-免费赠送）',
+                                                  `biz_id` varchar(12) NOT NULL COMMENT '业务ID（外部透传，活动ID、订单ID）',
+                                                  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                                  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                                  PRIMARY KEY (`id`),
+                                                  UNIQUE KEY `uq_biz_id` (`biz_id`),
+                                                  UNIQUE KEY `uq_flow_id` (`flow_id`),
+                                                  KEY `idx_user_id_activity_id` (`user_id`,`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动账户流水表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_account_flow_1`
+--
+
+LOCK TABLES `raffle_activity_account_flow_1` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_account_flow_1` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_account_flow_1` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_account_flow_2`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_account_flow_2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_account_flow_2` (
+                                                  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                                  `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                                  `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                                  `total_count` int NOT NULL COMMENT '总次数',
+                                                  `day_count` int NOT NULL COMMENT '日次数',
+                                                  `month_count` int NOT NULL COMMENT '月次数',
+                                                  `flow_id` varchar(32) NOT NULL COMMENT '流水ID - 生成的唯一ID',
+                                                  `flow_channel` varchar(12) NOT NULL DEFAULT 'activity' COMMENT '流水渠道（activity-活动领取、sale-购买、redeem-兑换、free-免费赠送）',
+                                                  `biz_id` varchar(12) NOT NULL COMMENT '业务ID（外部透传，活动ID、订单ID）',
+                                                  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                                  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                                  PRIMARY KEY (`id`),
+                                                  UNIQUE KEY `uq_biz_id` (`biz_id`),
+                                                  UNIQUE KEY `uq_flow_id` (`flow_id`),
+                                                  KEY `idx_user_id_activity_id` (`user_id`,`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动账户流水表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_account_flow_2`
+--
+
+LOCK TABLES `raffle_activity_account_flow_2` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_account_flow_2` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_account_flow_2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_count`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_count`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_count` (
+                                         `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                         `activity_count_id` bigint NOT NULL COMMENT '活动次数编号',
+                                         `total_count` int NOT NULL COMMENT '总次数',
+                                         `day_count` int NOT NULL COMMENT '日次数',
+                                         `month_count` int NOT NULL COMMENT '月次数',
+                                         `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                         `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+                                         PRIMARY KEY (`id`),
+                                         UNIQUE KEY `uq_activity_count_id` (`activity_count_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动次数配置表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_count`
+--
+
+LOCK TABLES `raffle_activity_count` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_count` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_count` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_order_0`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_order_0`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_order_0` (
+                                           `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                           `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                           `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                           `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
+                                           `strategy_id` bigint NOT NULL COMMENT '抽奖策略ID',
+                                           `order_id` varchar(12) NOT NULL COMMENT '订单ID',
+                                           `order_time` datetime NOT NULL COMMENT '下单时间',
+                                           `state` varchar(8) NOT NULL COMMENT '订单状态（not_used、used、expire）',
+                                           `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                           `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                           PRIMARY KEY (`id`),
+                                           UNIQUE KEY `uq_order_id` (`order_id`),
+                                           KEY `idx_user_id_activity_id` (`user_id`,`activity_id`,`state`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动单';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_order_0`
+--
+
+LOCK TABLES `raffle_activity_order_0` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_order_0` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_order_0` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_order_1`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_order_1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_order_1` (
+                                           `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                           `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                           `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                           `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
+                                           `strategy_id` bigint NOT NULL COMMENT '抽奖策略ID',
+                                           `order_id` varchar(12) NOT NULL COMMENT '订单ID',
+                                           `order_time` datetime NOT NULL COMMENT '下单时间',
+                                           `state` varchar(8) NOT NULL COMMENT '订单状态（not_used、used、expire）',
+                                           `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                           `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                           PRIMARY KEY (`id`),
+                                           UNIQUE KEY `uq_order_id` (`order_id`),
+                                           KEY `idx_user_id_activity_id` (`user_id`,`activity_id`,`state`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动单';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_order_1`
+--
+
+LOCK TABLES `raffle_activity_order_1` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_order_1` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_order_1` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raffle_activity_order_2`
+--
+
+DROP TABLE IF EXISTS `raffle_activity_order_2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raffle_activity_order_2` (
+                                           `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                                           `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+                                           `activity_id` bigint NOT NULL COMMENT '活动ID',
+                                           `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
+                                           `strategy_id` bigint NOT NULL COMMENT '抽奖策略ID',
+                                           `order_id` varchar(12) NOT NULL COMMENT '订单ID',
+                                           `order_time` datetime NOT NULL COMMENT '下单时间',
+                                           `state` varchar(8) NOT NULL COMMENT '订单状态（not_used、used、expire）',
+                                           `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                           `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+                                           PRIMARY KEY (`id`),
+                                           UNIQUE KEY `uq_order_id` (`order_id`),
+                                           KEY `idx_user_id_activity_id` (`user_id`,`activity_id`,`state`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动单';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raffle_activity_order_2`
+--
+
+LOCK TABLES `raffle_activity_order_2` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_order_2` DISABLE KEYS */;
+/*!40000 ALTER TABLE `raffle_activity_order_2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `rule_tree`
 --
 
@@ -193,7 +562,7 @@ CREATE TABLE `strategy_award` (
 
 LOCK TABLES `strategy_award` WRITE;
 /*!40000 ALTER TABLE `strategy_award` DISABLE KEYS */;
-INSERT INTO `strategy_award` VALUES (1,100001,101,'随机积分',NULL,80000,80000,80.00,'rule_random,rule_luck_award',1,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(2,100001,102,'5次使用',NULL,10000,10000,10.00,'rule_luck_award',2,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(3,100001,103,'10次使用',NULL,5000,5000,5.00,'rule_luck_award',3,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(4,100001,104,'20次使用',NULL,4000,4000,4.00,'rule_luck_award',4,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(5,100001,105,'增加gpt-4对话模型',NULL,600,600,0.60,'rule_luck_award',5,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(6,100001,106,'增加dall-e-2画图模型',NULL,200,200,0.20,'rule_luck_award',6,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(7,100001,107,'增加dall-e-3画图模型','抽奖1次后解锁',200,200,0.20,'rule_lock,rule_luck_award',7,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(8,100001,108,'增加100次使用','抽奖2次后解锁',199,199,0.20,'rule_lock,rule_luck_award',8,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(9,100001,109,'解锁全部模型','抽奖6次后解锁',1,1,0.10,'rule_lock,rule_luck_award',9,'2024-07-31 23:57:44','2024-08-04 20:33:36'),(10,100002,101,'随机积分',NULL,1,1,0.50,'rule_random,rule_luck_award',1,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(11,100002,102,'5次使用',NULL,1,1,0.10,'rule_random,rule_luck_award',2,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(12,100002,106,'增加dall-e-2画图模型',NULL,1,1,0.10,'rule_random,rule_luck_award',3,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(13,100003,107,'增加dall-e-3画图模型','抽奖1次后解锁',200,200,0.04,'rule_lock,rule_luck_award',7,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(14,100003,108,'增加100次使用','抽奖2次后解锁',199,199,0.09,'rule_lock,rule_luck_award',8,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(15,100003,109,'解锁全部模型','抽奖6次后解锁',1,1,0.01,'rule_lock,rule_luck_award',9,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(16,100004,100,'随机积分',NULL,100000,99898,0.07,'tree_lock',1,'2024-08-01 00:02:16','2024-08-09 15:17:10'),(17,100004,101,'10000积分',NULL,100000,99931,0.01,'tree_lock',2,'2024-08-01 00:04:42','2024-08-04 18:54:00'),(18,100004,102,'公仔一只',NULL,400,391,0.04,'tree_lock',3,'2024-08-01 14:09:58','2024-08-09 15:17:15'),(19,100004,103,'台灯一个',NULL,200,192,0.03,'tree_lock',4,'2024-08-01 14:12:47','2024-08-05 19:57:45'),(20,100004,104,'增加5次抽奖机会',NULL,100,89,0.02,'tree_lock',5,'2024-08-01 14:13:48','2024-08-05 19:59:20');
+INSERT INTO `strategy_award` VALUES (1,100001,101,'随机积分',NULL,80000,80000,80.00,'rule_random,rule_luck_award',1,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(2,100001,102,'5次使用',NULL,10000,10000,10.00,'rule_luck_award',2,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(3,100001,103,'10次使用',NULL,5000,5000,5.00,'rule_luck_award',3,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(4,100001,104,'20次使用',NULL,4000,4000,4.00,'rule_luck_award',4,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(5,100001,105,'增加gpt-4对话模型',NULL,600,600,0.60,'rule_luck_award',5,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(6,100001,106,'增加dall-e-2画图模型',NULL,200,200,0.20,'rule_luck_award',6,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(7,100001,107,'增加dall-e-3画图模型','抽奖1次后解锁',200,200,0.20,'rule_lock,rule_luck_award',7,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(8,100001,108,'增加100次使用','抽奖2次后解锁',199,199,0.20,'rule_lock,rule_luck_award',8,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(9,100001,109,'解锁全部模型','抽奖6次后解锁',1,1,0.10,'rule_lock,rule_luck_award',9,'2024-07-31 23:57:44','2024-08-04 20:33:36'),(10,100002,101,'随机积分',NULL,1,1,0.50,'rule_random,rule_luck_award',1,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(11,100002,102,'5次使用',NULL,1,1,0.10,'rule_random,rule_luck_award',2,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(12,100002,106,'增加dall-e-2画图模型',NULL,1,1,0.10,'rule_random,rule_luck_award',3,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(13,100003,107,'增加dall-e-3画图模型','抽奖1次后解锁',200,200,0.04,'rule_lock,rule_luck_award',7,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(14,100003,108,'增加100次使用','抽奖2次后解锁',199,199,0.09,'rule_lock,rule_luck_award',8,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(15,100003,109,'解锁全部模型','抽奖6次后解锁',1,1,0.01,'rule_lock,rule_luck_award',9,'2024-07-31 23:57:44','2024-07-31 23:57:44'),(16,100004,100,'随机积分',NULL,100000,99898,0.07,'tree_lock',1,'2024-08-01 00:02:16','2024-08-09 15:17:10'),(17,100004,101,'10000积分',NULL,100000,99930,0.01,'tree_lock',2,'2024-08-01 00:04:42','2024-08-10 16:29:05'),(18,100004,102,'公仔一只',NULL,400,391,0.04,'tree_lock',3,'2024-08-01 14:09:58','2024-08-09 15:17:15'),(19,100004,103,'台灯一个',NULL,200,192,0.03,'tree_lock',4,'2024-08-01 14:12:47','2024-08-05 19:57:45'),(20,100004,104,'增加5次抽奖机会',NULL,100,89,0.02,'tree_lock',5,'2024-08-01 14:13:48','2024-08-05 19:59:20');
 /*!40000 ALTER TABLE `strategy_award` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -238,85 +607,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-09 20:32:41
-CREATE TABLE `raffle_activity` (
-                                   `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-                                   `activity_id` bigint(12) NOT NULL COMMENT '活动ID',
-                                   `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
-                                   `activity_desc` varchar(128) NOT NULL COMMENT '活动描述',
-                                   `begin_date_time` datetime NOT NULL COMMENT '开始时间',
-                                   `end_date_time` datetime NOT NULL COMMENT '结束时间',
-                                   `stock_count` int(11) NOT NULL COMMENT '库存总量',
-                                   `stock_count_surplus` int(11) NOT NULL COMMENT '剩余库存',
-                                   `activity_count_id` bigint(12) NOT NULL COMMENT '活动参与次数配置',
-                                   `strategy_id` bigint(8) NOT NULL COMMENT '抽奖策略ID',
-                                   `state` varchar(8) NOT NULL COMMENT '活动状态',
-                                   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-                                   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-                                   PRIMARY KEY (`id`),
-                                   UNIQUE KEY `uq_activity_id` (`activity_id`),
-                                   KEY `idx_begin_date_time` (`begin_date_time`),
-                                   KEY `idx_end_date_time` (`end_date_time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖活动表';
-
-CREATE TABLE `raffle_activity_count` (
-                                         `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-                                         `activity_count_id` bigint(12) NOT NULL COMMENT '活动次数编号',
-                                         `total_count` int(8) NOT NULL COMMENT '总次数',
-                                         `day_count` int(8) NOT NULL COMMENT '日次数',
-                                         `month_count` int(8) NOT NULL COMMENT '月次数',
-                                         `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-                                         `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-                                         PRIMARY KEY (`id`),
-                                         UNIQUE KEY `uq_activity_count_id` (`activity_count_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖活动次数配置表';
-
-CREATE TABLE `raffle_activity_order` (
-                                         `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-                                         `user_id` varchar(32) NOT NULL COMMENT '用户ID',
-                                         `activity_id` bigint(12) NOT NULL COMMENT '活动ID',
-                                         `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
-                                         `strategy_id` bigint(8) NOT NULL COMMENT '抽奖策略ID',
-                                         `order_id` varchar(12) NOT NULL COMMENT '订单ID',
-                                         `order_time` datetime NOT NULL COMMENT '下单时间',
-                                         `state` varchar(8) NOT NULL COMMENT '订单状态（not_used、used、expire）',
-                                         `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-                                         `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-                                         PRIMARY KEY (`id`),
-                                         UNIQUE KEY `uq_order_id` (`order_id`),
-                                         KEY `idx_user_id_activity_id` (`user_id`,`activity_id`,`state`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖活动单';
-
-CREATE TABLE `raffle_activity_account` (
-                                           `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-                                           `user_id` varchar(32) NOT NULL COMMENT '用户ID',
-                                           `activity_id` bigint(12) NOT NULL COMMENT '活动ID',
-                                           `total_count` int(8) NOT NULL COMMENT '总次数',
-                                           `total_count_surplus` int(8) NOT NULL COMMENT '总次数-剩余',
-                                           `day_count` int(8) NOT NULL COMMENT '日次数',
-                                           `day_count_surplus` int(8) NOT NULL COMMENT '日次数-剩余',
-                                           `month_count` int(8) NOT NULL COMMENT '月次数',
-                                           `month_count_surplus` int(8) NOT NULL COMMENT '月次数-剩余',
-                                           `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-                                           `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-                                           PRIMARY KEY (`id`),
-                                           UNIQUE KEY `uq_user_id_activity_id` (`user_id`,`activity_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖活动账户表';
-
-CREATE TABLE `raffle_activity_account_flow` (
-                                                `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-                                                `user_id` varchar(32) NOT NULL COMMENT '用户ID',
-                                                `activity_id` bigint(12) NOT NULL COMMENT '活动ID',
-                                                `total_count` int(8) NOT NULL COMMENT '总次数',
-                                                `day_count` int(8) NOT NULL COMMENT '日次数',
-                                                `month_count` int(8) NOT NULL COMMENT '月次数',
-                                                `flow_id` varchar(32) NOT NULL COMMENT '流水ID - 生成的唯一ID',
-                                                `flow_channel` varchar(12) NOT NULL DEFAULT 'activity' COMMENT '流水渠道（activity-活动领取、sale-购买、redeem-兑换、free-免费赠送）',
-                                                `biz_id` varchar(12) NOT NULL COMMENT '业务ID（外部透传，活动ID、订单ID）',
-                                                `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-                                                `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-                                                PRIMARY KEY (`id`),
-                                                UNIQUE KEY `uq_flow_id` (`flow_id`),
-                                                UNIQUE KEY `uq_biz_id` (`biz_id`),
-                                                KEY `idx_user_id_activity_id` (`user_id`,`activity_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖活动账户流水表';
+-- Dump completed on 2024-08-10 21:14:10

@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,6 +28,8 @@ public class RaffleActivityAccountTest {
 
     @Test
     public void test_queryAllRaffleActivityAccount(){
+
+
         List<RaffleActivityAccount> raffleActivityAccounts = raffleActivityAccountDao.queryAllRaffleActivityAccount();
         log.info("抽奖活动账户有{}", JSON.toJSONString(raffleActivityAccounts));
     }

@@ -27,23 +27,105 @@ thread:
         block-queue-size: 5000
         policy: CallerRunsPolicy
 
-# 数据库配置；启动时配置数据库资源信息
 spring:
-  datasource:
-    username: root
-    password: Vt!4uNp?z6B*
-    url: jdbc:mysql://8.138.41.137:13306/big_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  hikari:
-    pool-name: Retail_HikariCP
-    minimum-idle: 15 #最小空闲连接数量
-    idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
-    maximum-pool-size: 25 #连接池最大连接数，默认是10
-    auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
-    max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
-    connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
-    connection-test-query: SELECT 1
-  type: com.zaxxer.hikari.HikariDataSource
+  shardingsphere:
+    props:
+      sql-show: true
+    datasource:
+      # 数据库
+      ds0:
+        username: root
+        password: Vt!4uNp?z6B*
+        jdbc-url: jdbc:mysql://8.138.41.137:13306/big_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      ds1:
+        username: root
+        password: Vt!4uNp?z6B*
+        jdbc-url: jdbc:mysql://8.138.41.137:13306/big_market_01?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      names: ds0,ds1
+    rules:
+      sharding:
+        sharding-algorithms:
+          # 分表算法
+          raffle-activity-account-table-inline:
+            type: INLINE
+            props:
+              algorithm-expression: raffle_activity_account_$->{user_id.hashCode() % 3}
+          raffle-activity-account-flow-table-inline:
+            type: INLINE
+            props:
+              algorithm-expression: raffle_activity_account_flow_$->{user_id.hashCode() % 3}
+          raffle-activity-order-table-line:
+            type: INLINE
+            props:
+              algorithm-expression: raffle_activity_order_$->{user_id.hashCode() % 3}
+          # 分库算法
+          database-inline:
+            type: INLINE
+            props:
+              algorithm-expression: ds$->{user_id.hashCode() % 2}
+
+        tables:
+          raffle_activity_account:
+            actual-data-nodes: ds$->{0..1}.raffle_activity_account_$->{0..2}
+            key-generate-strategy:
+              column: id
+              key-generator-name: auto_increment
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: database-inline
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: raffle-activity-account-table-inline
+          raffle_activity_order:
+            actual-data-nodes: ds$->{0..1}.raffle_activity_order_$->{0..2}
+            key-generate-strategy:
+              column: id
+              key-generator-name: auto_increment
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: database-inline
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: raffle-activity-order-table-line
+          raffle_activity_account_flow:
+            actual-data-nodes: ds$->{0..1}.raffle_activity_account_flow_$->{0..2}
+            key-generate-strategy:
+              column: id
+              key-generator-name: auto_increment
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: database-inline
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: raffle-activity-account-flow-table-inline
+        key-generators:
+          snowflake:
+            type: SNOWFLAKE
+            props:
+              worker-id: 123
+    mode:
+      type: Standalone
+      repository:
+        type: File
+      overwrite: true
+
+
 
 # MyBatis 配置【如需使用记得打开】
 mybatis:

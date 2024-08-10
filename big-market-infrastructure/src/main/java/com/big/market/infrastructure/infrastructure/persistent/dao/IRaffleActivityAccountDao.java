@@ -2,6 +2,7 @@ package com.big.market.infrastructure.infrastructure.persistent.dao;
 
 import com.big.market.infrastructure.infrastructure.persistent.po.RaffleActivityAccount;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,4 +18,8 @@ public interface IRaffleActivityAccountDao {
      * @return 所有抽奖活动账户
      */
     List<RaffleActivityAccount> queryAllRaffleActivityAccount();
+
+    void insert(RaffleActivityAccount raffleActivityAccount);
+
+
 }

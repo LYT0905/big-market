@@ -2,6 +2,7 @@ package com.big.market.infrastructure.infrastructure.persistent.dao;
 
 import com.big.market.infrastructure.infrastructure.persistent.po.RaffleActivityOrder;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,4 +18,5 @@ public interface IRaffleActivityOrderDao {
      * @return 所有的抽奖活动单
      */
     List<RaffleActivityOrder> queryAllRaffleActivityOrder();
+
 }
