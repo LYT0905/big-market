@@ -54,10 +54,6 @@ spring:
             type: INLINE
             props:
               algorithm-expression: raffle_activity_account_$->{user_id.hashCode() % 3}
-          raffle-activity-account-flow-table-inline:
-            type: INLINE
-            props:
-              algorithm-expression: raffle_activity_account_flow_$->{user_id.hashCode() % 3}
           raffle-activity-order-table-line:
             type: INLINE
             props:
@@ -73,7 +69,7 @@ spring:
             actual-data-nodes: ds$->{0..1}.raffle_activity_account_$->{0..2}
             key-generate-strategy:
               column: id
-              key-generator-name: auto_increment
+              key-generator-name: snowflake
             # 分库策略
             database-strategy:
               standard:
@@ -88,7 +84,7 @@ spring:
             actual-data-nodes: ds$->{0..1}.raffle_activity_order_$->{0..2}
             key-generate-strategy:
               column: id
-              key-generator-name: auto_increment
+              key-generator-name: SNOWFLAKE
             # 分库策略
             database-strategy:
               standard:
@@ -99,21 +95,6 @@ spring:
               standard:
                 sharding-column: user_id
                 sharding-algorithm-name: raffle-activity-order-table-line
-          raffle_activity_account_flow:
-            actual-data-nodes: ds$->{0..1}.raffle_activity_account_flow_$->{0..2}
-            key-generate-strategy:
-              column: id
-              key-generator-name: auto_increment
-            # 分库策略
-            database-strategy:
-              standard:
-                sharding-column: user_id
-                sharding-algorithm-name: database-inline
-            # 分表策略
-            table-strategy:
-              standard:
-                sharding-column: user_id
-                sharding-algorithm-name: raffle-activity-account-flow-table-inline
         key-generators:
           snowflake:
             type: SNOWFLAKE

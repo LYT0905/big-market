@@ -18,5 +18,4 @@ public interface IRaffleActivityOrderDao {
      * @return 所有的抽奖活动单
      */
     List<RaffleActivityOrder> queryAllRaffleActivityOrder();
-
 }
