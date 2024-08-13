@@ -28,7 +28,7 @@ public class RaffleOrderTest {
     @Test
     public void test_createRaffleActivityOrder() {
         ActivityShopCartEntity activityShopCartEntity = new ActivityShopCartEntity();
-        activityShopCartEntity.setUserId("lyutao");
+        activityShopCartEntity.setUserId("lyt");
         activityShopCartEntity.setSku(9011L);
         ActivityOrderEntity raffleActivityOrder = raffleOrder.createRaffleActivityOrder(activityShopCartEntity);
         log.info("测试结果：{}", JSON.toJSONString(raffleActivityOrder));
