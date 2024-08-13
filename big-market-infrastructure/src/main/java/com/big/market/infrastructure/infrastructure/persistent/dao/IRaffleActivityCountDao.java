@@ -18,4 +18,11 @@ public interface IRaffleActivityCountDao {
      * @return 所有抽奖活动次数配置
      */
     List<RaffleActivityCount> queryAllRaffleActivityCount();
+
+    /**
+     * 根据活动次数id 查询次数信息（用户在活动上可参与的次数）
+     * @param activityCountId 活动次数id
+     * @return 次数信息（用户在活动上可参与的次数）
+     */
+    RaffleActivityCount queryRaffleActivityCountByActivityCountId(Long activityCountId);
 }

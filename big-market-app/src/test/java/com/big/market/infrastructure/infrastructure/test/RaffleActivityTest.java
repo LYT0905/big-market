@@ -32,4 +32,10 @@ public class RaffleActivityTest {
         log.info("抽奖活动有{}", JSON.toJSONString(raffleActivities));
     }
 
+    @Test
+    public void test_queryRaffleActivityByActivityId(){
+        RaffleActivity raffleActivity = raffleActivityDao.queryRaffleActivityByActivityId(1L);
+        log.info("活动信息为{}", JSON.toJSONString(raffleActivity));
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.domain.test;
+package com.big.market.infrastructure.domain.test.strategy;
 
 import com.alibaba.fastjson.JSON;
 import com.big.market.infrastructure.domain.strategy.model.entity.RaffleAwardEntity;

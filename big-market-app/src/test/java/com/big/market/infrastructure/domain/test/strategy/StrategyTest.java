@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.domain.test;
+package com.big.market.infrastructure.domain.test.strategy;
 
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyArmoryService;
 import com.big.market.infrastructure.domain.strategy.service.armory.IStrategyDispatchService;

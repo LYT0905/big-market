@@ -31,4 +31,10 @@ public class RaffleActivitySkuTest {
         log.info("活动 SKU 有{}", JSON.toJSONString(raffleActivitySkus));
     }
 
+    @Test
+    public void test_queryActivitySku(){
+        RaffleActivitySku raffleActivitySku = raffleActivitySkuDao.queryActivitySku(1L);
+        log.info("商品 Sku 实体有{}", JSON.toJSONString(raffleActivitySku));
+    }
+
 }

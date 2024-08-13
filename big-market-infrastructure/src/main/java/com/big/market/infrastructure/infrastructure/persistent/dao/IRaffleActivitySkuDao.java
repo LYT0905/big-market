@@ -15,4 +15,10 @@ public interface IRaffleActivitySkuDao {
 
     List<RaffleActivitySku> queryAllRaffleActivitySku();
 
+    /**
+     * 根据商品 sku 查找活动 Sku 实体
+     * @param sku 商品 sku
+     * @return 活动 Sku 实体
+     */
+    RaffleActivitySku queryActivitySku(Long sku);
 }

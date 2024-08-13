@@ -31,4 +31,10 @@ public class RaffleActivityCountTest {
         log.info("抽奖活动次数配置有{}", JSON.toJSONString(raffleActivityCounts));
     }
 
+    @Test
+    public void test_queryRaffleActivityCountByActivityCountId(){
+        RaffleActivityCount raffleActivityCount = raffleActivityCountDao.queryRaffleActivityCountByActivityCountId(1L);
+        log.info("活动抽奖次数为{}", JSON.toJSONString(raffleActivityCount));
+    }
+
 }
