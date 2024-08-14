@@ -1,6 +1,5 @@
 package com.big.market.infrastructure.domain.activity.service;
 
-import com.alibaba.fastjson2.JSON;
 import com.big.market.infrastructure.domain.activity.model.aggregate.CreateOrderAggregate;
 import com.big.market.infrastructure.domain.activity.model.entity.*;
 import com.big.market.infrastructure.domain.activity.repository.IActivityRepository;
@@ -11,8 +10,6 @@ import com.big.market.infrastructure.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
-import javax.annotation.Resource;
-
 /**
  * @author 莱特0905
  * @Description: 抽奖活动抽象类，定义标准的流程
@@ -21,26 +18,9 @@ import javax.annotation.Resource;
 @Slf4j
 public abstract class AbstractRaffleActivity extends RaffleActivitySupport implements IRaffleOrder{
 
-//    protected IActivityRepository activityRepository;
-
     public AbstractRaffleActivity(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         super(activityRepository, defaultActivityChainFactory);
     }
-
-//    @Override
-//    public ActivityOrderEntity createRaffleActivityOrder(ActivityShopCartEntity activityShopCartEntity) {
-//        // 通过sku查询活动信息
-//        ActivitySkuEntity activitySkuEntity = activityRepository.queryActivitySku(activityShopCartEntity.getSku());
-//        // 查询活动信息
-//        ActivityEntity activityEntity = activityRepository.queryRaffleActivityByActivityId(activitySkuEntity.getActivityId());
-//        // 查询次数信息（用户在活动上可参与的次数）
-//        ActivityCountEntity activityCountEntity = activityRepository.queryRaffleActivityCountByActivityCountId(activitySkuEntity.getActivityCountId());
-//
-//        log.info("查询结果：{} {} {}", JSON.toJSONString(activitySkuEntity), JSON.toJSONString(activityEntity), JSON.toJSONString(activityCountEntity));
-//
-//        return ActivityOrderEntity.builder().build();
-//
-//    }
 
     /**
      * 创建活动商品充值订单

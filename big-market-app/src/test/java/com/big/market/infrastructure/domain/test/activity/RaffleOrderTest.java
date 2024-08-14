@@ -1,8 +1,5 @@
 package com.big.market.infrastructure.domain.test.activity;
 
-import com.alibaba.fastjson2.JSON;
-import com.big.market.infrastructure.domain.activity.model.entity.ActivityOrderEntity;
-import com.big.market.infrastructure.domain.activity.model.entity.ActivityShopCartEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.SkuRechargeEntity;
 import com.big.market.infrastructure.domain.activity.service.IRaffleOrder;
 import lombok.extern.slf4j.Slf4j;
@@ -25,15 +22,6 @@ public class RaffleOrderTest {
 
     @Resource
     private IRaffleOrder raffleOrder;
-
-    @Test
-    public void test_createRaffleActivityOrder() {
-        ActivityShopCartEntity activityShopCartEntity = new ActivityShopCartEntity();
-        activityShopCartEntity.setUserId("lyt");
-        activityShopCartEntity.setSku(9011L);
-//        ActivityOrderEntity raffleActivityOrder = raffleOrder.createRaffleActivityOrder(activityShopCartEntity);
-//        log.info("测试结果：{}", JSON.toJSONString(raffleActivityOrder));
-    }
 
     @Test
     public void test_createSkuRechargeOrder() {
