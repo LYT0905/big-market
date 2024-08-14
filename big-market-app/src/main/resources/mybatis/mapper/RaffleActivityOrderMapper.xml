@@ -15,6 +15,7 @@
         <result column="day_count" property="dayCount"/>
         <result column="month_count" property="monthCount"/>
         <result column="state" property="state"/>
+        <result column="out_business_no" property="outBusinessNo"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
@@ -34,6 +35,7 @@
             day_count,
             month_count,
             state,
+            out_business_no,
             create_time,
             update_time
         from raffle_activity_order;

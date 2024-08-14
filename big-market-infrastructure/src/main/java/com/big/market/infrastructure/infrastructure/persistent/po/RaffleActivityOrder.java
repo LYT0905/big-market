@@ -35,6 +35,8 @@ public class RaffleActivityOrder {
     private Integer monthCount;
     /** 下单时间 */
     private String state;
+    /** 业务防重ID */
+    private String outBusinessNo;
     /** 订单状态（not_used、used、expire） */
     private Date createTime;
     /** 创建时间 */
