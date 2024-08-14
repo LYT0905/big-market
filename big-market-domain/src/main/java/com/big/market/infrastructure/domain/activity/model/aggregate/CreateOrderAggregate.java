@@ -17,10 +17,32 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateOrderAggregate {
+
     /**
-     * 活动账户实体
+     * 用户id
      */
-    private ActivityAccountEntity activityAccountEntity;
+    private String userId;
+
+    /**
+     * 活动id
+     */
+    private Long activityId;
+
+    /**
+     * 增加总次数
+     */
+    private Integer totalCount;
+
+    /**
+     * 增加月次数
+     */
+    private Integer monthCount;
+
+    /**
+     * 增加日次数
+     */
+    private Integer dayCount;
+
     /**
      * 活动订单实体
      */
