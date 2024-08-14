@@ -36,7 +36,7 @@ CREATE TABLE `raffle_activity_account_0` (
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq_user_id_activity_id` (`user_id`,`activity_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动账户表';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动账户表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,6 +45,7 @@ CREATE TABLE `raffle_activity_account_0` (
 
 LOCK TABLES `raffle_activity_account_0` WRITE;
 /*!40000 ALTER TABLE `raffle_activity_account_0` DISABLE KEYS */;
+INSERT INTO `raffle_activity_account_0` VALUES (1,'lyt',101,20,20,20,20,20,20,'2024-08-14 22:29:02','2024-08-14 22:45:33');
 /*!40000 ALTER TABLE `raffle_activity_account_0` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,7 +134,7 @@ CREATE TABLE `raffle_activity_order_0` (
   `total_count` int NOT NULL COMMENT '总次数',
   `day_count` int NOT NULL COMMENT '日次数',
   `month_count` int NOT NULL COMMENT '月次数',
-  `state` varchar(8) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
+  `state` varchar(12) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
   `out_business_no` varchar(64) DEFAULT NULL COMMENT '业务防重ID-外部透传的，确保幂等',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -141,7 +142,7 @@ CREATE TABLE `raffle_activity_order_0` (
   UNIQUE KEY `uq_order_id` (`order_id`),
   UNIQUE KEY `uniq_obn_key` (`out_business_no`),
   KEY `idx_user_id_activity_id` (`user_id`,`activity_id`,`state`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动单';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='抽奖活动单';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,6 +151,7 @@ CREATE TABLE `raffle_activity_order_0` (
 
 LOCK TABLES `raffle_activity_order_0` WRITE;
 /*!40000 ALTER TABLE `raffle_activity_order_0` DISABLE KEYS */;
+INSERT INTO `raffle_activity_order_0` VALUES (4,'lyt',9011,101,'测试',100004,'182373269313','2024-08-14 14:45:32',10,10,10,'completed','700091009111','2024-08-14 22:45:33','2024-08-14 22:45:33');
 /*!40000 ALTER TABLE `raffle_activity_order_0` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +174,7 @@ CREATE TABLE `raffle_activity_order_1` (
   `total_count` int NOT NULL COMMENT '总次数',
   `day_count` int NOT NULL COMMENT '日次数',
   `month_count` int NOT NULL COMMENT '月次数',
-  `state` varchar(8) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
+  `state` varchar(12) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
   `out_business_no` varchar(64) DEFAULT NULL COMMENT '业务防重ID-外部透传的，确保幂等',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -211,7 +213,7 @@ CREATE TABLE `raffle_activity_order_2` (
   `total_count` int NOT NULL COMMENT '总次数',
   `day_count` int NOT NULL COMMENT '日次数',
   `month_count` int NOT NULL COMMENT '月次数',
-  `state` varchar(8) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
+  `state` varchar(12) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
   `out_business_no` varchar(64) DEFAULT NULL COMMENT '业务防重ID-外部透传的，确保幂等',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -240,4 +242,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-14 20:38:15
+-- Dump completed on 2024-08-14 22:47:27

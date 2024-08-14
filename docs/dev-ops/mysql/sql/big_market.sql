@@ -230,7 +230,7 @@ CREATE TABLE `raffle_activity_order_0` (
   `total_count` int NOT NULL COMMENT '总次数',
   `day_count` int NOT NULL COMMENT '日次数',
   `month_count` int NOT NULL COMMENT '月次数',
-  `state` varchar(8) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
+  `state` varchar(12) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
   `out_business_no` varchar(64) DEFAULT NULL COMMENT '业务防重ID-外部透传的，确保幂等',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -269,7 +269,7 @@ CREATE TABLE `raffle_activity_order_1` (
   `total_count` int NOT NULL COMMENT '总次数',
   `day_count` int NOT NULL COMMENT '日次数',
   `month_count` int NOT NULL COMMENT '月次数',
-  `state` varchar(8) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
+  `state` varchar(12) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
   `out_business_no` varchar(64) DEFAULT NULL COMMENT '业务防重ID-外部透传的，确保幂等',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -308,7 +308,7 @@ CREATE TABLE `raffle_activity_order_2` (
   `total_count` int NOT NULL COMMENT '总次数',
   `day_count` int NOT NULL COMMENT '日次数',
   `month_count` int NOT NULL COMMENT '月次数',
-  `state` varchar(8) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
+  `state` varchar(12) NOT NULL DEFAULT 'complete' COMMENT '订单状态（complete）',
   `out_business_no` varchar(64) DEFAULT NULL COMMENT '业务防重ID-外部透传的，确保幂等',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -554,4 +554,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-14 20:38:11
+-- Dump completed on 2024-08-14 22:47:25
