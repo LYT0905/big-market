@@ -19,6 +19,23 @@
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
+    <insert id="insert">
+        insert into raffle_activity_order(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, #{userId}, #{sku}, #{activityId}, #{activityName},
+                                 #{strategyId}, #{orderId}, #{orderTime}, #{totalCount}, #{dayCount},
+                                 #{monthCount}, #{state}, #{outBusinessNo})
+    </insert>
 
 
     <select id="queryAllRaffleActivityOrder"

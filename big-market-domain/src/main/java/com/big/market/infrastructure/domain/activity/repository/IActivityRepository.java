@@ -1,5 +1,6 @@
 package com.big.market.infrastructure.domain.activity.repository;
 
+import com.big.market.infrastructure.domain.activity.model.aggregate.CreateOrderAggregate;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityCountEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivitySkuEntity;
@@ -30,4 +31,10 @@ public interface IActivityRepository {
      * @return 次数信息
      */
     ActivityCountEntity queryRaffleActivityCountByActivityCountId(Long activityCountId);
+
+    /**
+     * 保存订单
+     * @param orderAggregate 订单聚合对象
+     */
+    void doSaveOrder(CreateOrderAggregate orderAggregate);
 }

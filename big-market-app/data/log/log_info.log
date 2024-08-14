@@ -1,23 +1,23 @@
-24-08-13.19:52:32.135 [main            ] INFO  RaffleActivitySkuTest  - Starting RaffleActivitySkuTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 9172 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.19:52:32.136 [main            ] INFO  RaffleActivitySkuTest  - The following 1 profile is active: "dev"
-24-08-13.19:52:33.622 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.19:52:33.627 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.19:52:33.686 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
-24-08-13.19:52:34.205 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.19:52:34.220 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.19:52:34.535 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$dfbbd8c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.19:52:35.863 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.19:52:36.532 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.19:52:36.971 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.19:52:37.327 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.19:52:38.580 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.19:52:38.603 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.19:52:39.220 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.19:52:43.815 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.19:52:43.834 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.19:52:43.834 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.19:52:43.835 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.19:52:43.836 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+24-08-14.20:45:35.528 [main            ] INFO  RaffleActivityOrderTest - Starting RaffleActivityOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 11784 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.20:45:35.529 [main            ] INFO  RaffleActivityOrderTest - The following 1 profile is active: "dev"
+24-08-14.20:45:37.050 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.20:45:37.055 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.20:45:37.111 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+24-08-14.20:45:37.649 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.20:45:37.667 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.20:45:37.984 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$bfea5f64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.20:45:39.326 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.20:45:40.000 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.20:45:40.431 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.20:45:40.790 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.20:45:42.164 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.20:45:42.181 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.20:45:42.914 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.20:45:47.476 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.20:45:47.495 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.20:45:47.495 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.20:45:47.496 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.20:45:47.497 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -25,15 +25,311 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-24-08-13.19:52:43.836 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.19:52:43.836 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.19:52:43.836 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7cff1930
-24-08-13.19:52:44.075 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.19:52:44.140 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.19:52:44.140 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.19:52:44.159 [main            ] INFO  RaffleActivitySkuTest  - Started RaffleActivitySkuTest in 12.544 seconds (JVM running for 14.29)
-24-08-13.19:52:45.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.19:52:45.220 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
+24-08-14.20:45:47.497 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.20:45:47.497 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.20:45:47.497 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@44bbf5e3
+24-08-14.20:45:47.704 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.20:45:47.772 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.20:45:47.772 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.20:45:47.792 [main            ] INFO  RaffleActivityOrderTest - Started RaffleActivityOrderTest in 12.802 seconds (JVM running for 14.382)
+24-08-14.20:45:48.843 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time
+        from raffle_activity_order;
+24-08-14.20:45:48.843 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-14.20:45:48.843 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time
+        from raffle_activity_order_0 ORDER BY id ASC ;
+24-08-14.20:45:48.843 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time
+        from raffle_activity_order_1 ORDER BY id ASC ;
+24-08-14.20:45:48.843 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time
+        from raffle_activity_order_2 ORDER BY id ASC ;
+24-08-14.20:45:48.843 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time
+        from raffle_activity_order_0 ORDER BY id ASC ;
+24-08-14.20:45:48.843 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time
+        from raffle_activity_order_1 ORDER BY id ASC ;
+24-08-14.20:45:48.843 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time
+        from raffle_activity_order_2 ORDER BY id ASC ;
+24-08-14.20:45:49.565 [main            ] INFO  RaffleActivityOrderTest - 抽奖活动订单有[]
+24-08-14.20:45:49.576 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.20:45:49.578 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.20:45:49.578 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.20:45:49.578 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.20:45:49.578 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.20:45:49.583 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.20:45:49.592 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.20:45:49.592 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.20:45:49.600 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:09:57.684 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 30424 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:09:57.686 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:09:59.052 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:09:59.055 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:09:59.118 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 0 Redis repository interfaces.
+24-08-14.22:09:59.642 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:09:59.658 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:09:59.975 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$f237f362] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:10:01.218 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:10:01.879 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:10:02.269 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:10:02.636 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:10:03.920 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:10:03.943 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:10:04.685 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:10:09.157 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:10:09.177 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:10:09.177 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:10:09.178 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:10:09.178 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:10:09.178 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:10:09.178 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:10:09.178 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5dd3841
+24-08-14.22:10:09.343 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:10:09.407 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:10:09.407 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:10:09.426 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 12.233 seconds (JVM running for 13.473)
+24-08-14.22:10:09.965 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:10:09.965 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:10:09.987 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:10:09.988 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:10:09.988 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:10:09.988 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:10:09.988 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:10:09.993 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:10:10.002 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:10:10.002 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:10:10.011 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:10:27.123 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 28972 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:10:27.125 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:10:28.543 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:10:28.547 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:10:28.610 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+24-08-14.22:10:29.071 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:10:29.085 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:10:29.353 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$cf442a0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:10:30.531 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:10:31.189 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:10:31.619 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:10:31.956 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:10:33.215 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:10:33.345 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:10:36.509 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 25804 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:10:36.510 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:10:37.895 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:10:37.900 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:10:37.959 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+24-08-14.22:10:38.497 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:10:38.512 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:10:38.769 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$962a67d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:10:39.896 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:10:40.544 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:10:40.969 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:10:41.293 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:10:42.546 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:10:42.560 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:10:43.261 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:10:47.491 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:10:47.506 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:10:47.506 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:10:47.506 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:10:47.507 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:10:47.507 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:10:47.507 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:10:47.507 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2a03b87
+24-08-14.22:10:47.689 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:10:47.756 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:10:47.756 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:10:47.773 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 11.722 seconds (JVM running for 12.898)
+24-08-14.22:10:54.516 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:11:16.295 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:11:24.145 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:11:36.418 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:12:13.939 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:12:13.940 [HikariPool-2 housekeeper] WARN  HikariPool             - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=57s644ms228µs800ns).
+24-08-14.22:12:13.940 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s237ms680µs700ns).
+24-08-14.22:12:13.978 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:12:13.979 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:12:13.979 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:12:13.979 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:12:13.980 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:12:13.986 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:12:13.987 [scheduling-1    ] ERROR UpdateAwardStockJob    - 定时任务，更新奖品消耗库存失败
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'redissonConnectionFactory': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.orderedStream(DefaultListableBeanFactory.java:481)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:167)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.big.market.infrastructure.infrastructure.persistent.repository.StrategyRepository$$EnhancerBySpringCGLIB$$d57eab69.takeQueueValue(<generated>)
+	at com.big.market.infrastructure.domain.strategy.service.raffle.DefaultRaffleStrategy.takeQueueValue(DefaultRaffleStrategy.java:80)
+	at com.big.market.infrastructure.trigger.job.UpdateAwardStockJob.exec(UpdateAwardStockJob.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+24-08-14.22:12:13.999 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:12:13.999 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:12:14.061 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:12:17.411 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 29096 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:12:17.412 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:12:19.008 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:12:19.013 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:12:19.092 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
+24-08-14.22:12:19.665 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:12:19.682 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:12:19.974 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$68f4ca1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:12:21.371 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:12:22.035 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:12:22.455 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:12:22.835 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:12:24.238 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:12:24.275 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:12:25.032 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:12:29.751 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:12:29.769 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:12:29.769 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:12:29.771 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:12:29.772 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:12:29.772 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:12:29.772 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:12:29.772 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@46984524
+24-08-14.22:12:29.948 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:12:30.029 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:12:30.029 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:12:30.047 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 13.109 seconds (JVM running for 14.448)
+24-08-14.22:12:35.019 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:12:40.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:12:43.131 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
                sku,
                activity_id,
                activity_count_id,
@@ -42,8 +338,8 @@
                create_time,
                update_time
         from raffle_activity_sku where sku = ?;
-24-08-13.19:52:45.221 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.19:52:45.221 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+24-08-14.22:12:43.131 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-14.22:12:43.131 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
                sku,
                activity_id,
                activity_count_id,
@@ -51,52 +347,9 @@
                stock_count_surplus,
                create_time,
                update_time
-        from raffle_activity_sku where sku = ?; ::: [1]
-24-08-13.19:52:45.797 [main            ] INFO  RaffleActivitySkuTest  - 商品 Sku 实体有null
-24-08-13.19:52:45.809 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.19:52:45.810 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.19:52:45.810 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.19:52:45.810 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.19:52:45.810 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.19:52:45.815 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.19:52:45.828 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.19:52:45.828 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.19:52:45.850 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
-24-08-13.20:02:14.948 [main            ] INFO  RaffleActivityTest     - Starting RaffleActivityTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 23812 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.20:02:14.949 [main            ] INFO  RaffleActivityTest     - The following 1 profile is active: "dev"
-24-08-13.20:02:16.192 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.20:02:16.198 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.20:02:16.252 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaces.
-24-08-13.20:02:16.699 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:02:16.714 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:02:16.976 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$3bb73b74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:02:18.091 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.20:02:18.732 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:02:19.107 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:02:19.424 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.20:02:20.635 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.20:02:20.649 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.20:02:21.295 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.20:02:25.568 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.20:02:25.583 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.20:02:25.583 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.20:02:25.584 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.20:02:25.585 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-24-08-13.20:02:25.585 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.20:02:25.585 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.20:02:25.585 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2531049f
-24-08-13.20:02:25.802 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.20:02:25.876 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.20:02:25.876 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.20:02:25.917 [main            ] INFO  RaffleActivityTest     - Started RaffleActivityTest in 11.434 seconds (JVM running for 12.573)
-24-08-13.20:02:26.810 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
+        from raffle_activity_sku where sku = ?; ::: [9011]
+24-08-14.22:12:48.453 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:12:52.432 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
                activity_id,
                activity_name,
                activity_desc,
@@ -110,550 +363,8 @@
                create_time,
                update_time
         from raffle_activity where activity_id = ?;
-24-08-13.20:02:26.811 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:02:26.811 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               activity_id,
-               activity_name,
-               activity_desc,
-               begin_date_time,
-               end_date_time,
-               stock_count,
-               stock_count_surplus,
-               activity_count_id,
-               strategy_id,
-               `state`,
-               create_time,
-               update_time
-        from raffle_activity where activity_id = ?; ::: [1]
-24-08-13.20:02:27.318 [main            ] INFO  RaffleActivityTest     - 活动信息为null
-24-08-13.20:02:27.328 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:02:27.329 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.20:02:27.329 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.20:02:27.329 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:02:27.330 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.20:02:27.335 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.20:02:27.344 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.20:02:27.344 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.20:02:27.352 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
-24-08-13.20:15:47.147 [main            ] INFO  RaffleActivityCountTest - Starting RaffleActivityCountTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 26952 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.20:15:47.148 [main            ] INFO  RaffleActivityCountTest - The following 1 profile is active: "dev"
-24-08-13.20:15:48.435 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.20:15:48.439 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.20:15:48.490 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
-24-08-13.20:15:49.010 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:15:49.025 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:15:49.288 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$ddb2638] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:15:50.422 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.20:15:51.060 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:15:51.422 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:15:51.739 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.20:15:52.945 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.20:15:52.958 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.20:15:53.545 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.20:15:57.755 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.20:15:57.769 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.20:15:57.770 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.20:15:57.770 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.20:15:57.771 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-24-08-13.20:15:57.771 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.20:15:57.771 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.20:15:57.771 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@273cb729
-24-08-13.20:15:57.991 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.20:15:58.055 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.20:15:58.055 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.20:15:58.072 [main            ] INFO  RaffleActivityCountTest - Started RaffleActivityCountTest in 11.374 seconds (JVM running for 12.441)
-24-08-13.20:15:58.953 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               activity_count_id,
-               total_count,
-               day_count,
-               month_count,
-               create_time,
-               update_time
-        from raffle_activity_count where activity_count_id = ?;
-24-08-13.20:15:58.954 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:15:58.954 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               activity_count_id,
-               total_count,
-               day_count,
-               month_count,
-               create_time,
-               update_time
-        from raffle_activity_count where activity_count_id = ?; ::: [1]
-24-08-13.20:15:59.472 [main            ] INFO  RaffleActivityCountTest - 活动抽奖次数为null
-24-08-13.20:15:59.482 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:15:59.484 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.20:15:59.484 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.20:15:59.484 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:15:59.484 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.20:15:59.489 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.20:15:59.499 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.20:15:59.499 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.20:15:59.506 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
-24-08-13.20:20:20.844 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 14820 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.20:20:20.845 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
-24-08-13.20:20:22.131 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.20:20:22.136 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.20:20:22.188 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
-24-08-13.20:20:22.656 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:20:22.672 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:20:22.928 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$95a68977] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:20:24.049 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.20:20:24.669 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:20:25.066 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:20:25.391 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.20:20:26.795 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.20:20:26.808 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.20:20:27.415 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.20:20:31.715 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.20:20:31.729 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.20:20:31.729 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.20:20:31.730 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.20:20:31.730 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-24-08-13.20:20:31.731 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.20:20:31.731 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.20:20:31.731 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1c74eeb7
-24-08-13.20:20:31.933 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.20:20:31.994 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.20:20:31.995 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.20:20:32.012 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 11.627 seconds (JVM running for 12.689)
-24-08-13.20:20:32.942 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?;
-24-08-13.20:20:32.942 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:20:32.942 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?; ::: [9011]
-24-08-13.20:20:33.277 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:20:33.278 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.20:20:33.278 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.20:20:33.278 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:20:33.279 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.20:20:33.284 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.20:20:33.292 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.20:20:33.293 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.20:20:33.301 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
-24-08-13.20:23:01.863 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 15420 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.20:23:01.864 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
-24-08-13.20:23:03.141 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.20:23:03.145 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.20:23:03.201 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 0 Redis repository interfaces.
-24-08-13.20:23:03.687 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:23:03.700 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:23:03.950 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$7b3f4a47] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:23:05.073 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.20:23:05.720 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:23:06.101 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:23:06.445 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.20:23:07.677 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.20:23:07.690 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.20:23:08.314 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.20:23:12.495 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.20:23:12.510 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.20:23:12.511 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.20:23:12.512 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.20:23:12.513 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-24-08-13.20:23:12.513 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.20:23:12.513 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.20:23:12.513 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7e864a8c
-24-08-13.20:23:12.737 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.20:23:12.802 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.20:23:12.803 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.20:23:12.819 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 11.42 seconds (JVM running for 12.536)
-24-08-13.20:23:13.754 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?;
-24-08-13.20:23:13.754 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:23:13.754 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?; ::: [9011]
-24-08-13.20:23:14.087 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               activity_id,
-               activity_name,
-               activity_desc,
-               begin_date_time,
-               end_date_time,
-               stock_count,
-               stock_count_surplus,
-               activity_count_id,
-               strategy_id,
-               `state`,
-               create_time,
-               update_time
-        from raffle_activity where activity_id = ?;
-24-08-13.20:23:14.087 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:23:14.087 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               activity_id,
-               activity_name,
-               activity_desc,
-               begin_date_time,
-               end_date_time,
-               stock_count,
-               stock_count_surplus,
-               activity_count_id,
-               strategy_id,
-               `state`,
-               create_time,
-               update_time
-        from raffle_activity where activity_id = ?; ::: [null]
-24-08-13.20:23:14.162 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:23:14.163 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.20:23:14.163 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.20:23:14.163 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:23:14.164 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.20:23:14.169 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.20:23:14.177 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.20:23:14.177 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.20:23:14.185 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
-24-08-13.20:24:09.607 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 29928 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.20:24:09.609 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
-24-08-13.20:24:11.138 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.20:24:11.144 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.20:24:11.203 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
-24-08-13.20:24:11.751 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:24:11.766 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:24:12.050 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$dbc1496c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:24:13.260 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.20:24:13.935 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:24:14.321 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:24:14.671 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.20:24:15.936 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.20:24:15.950 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.20:24:16.551 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.20:24:21.871 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.20:24:21.887 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.20:24:21.887 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.20:24:21.888 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.20:24:21.889 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-24-08-13.20:24:21.889 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.20:24:21.889 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.20:24:21.889 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@226346d4
-24-08-13.20:24:22.128 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.20:24:22.199 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.20:24:22.199 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.20:24:22.219 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 13.1 seconds (JVM running for 14.297)
-24-08-13.20:24:23.252 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?;
-24-08-13.20:24:23.252 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:24:23.252 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?; ::: [9011]
-24-08-13.20:24:23.641 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               activity_id,
-               activity_name,
-               activity_desc,
-               begin_date_time,
-               end_date_time,
-               stock_count,
-               stock_count_surplus,
-               activity_count_id,
-               strategy_id,
-               `state`,
-               create_time,
-               update_time
-        from raffle_activity where activity_id = ?;
-24-08-13.20:24:23.641 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:24:23.643 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               activity_id,
-               activity_name,
-               activity_desc,
-               begin_date_time,
-               end_date_time,
-               stock_count,
-               stock_count_surplus,
-               activity_count_id,
-               strategy_id,
-               `state`,
-               create_time,
-               update_time
-        from raffle_activity where activity_id = ?; ::: [null]
-24-08-13.20:24:23.712 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:24:23.714 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.20:24:23.714 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.20:24:23.714 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:24:23.715 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.20:24:23.719 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.20:24:23.726 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.20:24:23.727 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.20:24:23.735 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
-24-08-13.20:24:47.971 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 30332 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.20:24:47.973 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
-24-08-13.20:24:49.536 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.20:24:49.541 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.20:24:49.595 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 0 Redis repository interfaces.
-24-08-13.20:24:50.183 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:24:50.198 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:24:50.481 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$57f0fd3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:24:51.725 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.20:24:52.391 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:24:52.802 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:24:53.174 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.20:24:54.608 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.20:24:54.620 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.20:24:55.302 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.20:24:59.572 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.20:24:59.588 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.20:24:59.588 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.20:24:59.589 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.20:24:59.589 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-24-08-13.20:24:59.589 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.20:24:59.590 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.20:24:59.590 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1ccf1819
-24-08-13.20:24:59.817 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.20:24:59.881 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.20:24:59.881 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.20:24:59.899 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 12.445 seconds (JVM running for 13.621)
-24-08-13.20:25:00.006 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:25:10.519 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:25:15.004 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:25:17.374 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?;
-24-08-13.20:25:17.375 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:25:17.375 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?; ::: [9011]
-24-08-13.20:25:54.293 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:25:54.293 [HikariPool-2 housekeeper] WARN  HikariPool             - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=58s869ms67µs100ns).
-24-08-13.20:25:54.294 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s572ms279µs100ns).
-24-08-13.20:25:54.437 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               activity_id,
-               activity_name,
-               activity_desc,
-               begin_date_time,
-               end_date_time,
-               stock_count,
-               stock_count_surplus,
-               activity_count_id,
-               strategy_id,
-               `state`,
-               create_time,
-               update_time
-        from raffle_activity where activity_id = ?;
-24-08-13.20:25:54.437 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:25:54.437 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               activity_id,
-               activity_name,
-               activity_desc,
-               begin_date_time,
-               end_date_time,
-               stock_count,
-               stock_count_surplus,
-               activity_count_id,
-               strategy_id,
-               `state`,
-               create_time,
-               update_time
-        from raffle_activity where activity_id = ?; ::: [null]
-24-08-13.20:25:54.563 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:25:54.564 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.20:25:54.564 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.20:25:54.564 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:25:54.565 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.20:25:54.570 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.20:25:54.579 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.20:25:54.579 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.20:25:54.588 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
-24-08-13.20:26:49.069 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 29896 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.20:26:49.070 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
-24-08-13.20:26:50.565 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.20:26:50.569 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.20:26:50.623 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaces.
-24-08-13.20:26:51.158 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:26:51.173 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:26:51.450 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$19c0d3c0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:26:52.638 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.20:26:53.259 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:26:53.620 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:26:53.957 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.20:26:55.201 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.20:26:55.214 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.20:26:55.876 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.20:27:00.177 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.20:27:00.193 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.20:27:00.193 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.20:27:00.194 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.20:27:00.194 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-24-08-13.20:27:00.194 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.20:27:00.194 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.20:27:00.194 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@25dd9eb6
-24-08-13.20:27:00.413 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.20:27:00.498 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.20:27:00.498 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.20:27:00.515 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 11.944 seconds (JVM running for 13.161)
-24-08-13.20:27:07.337 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:27:21.849 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:27:21.899 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:27:21.901 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.20:27:21.901 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.20:27:21.901 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:27:21.902 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.20:27:21.911 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.20:27:21.927 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.20:27:21.927 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.20:27:22.056 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
-24-08-13.20:27:25.353 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 23652 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
-24-08-13.20:27:25.354 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
-24-08-13.20:27:26.704 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-13.20:27:26.708 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-13.20:27:26.766 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
-24-08-13.20:27:27.299 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:27:27.313 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:27:27.598 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$5cb2a092] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-24-08-13.20:27:28.838 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-13.20:27:29.476 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:27:29.900 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
-24-08-13.20:27:30.240 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-08-13.20:27:31.502 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-08-13.20:27:31.516 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
-24-08-13.20:27:32.261 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
-24-08-13.20:27:36.617 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-24-08-13.20:27:36.632 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-24-08-13.20:27:36.632 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-24-08-13.20:27:36.633 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-24-08-13.20:27:36.633 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-24-08-13.20:27:36.633 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-24-08-13.20:27:36.633 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-24-08-13.20:27:36.633 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2fe6bcbb
-24-08-13.20:27:36.853 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-13.20:27:36.939 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-24-08-13.20:27:36.940 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-24-08-13.20:27:36.957 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 12.081 seconds (JVM running for 13.358)
-24-08-13.20:27:43.988 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:27:50.010 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:27:52.018 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?;
-24-08-13.20:27:52.018 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:27:52.018 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
-               sku,
-               activity_id,
-               activity_count_id,
-               stock_count,
-               stock_count_surplus,
-               create_time,
-               update_time
-        from raffle_activity_sku where sku = ?; ::: [9011]
-24-08-13.20:27:56.065 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
-24-08-13.20:27:56.213 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
-               activity_id,
-               activity_name,
-               activity_desc,
-               begin_date_time,
-               end_date_time,
-               stock_count,
-               stock_count_surplus,
-               activity_count_id,
-               strategy_id,
-               `state`,
-               create_time,
-               update_time
-        from raffle_activity where activity_id = ?;
-24-08-13.20:27:56.213 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:27:56.213 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+24-08-14.22:12:52.432 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-14.22:12:52.432 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
                activity_id,
                activity_name,
                activity_desc,
@@ -667,7 +378,8 @@
                create_time,
                update_time
         from raffle_activity where activity_id = ?; ::: [101]
-24-08-13.20:27:56.444 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
+24-08-14.22:12:59.996 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:13:00.111 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
                activity_count_id,
                total_count,
                day_count,
@@ -675,8 +387,8 @@
                create_time,
                update_time
         from raffle_activity_count where activity_count_id = ?;
-24-08-13.20:27:56.444 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
-24-08-13.20:27:56.444 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+24-08-14.22:13:00.111 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-14.22:13:00.111 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
                activity_count_id,
                total_count,
                day_count,
@@ -684,14 +396,760 @@
                create_time,
                update_time
         from raffle_activity_count where activity_count_id = ?; ::: [101]
-24-08-13.20:27:56.868 [main            ] INFO  AbstractRaffleActivity - 查询结果：{"activityCountId":101,"activityId":101,"sku":9011,"stockCount":10,"stockCountSurplus":10} {"state":"create"} {"activityCountId":101}
-24-08-13.20:27:56.871 [main            ] INFO  RaffleOrderTest        - 测试结果：{}
-24-08-13.20:27:56.882 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:27:56.883 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-24-08-13.20:27:56.883 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-24-08-13.20:27:56.883 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-24-08-13.20:27:56.884 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-24-08-13.20:27:56.888 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-08-13.20:27:56.897 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-08-13.20:27:56.897 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
-24-08-13.20:27:56.906 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:13:00.252 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:13:00.253 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:13:16.412 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:13:27.724 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:13:27.725 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:13:27.725 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:13:27.725 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:13:27.725 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:13:27.732 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:13:27.735 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:13:27.735 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:13:27.745 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:14:11.599 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 30728 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:14:11.600 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:14:13.017 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:14:13.022 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:14:13.086 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 0 Redis repository interfaces.
+24-08-14.22:14:13.746 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:14:13.786 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:14:14.075 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$3b3a73bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:14:15.283 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:14:15.952 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:14:16.387 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:14:16.730 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:14:18.078 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:14:18.212 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:14:18.862 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:14:23.455 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:14:23.469 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:14:23.469 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:14:23.470 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:14:23.471 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:14:23.471 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:14:23.471 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:14:23.471 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2a64cb1f
+24-08-14.22:14:23.647 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:14:23.735 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:14:23.735 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:14:23.753 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 12.648 seconds (JVM running for 13.93)
+24-08-14.22:14:29.750 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:14:32.538 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:14:38.307 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:14:38.719 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:14:38.719 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:14:50.086 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:14:59.351 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:15:00.250 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:15:20.029 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:15:31.091 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:15:31.092 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:15:31.092 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:15:31.092 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:15:31.093 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:15:31.097 [scheduling-1    ] ERROR UpdateAwardStockJob    - 定时任务，更新奖品消耗库存失败
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'redissonConnectionFactory': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.orderedStream(DefaultListableBeanFactory.java:481)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:167)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.big.market.infrastructure.infrastructure.persistent.repository.StrategyRepository$$EnhancerBySpringCGLIB$$aa2d2e8e.takeQueueValue(<generated>)
+	at com.big.market.infrastructure.domain.strategy.service.raffle.DefaultRaffleStrategy.takeQueueValue(DefaultRaffleStrategy.java:80)
+	at com.big.market.infrastructure.trigger.job.UpdateAwardStockJob.exec(UpdateAwardStockJob.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+24-08-14.22:15:31.098 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:15:31.108 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:15:31.108 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:15:31.117 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:17:32.115 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 27628 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:17:32.117 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:17:34.249 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:17:34.254 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:17:34.325 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+24-08-14.22:17:34.931 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:17:34.950 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:17:35.247 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$426ec0b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:17:36.536 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:17:37.334 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:17:37.692 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:17:38.185 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:17:39.544 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:17:39.558 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:17:40.287 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:17:45.580 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:17:45.607 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:17:45.607 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:17:45.609 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:17:45.610 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:17:45.610 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:17:45.610 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:17:45.610 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@38379575
+24-08-14.22:17:45.870 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:17:45.940 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:17:45.940 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:17:45.959 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 14.403 seconds (JVM running for 15.79)
+24-08-14.22:17:46.470 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:17:46.470 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:17:50.561 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:19:43.774 [HikariPool-2 housekeeper] WARN  HikariPool             - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m3s381ms475µs200ns).
+24-08-14.22:19:43.796 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m4s96ms908µs600ns).
+24-08-14.22:19:43.806 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:19:43.808 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:19:43.809 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:19:43.809 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:19:43.809 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:19:43.818 [scheduling-1    ] ERROR UpdateAwardStockJob    - 定时任务，更新奖品消耗库存失败
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'redissonConnectionFactory': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.orderedStream(DefaultListableBeanFactory.java:481)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:167)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.big.market.infrastructure.infrastructure.persistent.repository.StrategyRepository$$EnhancerBySpringCGLIB$$72ebb883.takeQueueValue(<generated>)
+	at com.big.market.infrastructure.domain.strategy.service.raffle.DefaultRaffleStrategy.takeQueueValue(DefaultRaffleStrategy.java:80)
+	at com.big.market.infrastructure.trigger.job.UpdateAwardStockJob.exec(UpdateAwardStockJob.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+24-08-14.22:19:43.819 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:19:43.833 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:19:43.834 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:19:43.847 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:20:28.819 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 26036 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:20:28.820 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:20:30.260 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:20:30.265 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:20:30.332 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+24-08-14.22:20:30.894 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:20:30.910 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:20:31.185 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$7b465e00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:20:32.399 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:20:33.066 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:20:33.436 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:20:33.805 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:20:35.112 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:20:35.128 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:20:35.886 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:20:40.826 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:20:40.844 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:20:40.844 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:20:40.845 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:20:40.846 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:20:40.846 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:20:40.846 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:20:40.846 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@bf3aa52
+24-08-14.22:20:41.027 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:20:41.099 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:20:41.099 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:20:41.117 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 12.814 seconds (JVM running for 13.982)
+24-08-14.22:20:41.643 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:20:41.644 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:20:50.214 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:20:54.508 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_order(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time) values (null, ?, ?, ?, ?,
+                                 ?, ?, ?, ?, ?,
+                                 ?, ?, ?, ?, ?)
+24-08-14.22:20:54.509 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-14.22:20:54.509 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_order_0(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ::: [lyt, 9011, 101, 测试, 100004, ᡠ㳩𥨗𦡀㏖䧮𧍔𡅯, 2024-08-14 22:20:41.648, 10, 10, 10, completed, 700091009111, null, null]
+24-08-14.22:20:55.009 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:21:00.310 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:21:00.331 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:21:00.332 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:21:00.332 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:21:00.332 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:21:00.333 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:21:00.338 [scheduling-1    ] ERROR UpdateAwardStockJob    - 定时任务，更新奖品消耗库存失败
+org.springframework.dao.InvalidDataAccessApiUsageException: java.lang.InterruptedException; nested exception is org.redisson.client.RedisException: java.lang.InterruptedException
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:52)
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:35)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.redisson.spring.data.connection.RedissonConnectionFactory.translateExceptionIfPossible(RedissonConnectionFactory.java:91)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.big.market.infrastructure.infrastructure.persistent.repository.StrategyRepository$$EnhancerBySpringCGLIB$$fb6ea459.takeQueueValue(<generated>)
+	at com.big.market.infrastructure.domain.strategy.service.raffle.DefaultRaffleStrategy.takeQueueValue(DefaultRaffleStrategy.java:80)
+	at com.big.market.infrastructure.trigger.job.UpdateAwardStockJob.exec(UpdateAwardStockJob.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.redisson.client.RedisException: java.lang.InterruptedException
+	at org.redisson.command.CommandAsyncService.get(CommandAsyncService.java:114)
+	at org.redisson.RedissonObject.get(RedissonObject.java:90)
+	at org.redisson.RedissonQueue.poll(RedissonQueue.java:105)
+	at com.big.market.infrastructure.infrastructure.persistent.repository.StrategyRepository.takeQueueValue(StrategyRepository.java:365)
+	at com.big.market.infrastructure.infrastructure.persistent.repository.StrategyRepository$$FastClassBySpringCGLIB$$47613a41.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 21 common frames omitted
+Caused by: java.lang.InterruptedException: null
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:347)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1895)
+	at org.redisson.command.CommandAsyncService.get(CommandAsyncService.java:110)
+	... 30 common frames omitted
+24-08-14.22:21:00.339 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:21:00.347 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:21:00.347 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:21:00.355 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:22:57.560 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 26356 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:22:57.561 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:22:59.045 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:22:59.049 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:22:59.124 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
+24-08-14.22:22:59.687 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:22:59.703 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:22:59.983 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$3b3584d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:23:01.240 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:23:01.912 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:23:02.247 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:23:02.637 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:23:03.928 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:23:03.943 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:23:04.699 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:23:09.443 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:23:09.460 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:23:09.462 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:23:09.463 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:23:09.463 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:23:09.463 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:23:09.463 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:23:09.463 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@524250ec
+24-08-14.22:23:09.637 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:23:09.731 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:23:09.731 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:23:09.748 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 12.686 seconds (JVM running for 13.928)
+24-08-14.22:23:10.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-14.22:23:10.257 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:23:10.257 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:23:11.039 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_order(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time) values (null, ?, ?, ?, ?,
+                                 ?, ?, ?, ?, ?,
+                                 ?, ?, ?, ?, ?)
+24-08-14.22:23:11.040 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-14.22:23:11.040 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_order_0(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no,
+            create_time,
+            update_time) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ::: [lyt, 9011, 101, 测试, 100004, 쏽钁𠺟ཧ輓𥑴響㾖𤈠, 2024-08-14 22:23:10.262, 10, 10, 10, completed, 700091009111, null, null]
+24-08-14.22:23:11.564 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:23:11.565 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:23:11.565 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:23:11.565 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:23:11.565 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:23:11.569 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:23:11.579 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:23:11.579 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:23:11.588 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:24:14.939 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 30468 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:24:14.940 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:24:16.528 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:24:16.534 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:24:16.605 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 0 Redis repository interfaces.
+24-08-14.22:24:17.184 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:24:17.200 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:24:17.497 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$875036d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:24:18.743 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:24:19.379 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:24:19.809 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:24:20.167 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:24:21.439 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:24:21.581 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:24:22.367 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:24:26.936 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:24:26.954 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:24:26.954 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:24:26.954 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:24:26.955 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:24:26.955 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:24:26.955 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:24:26.955 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4d484961
+24-08-14.22:24:27.183 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:24:27.248 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:24:27.249 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:24:27.269 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 12.836 seconds (JVM running for 14.141)
+24-08-14.22:24:27.805 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:24:27.805 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:24:28.592 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_order(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, ?, ?, ?, ?,
+                                 ?, ?, ?, ?, ?,
+                                 ?, ?, ?)
+24-08-14.22:24:28.592 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-14.22:24:28.592 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_order_0(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ::: [lyt, 9011, 101, 测试, 100004, 𥪄𨜒ᮆ솄켉𡩨⓲৩Ꜭ, 2024-08-14 22:24:27.811, 10, 10, 10, completed, 700091009111]
+24-08-14.22:24:29.447 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:24:29.448 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:24:29.449 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:24:29.449 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:24:29.449 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:24:29.456 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:24:29.466 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:24:29.466 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:24:29.476 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:28:08.617 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 29724 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:28:08.618 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:28:10.384 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:28:10.392 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:28:10.470 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+24-08-14.22:28:11.154 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:28:11.172 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:28:11.512 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$f1f89920] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:28:12.811 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:28:13.465 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:28:13.834 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:28:14.272 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:28:15.659 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:28:15.676 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:28:16.391 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:28:21.652 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:28:21.673 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:28:21.674 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:28:21.675 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:28:21.677 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:28:21.677 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:28:21.677 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:28:21.677 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@58182d7
+24-08-14.22:28:21.972 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:28:22.043 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:28:22.044 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:28:22.066 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 13.944 seconds (JVM running for 15.178)
+24-08-14.22:28:22.757 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:28:22.758 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:28:23.566 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_order(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, ?, ?, ?, ?,
+                                 ?, ?, ?, ?, ?,
+                                 ?, ?, ?)
+24-08-14.22:28:23.566 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-14.22:28:23.567 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_order_0(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ::: [lyt, 9011, 101, 测试, 100004, 衒豊穫𣯈𦎧𨈖⾆𪘡, 2024-08-14 22:28:22.763, 10, 10, 10, completed, 700091009111]
+24-08-14.22:28:23.949 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account set
+                                           total_count = total_count + ?,
+                                           total_count_surplus = total_count_surplus + ?,
+                                           day_count = day_count + ?,
+                                           day_count_surplus = day_count_surplus + ?,
+                                           month_count = month_count + ?,
+                                           month_count_surplus = month_count_surplus + ?,
+                                           update_time = now()
+        where user_id = ? and activityId = ?
+24-08-14.22:28:23.950 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-14.22:28:23.950 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_0 set
+                                           total_count = total_count + ?,
+                                           total_count_surplus = total_count_surplus + ?,
+                                           day_count = day_count + ?,
+                                           day_count_surplus = day_count_surplus + ?,
+                                           month_count = month_count + ?,
+                                           month_count_surplus = month_count_surplus + ?,
+                                           update_time = now()
+        where user_id = ? and activityId = ? ::: [10, 10, 10, 10, 10, 10, lyt, 101]
+24-08-14.22:28:24.440 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:28:24.442 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:28:24.442 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:28:24.442 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:28:24.442 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:28:24.448 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:28:24.458 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:28:24.458 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:28:24.466 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:28:48.809 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 28020 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:28:48.811 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:28:50.229 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:28:50.234 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:28:50.301 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+24-08-14.22:28:50.875 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:28:50.892 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:28:51.176 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$b2d4de87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:28:52.414 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:28:53.082 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:28:53.463 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:28:53.809 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:28:55.084 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:28:55.098 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:28:55.741 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:29:00.492 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:29:00.511 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:29:00.511 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:29:00.512 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:29:00.513 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:29:00.513 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:29:00.513 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:29:00.513 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@48fbb1bc
+24-08-14.22:29:00.730 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:29:00.792 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:29:00.792 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:29:00.810 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 12.488 seconds (JVM running for 13.662)
+24-08-14.22:29:01.305 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:29:01.305 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:29:02.068 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_order(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, ?, ?, ?, ?,
+                                 ?, ?, ?, ?, ?,
+                                 ?, ?, ?)
+24-08-14.22:29:02.069 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-14.22:29:02.069 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_order_0(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ::: [lyt, 9011, 101, 测试, 100004, 𨿖ꡎ梷뵜繯𠭍ﺯ𨕃譛, 2024-08-14 22:29:01.309, 10, 10, 10, completed, 700091009111]
+24-08-14.22:29:02.461 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account set
+                                           total_count = total_count + ?,
+                                           total_count_surplus = total_count_surplus + ?,
+                                           day_count = day_count + ?,
+                                           day_count_surplus = day_count_surplus + ?,
+                                           month_count = month_count + ?,
+                                           month_count_surplus = month_count_surplus + ?,
+                                           update_time = now()
+        where user_id = ? and activity_id = ?
+24-08-14.22:29:02.461 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-14.22:29:02.461 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_0 set
+                                           total_count = total_count + ?,
+                                           total_count_surplus = total_count_surplus + ?,
+                                           day_count = day_count + ?,
+                                           day_count_surplus = day_count_surplus + ?,
+                                           month_count = month_count + ?,
+                                           month_count_surplus = month_count_surplus + ?,
+                                           update_time = now()
+        where user_id = ? and activity_id = ? ::: [10, 10, 10, 10, 10, 10, lyt, 101]
+24-08-14.22:29:02.582 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_account(
+            id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus
+        ) values (null, ?, ?, ?, ?, ?,
+                  ?, ?, ?)
+24-08-14.22:29:02.582 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-14.22:29:02.582 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_account_0(
+            id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus
+        ) values (null, ?, ?, ?, ?, ?, ?, ?, ?) ::: [lyt, 101, 10, 10, 10, 10, 10, 10]
+24-08-14.22:29:02.784 [main            ] INFO  RaffleOrderTest        - 测试结果：𨿖ꡎ梷뵜繯𠭍ﺯ𨕃譛
+24-08-14.22:29:02.799 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:29:02.800 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:29:02.800 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:29:02.801 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:29:02.801 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:29:02.807 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:29:02.820 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:29:02.820 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:29:02.832 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-14.22:45:18.529 [main            ] INFO  RaffleOrderTest        - Starting RaffleOrderTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 14248 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-14.22:45:18.531 [main            ] INFO  RaffleOrderTest        - The following 1 profile is active: "dev"
+24-08-14.22:45:20.056 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-14.22:45:20.062 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-14.22:45:20.143 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+24-08-14.22:45:20.701 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:45:20.716 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:45:21.048 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$cf442a0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-14.22:45:22.383 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-14.22:45:23.082 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:45:23.489 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-14.22:45:23.845 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-14.22:45:25.218 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-14.22:45:25.368 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-14.22:45:26.133 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-14.22:45:31.061 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-14.22:45:31.080 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-14.22:45:31.080 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-14.22:45:31.081 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-14.22:45:31.082 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-14.22:45:31.082 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-14.22:45:31.082 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-14.22:45:31.082 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@27476b5f
+24-08-14.22:45:31.259 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-14.22:45:31.331 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-14.22:45:31.331 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-14.22:45:31.350 [main            ] INFO  RaffleOrderTest        - Started RaffleOrderTest in 13.329 seconds (JVM running for 14.91)
+24-08-14.22:45:31.950 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+24-08-14.22:45:31.951 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【校验&扣减】开始。
+24-08-14.22:45:32.016 [main            ] INFO  SnowflakeUUIDUtils     - 12位数字的UUID:182373269313
+24-08-14.22:45:32.947 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_order(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, ?, ?, ?, ?,
+                                 ?, ?, ?, ?, ?,
+                                 ?, ?, ?)
+24-08-14.22:45:32.947 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-14.22:45:32.947 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_order_0(id,
+            user_id,
+            sku,
+            activity_id,
+            activity_name,
+            strategy_id,
+            order_id,
+            order_time,
+            total_count,
+            day_count,
+            month_count,
+            state,
+            out_business_no) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ::: [lyt, 9011, 101, 测试, 100004, 182373269313, 2024-08-14 22:45:32.016, 10, 10, 10, completed, 700091009111]
+24-08-14.22:45:33.339 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account set
+                                           total_count = total_count + ?,
+                                           total_count_surplus = total_count_surplus + ?,
+                                           day_count = day_count + ?,
+                                           day_count_surplus = day_count_surplus + ?,
+                                           month_count = month_count + ?,
+                                           month_count_surplus = month_count_surplus + ?,
+                                           update_time = now()
+        where user_id = ? and activity_id = ?
+24-08-14.22:45:33.339 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-14.22:45:33.340 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_0 set
+                                           total_count = total_count + ?,
+                                           total_count_surplus = total_count_surplus + ?,
+                                           day_count = day_count + ?,
+                                           day_count_surplus = day_count_surplus + ?,
+                                           month_count = month_count + ?,
+                                           month_count_surplus = month_count_surplus + ?,
+                                           update_time = now()
+        where user_id = ? and activity_id = ? ::: [10, 10, 10, 10, 10, 10, lyt, 101]
+24-08-14.22:45:33.595 [main            ] INFO  RaffleOrderTest        - 测试结果：182373269313
+24-08-14.22:45:33.782 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:45:33.784 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-14.22:45:33.784 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-14.22:45:33.784 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-14.22:45:33.786 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-14.22:45:33.793 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-14.22:45:33.808 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-14.22:45:33.808 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-14.22:45:33.821 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.

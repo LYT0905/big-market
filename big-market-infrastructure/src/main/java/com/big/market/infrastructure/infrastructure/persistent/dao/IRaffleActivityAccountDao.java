@@ -19,7 +19,16 @@ public interface IRaffleActivityAccountDao {
      */
     List<RaffleActivityAccount> queryAllRaffleActivityAccount();
 
+    /**
+     * 创建账户
+     * @param raffleActivityAccount 抽奖活动账户实体对象
+     */
     void insert(RaffleActivityAccount raffleActivityAccount);
 
-
+    /**
+     * 更新账户
+     * @param raffleActivityAccount 抽奖活动账户实体对象
+     * @return 影响行数
+     */
+    int updateAccountQuota(RaffleActivityAccount raffleActivityAccount);
 }
