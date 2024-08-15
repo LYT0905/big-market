@@ -11,6 +11,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class SnowflakeUUIDUtils {
 
+    /**
+     * 生成固定位数的 ID
+     * @param number 生成位数
+     * @return ID
+     */
     public static String generateId(Integer number){
         // 初始化雪花算法生成器
         long workerId = 1;  // 机器ID
@@ -20,7 +25,7 @@ public class SnowflakeUUIDUtils {
         // 转换成字符串并截取前12位
         String uniqueID = String.valueOf(snowflakeId).substring(0, number);
 
-        log.info("{}位数字的UUID:{}", number, uniqueID);
+        log.info("{} 位数字的UUID:{}", number, uniqueID);
         return uniqueID;
     }
 }
