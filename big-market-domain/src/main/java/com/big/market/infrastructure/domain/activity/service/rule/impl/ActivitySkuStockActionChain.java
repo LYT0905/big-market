@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class ActivitySkuStockActionChain extends AbstractActionChain {
     @Override
     public boolean action(ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
-        log.info("活动责任链-商品库存处理【校验&扣减】开始。");
+        log.info("活动责任链-商品库存处理【有效期、状态、库存(sku)】开始。sku:{} activityId:{}", activitySkuEntity.getSku(), activityEntity.getActivityId());
 
         return true;
     }
