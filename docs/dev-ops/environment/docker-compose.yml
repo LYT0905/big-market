@@ -84,6 +84,22 @@ services:
     depends_on:
       redis:
         condition: service_healthy
+  # rabbitmq
+  # 账密 admin/Vt!4uNp?z6B*
+  # rabbitmq-plugins enable rabbitmq_management
+  rabbitmq:
+    image: rabbitmq:3.12.9
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: Vt!4uNp?z6B*
+    command: rabbitmq-server
+    volumes:
+      - "/c/Users/27132/Java/big-market/docs/dev-ops/rabbitmq/enabled_plugins:/etc/rabbitmq/enabled_plugins"
 
 networks:
   my-network:
