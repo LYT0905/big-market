@@ -8,6 +8,7 @@ import com.big.market.infrastructure.domain.activity.model.valobj.OrderStateVO;
 import com.big.market.infrastructure.domain.activity.repository.IActivityRepository;
 import com.big.market.infrastructure.domain.activity.service.rule.factory.DefaultActivityChainFactory;
 import com.big.market.infrastructure.types.utils.SnowflakeUUIDUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ import java.util.Date;
  * @Date: 2024/08/13 19:32:36
  */
 @Service
+@Slf4j
 public class RaffleActivityService extends AbstractRaffleActivity {
 
 
@@ -37,21 +39,26 @@ public class RaffleActivityService extends AbstractRaffleActivity {
     @Override
     protected CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
 
-        ActivityOrderEntity activityOrderEntity = ActivityOrderEntity.builder()
-                .activityId(activitySkuEntity.getActivityId())
-                // 公司里一般会有专门的雪花算法UUID服务，我们这里直接生成个12位就可以了。
-                .orderId(SnowflakeUUIDUtils.generateId(12))
-                .userId(skuRechargeEntity.getUserId())
-                .activityName(activityEntity.getActivityName())
-                .dayCount(activityCountEntity.getDayCount())
-                .monthCount(activityCountEntity.getMonthCount())
-                .totalCount(activityCountEntity.getTotalCount())
-                .orderTime(new Date())
-                .strategyId(activityEntity.getStrategyId())
-                .outBusinessNo(skuRechargeEntity.getOutBusinessNo())
-                .sku(skuRechargeEntity.getSku())
-                .state(OrderStateVO.completed)
-                .build();
+        ActivityOrderEntity activityOrderEntity = null;
+        try {
+            activityOrderEntity = ActivityOrderEntity.builder()
+                    .activityId(activitySkuEntity.getActivityId())
+                    // 公司里一般会有专门的雪花算法UUID服务，我们这里直接生成个12位就可以了。
+                    .orderId(SnowflakeUUIDUtils.generateId(12))
+                    .userId(skuRechargeEntity.getUserId())
+                    .activityName(activityEntity.getActivityName())
+                    .dayCount(activityCountEntity.getDayCount())
+                    .monthCount(activityCountEntity.getMonthCount())
+                    .totalCount(activityCountEntity.getTotalCount())
+                    .orderTime(new Date())
+                    .strategyId(activityEntity.getStrategyId())
+                    .outBusinessNo(skuRechargeEntity.getOutBusinessNo())
+                    .sku(skuRechargeEntity.getSku())
+                    .state(OrderStateVO.completed)
+                    .build();
+        }catch (Throwable ex){
+            log.error("订单ID生成错误");
+        }
 
 
         return CreateOrderAggregate.builder()

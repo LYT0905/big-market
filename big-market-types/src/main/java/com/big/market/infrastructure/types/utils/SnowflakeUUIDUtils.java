@@ -25,7 +25,7 @@ public class SnowflakeUUIDUtils {
         long datacenterId = 1;  // 数据中心ID
         long snowflakeId = IdUtil.getSnowflake(workerId, datacenterId).nextId();
 
-        // 转换成字符串并截取前12位
+        // 转换成字符串并截取前 number 位
         String uniqueID = String.valueOf(snowflakeId).substring(0, number);
 
         log.info("{}位数字的UUID:{}", number, uniqueID);
