@@ -4,6 +4,9 @@ import com.big.market.infrastructure.domain.activity.model.aggregate.CreateOrder
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityCountEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivitySkuEntity;
+import com.big.market.infrastructure.domain.activity.model.valobj.ActivitySkuStockKeyVO;
+
+import java.util.Date;
 
 /**
  * @author 莱特0905
@@ -37,4 +40,53 @@ public interface IActivityRepository {
      * @param orderAggregate 订单聚合对象
      */
     void doSaveOrder(CreateOrderAggregate orderAggregate);
+
+    /**
+     * 缓存活动sku库存信息
+     * @param cacheKey 缓存key
+     * @param stockCountSurplus 库存信息
+     */
+    void cacheActivitySkuStockCount(String cacheKey, Integer stockCountSurplus);
+
+    /**
+     * 根据策略ID和奖品ID，扣减奖品缓存库存
+     *
+     * @param sku 互动SKU
+     * @param cacheKey 缓存key
+     * @param endDateTime 活动结束时间，根据结束时间设置加锁的key为结束时间
+     * @return 扣减结果
+     */
+    boolean subtractionActivitySkuStock(Long sku, String cacheKey, Date endDateTime);
+
+    /**
+     * 延迟消费更新库存记录
+     * @param activitySkuStockKeyVO 活动 id 和 sku id
+     */
+    void activitySkuStockConsumeSendQueue(ActivitySkuStockKeyVO activitySkuStockKeyVO);
+
+    /**
+     * 获取活动sku库存消耗队列
+     *
+     * @return 奖品库存Key信息
+     */
+    ActivitySkuStockKeyVO takeQueueValue();
+
+    /**
+     * 清空队列
+     */
+    void clearQueueValue();
+
+    /**
+     * 延迟队列 + 任务趋势更新活动sku库存
+     *
+     * @param sku 活动商品
+     */
+    void updateActivitySkuStock(Long sku);
+
+    /**
+     * 缓存库存以消耗完毕，清空数据库库存
+     *
+     * @param sku 活动商品
+     */
+    void clearActivitySkuStock(Long sku);
 }

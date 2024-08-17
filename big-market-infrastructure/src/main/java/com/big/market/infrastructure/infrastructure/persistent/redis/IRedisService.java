@@ -2,6 +2,8 @@ package com.big.market.infrastructure.infrastructure.persistent.redis;
 
 import org.redisson.api.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author LYT0905
  * @Description: Redis接口
@@ -265,4 +267,11 @@ public interface IRedisService {
      * @return 加锁是否成功
      */
     Boolean setNx(String key);
+
+    /**
+     * 加锁
+     * @param key 键
+     * @return 加锁是否成功
+     */
+    Boolean setNx(String key, long expired, TimeUnit timeUnit);
 }

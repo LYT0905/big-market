@@ -4,6 +4,7 @@ import cn.hutool.Hutool;
 import cn.hutool.core.util.IdUtil;
 import com.big.market.infrastructure.domain.activity.model.aggregate.CreateOrderAggregate;
 import com.big.market.infrastructure.domain.activity.model.entity.*;
+import com.big.market.infrastructure.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import com.big.market.infrastructure.domain.activity.model.valobj.OrderStateVO;
 import com.big.market.infrastructure.domain.activity.repository.IActivityRepository;
 import com.big.market.infrastructure.domain.activity.service.rule.factory.DefaultActivityChainFactory;
@@ -12,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -21,7 +23,7 @@ import java.util.Date;
  */
 @Service
 @Slf4j
-public class RaffleActivityService extends AbstractRaffleActivity {
+public class RaffleActivityService extends AbstractRaffleActivity implements ISkuStock{
 
 
     public RaffleActivityService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
@@ -78,5 +80,44 @@ public class RaffleActivityService extends AbstractRaffleActivity {
     @Override
     protected void doSaveOrder(CreateOrderAggregate orderAggregate) {
         activityRepository.doSaveOrder(orderAggregate);
+    }
+
+    /**
+     * 获取活动sku库存消耗队列
+     *
+     * @return 奖品库存Key信息
+     * @throws InterruptedException 异常
+     */
+    @Override
+    public ActivitySkuStockKeyVO takeQueueValue() throws InterruptedException {
+        return activityRepository.takeQueueValue();
+    }
+
+    /**
+     * 清空队列
+     */
+    @Override
+    public void clearQueueValue() {
+        activityRepository.clearQueueValue();
+    }
+
+    /**
+     * 延迟队列 + 任务趋势更新活动sku库存
+     *
+     * @param sku 活动商品
+     */
+    @Override
+    public void updateActivitySkuStock(Long sku) {
+        activityRepository.updateActivitySkuStock(sku);
+    }
+
+    /**
+     * 缓存库存以消耗完毕，清空数据库库存
+     *
+     * @param sku 活动商品
+     */
+    @Override
+    public void clearActivitySkuStock(Long sku) {
+        activityRepository.clearActivitySkuStock(sku);
     }
 }
