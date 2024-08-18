@@ -62,6 +62,22 @@ spring:
       sharding:
         sharding-algorithms:
           # 分表算法
+          user-raffle-order-table-inline:
+            type: INLINE
+            props:
+              algorithm-expression: user_raffle_order_$->{user_id.hashCode() % 3}
+          user-award-record-table-inline:
+            type: INLINE
+            props:
+              algorithm-expression: user_award_record_$->{user_id.hashCode() % 3}
+          raffle-activity-account-month-table-inline:
+            type: INLINE
+            props:
+              algorithm-expression: raffle_activity_account_month_$->{user_id.hashCode() % 3}
+          raffle-activity-account-day-table-inline:
+            type: INLINE
+            props:
+              algorithm-expression: raffle_activity_account_day_$->{user_id.hashCode() % 3}
           raffle-activity-account-table-inline:
             type: INLINE
             props:
@@ -75,8 +91,82 @@ spring:
             type: INLINE
             props:
               algorithm-expression: ds$->{user_id.hashCode() % 2}
+          task-database-inline:
+            type: INLINE
+            props:
+              algorithm-expression: ds$->{topic.hashCode() % 2}
 
         tables:
+          user_raffle_order:
+            actual-data-nodes: ds$->{0..1}.user_raffle_order_$->{0..2}
+            key-generate-strategy:
+              column: id
+              key-generator-name: snowflake
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: database-inline
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: user-raffle-order-table-inline
+          user_award_record:
+            actual-data-nodes: ds$->{0..1}.user_award_record_$->{0..2}
+            key-generate-strategy:
+              column: id
+              key-generator-name: snowflake
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: database-inline
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: user-award-record-table-inline
+          task:
+            actual-data-nodes: ds$->{0..1}.task
+            key-generate-strategy:
+              column: id
+              key-generator-name: snowflake
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: topic
+                sharding-algorithm-name: task-database-inline
+          raffle_activity_account_month:
+            actual-data-nodes: ds$->{0..1}.raffle_activity_account_month_$->{0..2}
+            key-generate-strategy:
+              column: id
+              key-generator-name: snowflake
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: database-inline
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: raffle-activity-account-month-table-inline
+          raffle_activity_account_day:
+            actual-data-nodes: ds$->{0..1}.raffle_activity_account_day_$->{0..2}
+            key-generate-strategy:
+              column: id
+              key-generator-name: snowflake
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: database-inline
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: user_id
+                sharding-algorithm-name: raffle-activity-account-day-table-inline
           raffle_activity_account:
             actual-data-nodes: ds$->{0..1}.raffle_activity_account_$->{0..2}
             key-generate-strategy:
