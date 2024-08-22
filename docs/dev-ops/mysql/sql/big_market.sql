@@ -189,7 +189,7 @@ DROP TABLE IF EXISTS `raffle_activity_account_day_0`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `raffle_activity_account_day_0` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `day` varchar(10) NOT NULL COMMENT '日期（yyyy-mm-dd）',
@@ -219,7 +219,7 @@ DROP TABLE IF EXISTS `raffle_activity_account_day_1`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `raffle_activity_account_day_1` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `day` varchar(10) NOT NULL COMMENT '日期（yyyy-mm-dd）',
@@ -249,7 +249,7 @@ DROP TABLE IF EXISTS `raffle_activity_account_day_2`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `raffle_activity_account_day_2` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `day` varchar(10) NOT NULL COMMENT '日期（yyyy-mm-dd）',
@@ -279,7 +279,7 @@ DROP TABLE IF EXISTS `raffle_activity_account_month_0`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `raffle_activity_account_month_0` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `month` varchar(7) NOT NULL COMMENT '月（yyyy-mm）',
@@ -309,7 +309,7 @@ DROP TABLE IF EXISTS `raffle_activity_account_month_1`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `raffle_activity_account_month_1` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `month` varchar(7) NOT NULL COMMENT '月（yyyy-mm）',
@@ -339,7 +339,7 @@ DROP TABLE IF EXISTS `raffle_activity_account_month_2`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `raffle_activity_account_month_2` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `month` varchar(7) NOT NULL COMMENT '月（yyyy-mm）',
@@ -733,7 +733,7 @@ DROP TABLE IF EXISTS `task`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `task` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `topic` varchar(32) NOT NULL COMMENT '消息主题',
   `user_id` varchar(32) DEFAULT NULL COMMENT '用户ID',
   `message` varchar(512) NOT NULL COMMENT '消息主体',
@@ -742,7 +742,7 @@ CREATE TABLE `task` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='任务表，发送MQ';
+) ENGINE=InnoDB AUTO_INCREMENT=1033419035968516098 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='任务表，发送MQ';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -751,6 +751,7 @@ CREATE TABLE `task` (
 
 LOCK TABLES `task` WRITE;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
+INSERT INTO `task` VALUES (1033417240110149633,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265375783\",\"timeStamp\":\"2024-08-22 16:31:08.764\"}','18265375783','completed','2024-08-22 16:31:10','2024-08-22 16:31:11'),(1033417245705351169,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265375883\",\"timeStamp\":\"2024-08-22 16:31:11.14\"}','18265375883','completed','2024-08-22 16:31:12','2024-08-22 16:31:12'),(1033417250528800769,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265375931\",\"timeStamp\":\"2024-08-22 16:31:12.294\"}','18265375931','completed','2024-08-22 16:31:13','2024-08-22 16:31:13'),(1033417255226421249,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265375979\",\"timeStamp\":\"2024-08-22 16:31:13.437\"}','18265375979','completed','2024-08-22 16:31:14','2024-08-22 16:31:14'),(1033417259911458817,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265376027\",\"timeStamp\":\"2024-08-22 16:31:14.569\"}','18265376027','completed','2024-08-22 16:31:15','2024-08-22 16:31:15'),(1033417264571330561,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265376073\",\"timeStamp\":\"2024-08-22 16:31:15.674\"}','18265376073','completed','2024-08-22 16:31:16','2024-08-22 16:31:16'),(1033417269394780161,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265376120\",\"timeStamp\":\"2024-08-22 16:31:16.797\"}','18265376120','completed','2024-08-22 16:31:17','2024-08-22 16:31:18'),(1033417274125955073,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265376167\",\"timeStamp\":\"2024-08-22 16:31:17.918\"}','18265376167','completed','2024-08-22 16:31:19','2024-08-22 16:31:19'),(1033417279754711041,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265376222\",\"timeStamp\":\"2024-08-22 16:31:19.224\"}','18265376222','completed','2024-08-22 16:31:20','2024-08-22 16:31:20'),(1033417284498468865,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265376273\",\"timeStamp\":\"2024-08-22 16:31:20.439\"}','18265376273','completed','2024-08-22 16:31:21','2024-08-22 16:31:21'),(1033417289363861505,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265376321\",\"timeStamp\":\"2024-08-22 16:31:21.584\"}','18265376321','completed','2024-08-22 16:31:22','2024-08-22 16:31:22'),(1033417294057287681,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265376367\",\"timeStamp\":\"2024-08-22 16:31:22.694\"}','18265376367','completed','2024-08-22 16:31:23','2024-08-22 16:31:24'),(1033417610966315009,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379491\",\"timeStamp\":\"2024-08-22 16:32:37.162\"}','18265379491','completed','2024-08-22 16:32:39','2024-08-22 16:32:39'),(1033417616561516545,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379592\",\"timeStamp\":\"2024-08-22 16:32:39.587\"}','18265379592','completed','2024-08-22 16:32:40','2024-08-22 16:32:41'),(1033417622047666177,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379644\",\"timeStamp\":\"2024-08-22 16:32:40.827\"}','18265379644','completed','2024-08-22 16:32:41','2024-08-22 16:32:42'),(1033417627529621505,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379699\",\"timeStamp\":\"2024-08-22 16:32:42.116\"}','18265379699','completed','2024-08-22 16:32:43','2024-08-22 16:32:43'),(1033417632764112897,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379752\",\"timeStamp\":\"2024-08-22 16:32:43.381\"}','18265379752','completed','2024-08-22 16:32:44','2024-08-22 16:32:44'),(1033417637671448577,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379802\",\"timeStamp\":\"2024-08-22 16:32:44.576\"}','18265379802','completed','2024-08-22 16:32:45','2024-08-22 16:32:45'),(1033417642855608321,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379853\",\"timeStamp\":\"2024-08-22 16:32:45.8\"}','18265379853','completed','2024-08-22 16:32:46','2024-08-22 16:32:47'),(1033417647825858561,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379905\",\"timeStamp\":\"2024-08-22 16:32:47.033\"}','18265379905','completed','2024-08-22 16:32:48','2024-08-22 16:32:48'),(1033417653022601217,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265379954\",\"timeStamp\":\"2024-08-22 16:32:48.217\"}','18265379954','completed','2024-08-22 16:32:49','2024-08-22 16:32:49'),(1033417658219343873,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265380006\",\"timeStamp\":\"2024-08-22 16:32:49.456\"}','18265380006','completed','2024-08-22 16:32:50','2024-08-22 16:32:50'),(1033417663537721345,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265380057\",\"timeStamp\":\"2024-08-22 16:32:50.674\"}','18265380057','completed','2024-08-22 16:32:51','2024-08-22 16:32:52'),(1033417668537331713,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265380111\",\"timeStamp\":\"2024-08-22 16:32:51.953\"}','18265380111','completed','2024-08-22 16:32:53','2024-08-22 16:32:53'),(1033417673276895233,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265380159\",\"timeStamp\":\"2024-08-22 16:32:53.092\"}','18265380159','completed','2024-08-22 16:32:54','2024-08-22 16:33:26'),(1033417795595382785,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381338\",\"timeStamp\":\"2024-08-22 16:33:21.204\"}','18265381338','completed','2024-08-22 16:33:23','2024-08-22 16:33:23'),(1033417800976674817,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381436\",\"timeStamp\":\"2024-08-22 16:33:23.546\"}','18265381436','completed','2024-08-22 16:33:24','2024-08-22 16:33:24'),(1033417805967896577,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381485\",\"timeStamp\":\"2024-08-22 16:33:24.714\"}','18265381485','completed','2024-08-22 16:33:25','2024-08-22 16:33:26'),(1033417811001061377,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381535\",\"timeStamp\":\"2024-08-22 16:33:25.897\"}','18265381535','completed','2024-08-22 16:33:27','2024-08-22 16:33:27'),(1033417815912591361,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381586\",\"timeStamp\":\"2024-08-22 16:33:27.113\"}','18265381586','completed','2024-08-22 16:33:28','2024-08-22 16:33:28'),(1033417821004476417,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381636\",\"timeStamp\":\"2024-08-22 16:33:28.315\"}','18265381636','completed','2024-08-22 16:33:29','2024-08-22 16:33:29'),(1033417825626599425,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381683\",\"timeStamp\":\"2024-08-22 16:33:29.434\"}','18265381683','completed','2024-08-22 16:33:30','2024-08-22 16:33:30'),(1033417830416494593,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381730\",\"timeStamp\":\"2024-08-22 16:33:30.557\"}','18265381730','completed','2024-08-22 16:33:31','2024-08-22 16:33:31'),(1033417835571294209,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381779\",\"timeStamp\":\"2024-08-22 16:33:31.708\"}','18265381779','completed','2024-08-22 16:33:32','2024-08-22 16:33:33'),(1033417841002917889,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381835\",\"timeStamp\":\"2024-08-22 16:33:33.062\"}','18265381835','completed','2024-08-22 16:33:34','2024-08-22 16:33:34'),(1033417845943808001,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381885\",\"timeStamp\":\"2024-08-22 16:33:34.242\"}','18265381885','completed','2024-08-22 16:33:35','2024-08-22 16:33:35'),(1033417850880503809,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381936\",\"timeStamp\":\"2024-08-22 16:33:35.46\"}','18265381936','completed','2024-08-22 16:33:36','2024-08-22 16:33:36'),(1033417855951417345,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265381986\",\"timeStamp\":\"2024-08-22 16:33:36.645\"}','18265381986','completed','2024-08-22 16:33:37','2024-08-22 16:33:38'),(1033417861122994177,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265382038\",\"timeStamp\":\"2024-08-22 16:33:37.884\"}','18265382038','completed','2024-08-22 16:33:38','2024-08-22 16:33:39'),(1033417865816420353,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265382085\",\"timeStamp\":\"2024-08-22 16:33:39.021\"}','18265382085','completed','2024-08-22 16:33:40','2024-08-22 16:33:40'),(1033417870522429441,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265382134\",\"timeStamp\":\"2024-08-22 16:33:40.173\"}','18265382134','completed','2024-08-22 16:33:41','2024-08-22 16:38:11'),(1033418991815077889,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393296\",\"timeStamp\":\"2024-08-22 16:38:06.302\"}','18265393296','completed','2024-08-22 16:38:08','2024-08-22 16:38:08'),(1033418996332343297,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393392\",\"timeStamp\":\"2024-08-22 16:38:08.584\"}','18265393392','completed','2024-08-22 16:38:09','2024-08-22 16:38:09'),(1033419000774111233,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393433\",\"timeStamp\":\"2024-08-22 16:38:09.581\"}','18265393433','completed','2024-08-22 16:38:10','2024-08-22 16:38:10'),(1033419005056495617,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393479\",\"timeStamp\":\"2024-08-22 16:38:10.669\"}','18265393479','completed','2024-08-22 16:38:11','2024-08-22 16:38:11'),(1033419009498263553,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393522\",\"timeStamp\":\"2024-08-22 16:38:11.685\"}','18265393522','completed','2024-08-22 16:38:12','2024-08-22 16:38:13'),(1033419013981974529,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393567\",\"timeStamp\":\"2024-08-22 16:38:12.757\"}','18265393567','completed','2024-08-22 16:38:13','2024-08-22 16:38:14'),(1033419018297913345,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393609\",\"timeStamp\":\"2024-08-22 16:38:13.766\"}','18265393609','completed','2024-08-22 16:38:14','2024-08-22 16:38:15'),(1033419022622240769,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393653\",\"timeStamp\":\"2024-08-22 16:38:14.824\"}','18265393653','completed','2024-08-22 16:38:15','2024-08-22 16:38:16'),(1033419026963345409,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393696\",\"timeStamp\":\"2024-08-22 16:38:15.851\"}','18265393696','completed','2024-08-22 16:38:16','2024-08-22 16:38:17'),(1033419031468027905,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393739\",\"timeStamp\":\"2024-08-22 16:38:16.878\"}','18265393739','completed','2024-08-22 16:38:17','2024-08-22 16:38:18'),(1033419035968516097,'send_award','lyt','{\"data\":{\"awardId\":101,\"awardTitle\":\"OpenAI 增加使用次数\",\"userId\":\"lyt\"},\"id\":\"18265393785\",\"timeStamp\":\"2024-08-22 16:38:17.969\"}','18265393785','create','2024-08-22 16:38:19','2024-08-22 16:38:19');
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -762,7 +763,7 @@ DROP TABLE IF EXISTS `user_award_record_0`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_award_record_0` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `strategy_id` bigint NOT NULL COMMENT '抽奖策略ID',
@@ -798,7 +799,7 @@ DROP TABLE IF EXISTS `user_award_record_1`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_award_record_1` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `strategy_id` bigint NOT NULL COMMENT '抽奖策略ID',
@@ -834,7 +835,7 @@ DROP TABLE IF EXISTS `user_award_record_2`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_award_record_2` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `strategy_id` bigint NOT NULL COMMENT '抽奖策略ID',
@@ -870,7 +871,7 @@ DROP TABLE IF EXISTS `user_raffle_order_0`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_raffle_order_0` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint NOT NULL AUTO_INCREMENT,
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
@@ -903,7 +904,7 @@ DROP TABLE IF EXISTS `user_raffle_order_1`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_raffle_order_1` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint NOT NULL AUTO_INCREMENT,
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
@@ -936,7 +937,7 @@ DROP TABLE IF EXISTS `user_raffle_order_2`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_raffle_order_2` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint NOT NULL AUTO_INCREMENT,
   `user_id` varchar(32) NOT NULL COMMENT '用户ID',
   `activity_id` bigint NOT NULL COMMENT '活动ID',
   `activity_name` varchar(64) NOT NULL COMMENT '活动名称',
@@ -970,4 +971,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-22 14:14:41
+-- Dump completed on 2024-08-22 16:44:21
