@@ -735,7 +735,9 @@ DROP TABLE IF EXISTS `task`;
 CREATE TABLE `task` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `topic` varchar(32) NOT NULL COMMENT '消息主题',
+  `user_id` varchar(32) DEFAULT NULL COMMENT '用户ID',
   `message` varchar(512) NOT NULL COMMENT '消息主体',
+  `message_id` varchar(11) DEFAULT NULL COMMENT '消息编号',
   `state` varchar(16) NOT NULL DEFAULT 'create' COMMENT '任务状态；create-创建、completed-完成、fail-失败',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -968,4 +970,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-18 13:43:16
+-- Dump completed on 2024-08-22 14:14:41
