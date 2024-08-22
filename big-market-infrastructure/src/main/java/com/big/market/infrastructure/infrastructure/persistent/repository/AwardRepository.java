@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * @author 莱特0905
@@ -37,6 +38,8 @@ public class AwardRepository implements IAwardRepository {
     private TransactionTemplate transactionTemplate;
     @Resource
     private EventPublisher eventPublisher;
+    @Resource
+    private ThreadPoolExecutor threadPoolExecutor;
 
     /**
      * 保存用户获奖记录
@@ -82,15 +85,17 @@ public class AwardRepository implements IAwardRepository {
             }
         });
 
-        try {
-            // 发送消息(在事务外执行，如果失败还有任务补偿)
-            eventPublisher.publish(task.getTopic(), task.getMessage());
-            // 更新数据库记录
-            taskDao.updateTaskSendMessageCompleted(task);
-        }catch (Throwable ex){
-            log.error("写入中奖记录，发送MQ消息失败 userId:{} topic:{}", userId, task.getTopic());
-            taskDao.updateTaskSendMessageFail(task);
-        }
+        threadPoolExecutor.execute(() -> {
+            try {
+                // 发送消息(在事务外执行，如果失败还有任务补偿)
+                eventPublisher.publish(task.getTopic(), task.getMessage());
+                // 更新数据库记录
+                taskDao.updateTaskSendMessageCompleted(task);
+            }catch (Throwable ex){
+                log.error("写入中奖记录，发送MQ消息失败 userId:{} topic:{}", userId, task.getTopic());
+                taskDao.updateTaskSendMessageFail(task);
+            }
+        });
 
     }
 }
