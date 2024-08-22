@@ -21,7 +21,7 @@ public class ActivitySkuStockZeroMessageEvent extends BaseEvent<Long> {
     private String topic;
 
     @Override
-    public EventMessage<Long> buildEventMessage(Long sku)  {
+    public EventMessage<Long> buildEventMessage(Long sku) {
         try {
             return EventMessage.<Long>builder()
                     .id(SnowflakeUUIDUtils.generateId(11))

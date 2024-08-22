@@ -4,11 +4,38 @@
     <resultMap id="dataMap" type="com.big.market.infrastructure.infrastructure.persistent.po.Task">
         <id column="id" property="id"/>
         <result column="topic" property="topic"/>
+        <result column="user_id" property="userId"/>
         <result column="message" property="message"/>
+        <result column="message_id" property="messageId"/>
         <result column="state" property="state"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
+
+    <insert id="insert">
+        insert into task(
+            topic,
+            user_id,
+            message,
+            message_id,
+            state
+        ) values (#{topic},
+                 #{userId},
+                 #{message},
+                 #{messageId},
+                 #{state});
+    </insert>
+
+    <update id="updateTaskSendMessageCompleted">
+        update task set state = 'completed', update_time = now()
+        where user_id = #{userId} and message_id = #{messageId};
+    </update>
+
+    <update id="updateTaskSendMessageFail">
+        update task set state = 'fail', update_time = now()
+        where user_id = #{userId} and message_id = #{messageId};
+    </update>
+
     <select id="queryAllTask" resultMap="dataMap">
         select id,
             topic,
@@ -17,5 +44,14 @@
             create_time,
             update_time
         from task;
+    </select>
+
+    <select id="queryNoSendMessageTakeList"
+            resultMap="dataMap">
+        select topic,
+               user_id,
+               message,
+               message_id
+        from task where state = 'fail' or(state = 'create' and now() - update_time > 60) limit 10;;
     </select>
 </mapper>

@@ -13,4 +13,28 @@ import java.util.List;
 @Mapper
 public interface ITaskDao {
     List<Task> queryAllTask();
+
+    /**
+     * 插入任务记录
+     * @param task 任务记录
+     */
+    void insert(Task task);
+
+    /**
+     * 更新任务发送消息发送完成
+     * @param task 任务
+     */
+    void updateTaskSendMessageCompleted(Task task);
+
+    /**
+     * 更新任务发送消息发送失败
+     * @param task 任务
+     */
+    void updateTaskSendMessageFail(Task task);
+
+    /**
+     * 查找没有发送消息的任务消息
+     * @return 任务集合
+     */
+    List<Task> queryNoSendMessageTakeList();
 }

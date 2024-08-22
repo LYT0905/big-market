@@ -14,6 +14,26 @@
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
+
+    <insert id="insert">
+        insert into user_award_record(user_id,
+            activity_id,
+            strategy_id,
+            order_id,
+            award_id,
+            award_title,
+            award_time,
+            award_state) values(#{userId},
+                                #{activityId},
+                                #{strategyId},
+                                #{orderId},
+                                #{awardId},
+                                #{awardTitle},
+                                #{awardTime},
+                                #{awardState});
+    </insert>
+
+
     <select id="queryAllUserAwardRecord"
             resultMap="dataMap">
         select id,

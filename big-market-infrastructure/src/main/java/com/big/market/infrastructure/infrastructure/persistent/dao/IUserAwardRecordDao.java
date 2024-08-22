@@ -13,4 +13,10 @@ import java.util.List;
 @Mapper
 public interface IUserAwardRecordDao {
     List<UserAwardRecord> queryAllUserAwardRecord();
+
+    /**
+     * 插入用户中奖记录
+     * @param userAwardRecord 用户中奖记录
+     */
+    void insert(UserAwardRecord userAwardRecord);
 }

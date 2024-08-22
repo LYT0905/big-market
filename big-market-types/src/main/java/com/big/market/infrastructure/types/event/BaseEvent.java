@@ -16,7 +16,7 @@ import java.util.Date;
 public abstract class BaseEvent<T> {
 
 
-    public abstract EventMessage<T> buildEventMessage(T data) throws IllegalAccessException;
+    public abstract EventMessage<T> buildEventMessage(T data);
     public abstract String topic();
 
     @AllArgsConstructor
