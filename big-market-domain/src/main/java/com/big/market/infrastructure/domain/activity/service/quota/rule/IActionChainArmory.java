@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.domain.activity.service.rule;
+package com.big.market.infrastructure.domain.activity.service.quota.rule;
 
 /**
  * @author 莱特0905

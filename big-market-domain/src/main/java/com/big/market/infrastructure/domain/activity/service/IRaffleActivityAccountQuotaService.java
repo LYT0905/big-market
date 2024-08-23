@@ -7,7 +7,7 @@ import com.big.market.infrastructure.domain.activity.model.entity.SkuRechargeEnt
  * @Description: 抽奖活动订单接口
  * @Date: 2024/08/13 19:32:23
  */
-public interface IRaffleOrder {
+public interface IRaffleActivityAccountQuotaService {
 
     /**
      * 创建活动商品充值订单
@@ -17,5 +17,5 @@ public interface IRaffleOrder {
      * @param skuRechargeEntity 活动商品充值实体对象
      * @return 订单单号
      */
-    String createSkuRechargeOrder(SkuRechargeEntity skuRechargeEntity);
+    String createOrder(SkuRechargeEntity skuRechargeEntity);
 }

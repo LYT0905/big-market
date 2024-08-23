@@ -1,10 +1,10 @@
-package com.big.market.infrastructure.domain.activity.service.rule.impl;
+package com.big.market.infrastructure.domain.activity.service.quota.rule.impl;
 
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityCountEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivitySkuEntity;
 import com.big.market.infrastructure.domain.activity.model.valobj.ActivityStateVO;
-import com.big.market.infrastructure.domain.activity.service.rule.AbstractActionChain;
+import com.big.market.infrastructure.domain.activity.service.quota.rule.AbstractActionChain;
 import com.big.market.infrastructure.types.enums.ResponseCode;
 import com.big.market.infrastructure.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

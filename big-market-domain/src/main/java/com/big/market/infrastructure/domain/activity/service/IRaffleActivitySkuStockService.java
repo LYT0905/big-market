@@ -7,7 +7,7 @@ import com.big.market.infrastructure.domain.activity.model.valobj.ActivitySkuSto
  * @Description: 活动sku库存处理接口
  * @Date: 2024/08/17 20:28:19
  */
-public interface ISkuStock {
+public interface IRaffleActivitySkuStockService {
 
     /**
      * 获取活动sku库存消耗队列

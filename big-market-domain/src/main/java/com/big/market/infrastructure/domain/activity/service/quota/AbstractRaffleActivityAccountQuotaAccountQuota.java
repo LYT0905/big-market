@@ -1,10 +1,11 @@
-package com.big.market.infrastructure.domain.activity.service;
+package com.big.market.infrastructure.domain.activity.service.quota;
 
 import com.big.market.infrastructure.domain.activity.model.aggregate.CreateOrderAggregate;
 import com.big.market.infrastructure.domain.activity.model.entity.*;
 import com.big.market.infrastructure.domain.activity.repository.IActivityRepository;
-import com.big.market.infrastructure.domain.activity.service.rule.IActionChain;
-import com.big.market.infrastructure.domain.activity.service.rule.factory.DefaultActivityChainFactory;
+import com.big.market.infrastructure.domain.activity.service.IRaffleActivityAccountQuotaService;
+import com.big.market.infrastructure.domain.activity.service.quota.rule.IActionChain;
+import com.big.market.infrastructure.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 import com.big.market.infrastructure.types.enums.ResponseCode;
 import com.big.market.infrastructure.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -16,9 +17,9 @@ import org.apache.commons.lang3.StringUtils;
  * @Date: 2024/08/13 19:32:14
  */
 @Slf4j
-public abstract class AbstractRaffleActivity extends RaffleActivitySupport implements IRaffleOrder{
+public abstract class AbstractRaffleActivityAccountQuotaAccountQuota extends RaffleActivityAccountQuotaSupport implements IRaffleActivityAccountQuotaService {
 
-    public AbstractRaffleActivity(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
+    public AbstractRaffleActivityAccountQuotaAccountQuota(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         super(activityRepository, defaultActivityChainFactory);
     }
 
@@ -31,7 +32,7 @@ public abstract class AbstractRaffleActivity extends RaffleActivitySupport imple
      * @return 订单单号
      */
     @Override
-    public String createSkuRechargeOrder(SkuRechargeEntity skuRechargeEntity) {
+    public String createOrder(SkuRechargeEntity skuRechargeEntity) {
         // 参数校验
         Long sku = skuRechargeEntity.getSku();
         String userId = skuRechargeEntity.getUserId();

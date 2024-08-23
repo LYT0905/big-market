@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.domain.activity.service.rule;
+package com.big.market.infrastructure.domain.activity.service.quota.rule;
 
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityCountEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityEntity;

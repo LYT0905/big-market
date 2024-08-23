@@ -1,19 +1,16 @@
-package com.big.market.infrastructure.domain.activity.service;
+package com.big.market.infrastructure.domain.activity.service.quota;
 
-import cn.hutool.Hutool;
-import cn.hutool.core.util.IdUtil;
 import com.big.market.infrastructure.domain.activity.model.aggregate.CreateOrderAggregate;
 import com.big.market.infrastructure.domain.activity.model.entity.*;
 import com.big.market.infrastructure.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import com.big.market.infrastructure.domain.activity.model.valobj.OrderStateVO;
 import com.big.market.infrastructure.domain.activity.repository.IActivityRepository;
-import com.big.market.infrastructure.domain.activity.service.rule.factory.DefaultActivityChainFactory;
+import com.big.market.infrastructure.domain.activity.service.IRaffleActivitySkuStockService;
+import com.big.market.infrastructure.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 import com.big.market.infrastructure.types.utils.SnowflakeUUIDUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -23,10 +20,10 @@ import java.util.Date;
  */
 @Service
 @Slf4j
-public class RaffleActivityService extends AbstractRaffleActivity implements ISkuStock{
+public class RaffleActivityAccountQuotaAccountQuotaService extends AbstractRaffleActivityAccountQuotaAccountQuota implements IRaffleActivitySkuStockService {
 
 
-    public RaffleActivityService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
+    public RaffleActivityAccountQuotaAccountQuotaService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         super(activityRepository, defaultActivityChainFactory);
     }
 

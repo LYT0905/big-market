@@ -1,23 +1,23 @@
-package com.big.market.infrastructure.domain.activity.service;
+package com.big.market.infrastructure.domain.activity.service.quota;
 
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityCountEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivityEntity;
 import com.big.market.infrastructure.domain.activity.model.entity.ActivitySkuEntity;
 import com.big.market.infrastructure.domain.activity.repository.IActivityRepository;
-import com.big.market.infrastructure.domain.activity.service.rule.factory.DefaultActivityChainFactory;
+import com.big.market.infrastructure.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 
 /**
  * @author 莱特0905
  * @Description: 抽奖活动的支撑类
  * @Date: 2024/08/14 21:06:17
  */
-public class RaffleActivitySupport {
+public class RaffleActivityAccountQuotaSupport {
 
     protected DefaultActivityChainFactory defaultActivityChainFactory;
 
     protected IActivityRepository activityRepository;
 
-    public RaffleActivitySupport(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
+    public RaffleActivityAccountQuotaSupport(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         this.activityRepository = activityRepository;
         this.defaultActivityChainFactory = defaultActivityChainFactory;
     }

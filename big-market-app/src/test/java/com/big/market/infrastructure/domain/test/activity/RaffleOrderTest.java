@@ -1,7 +1,7 @@
 package com.big.market.infrastructure.domain.test.activity;
 
 import com.big.market.infrastructure.domain.activity.model.entity.SkuRechargeEntity;
-import com.big.market.infrastructure.domain.activity.service.IRaffleOrder;
+import com.big.market.infrastructure.domain.activity.service.IRaffleActivityAccountQuotaService;
 import com.big.market.infrastructure.domain.activity.service.armory.IActivityArmory;
 import com.big.market.infrastructure.types.exception.AppException;
 import com.big.market.infrastructure.types.utils.SnowflakeUUIDUtils;
@@ -26,7 +26,7 @@ import java.util.concurrent.CountDownLatch;
 public class RaffleOrderTest {
 
     @Resource
-    private IRaffleOrder raffleOrder;
+    private IRaffleActivityAccountQuotaService raffleOrder;
     @Resource
     private IActivityArmory activityArmory;
 
@@ -43,7 +43,7 @@ public class RaffleOrderTest {
         skuRechargeEntity.setSku(9011L);
         // outBusinessNo 作为幂等仿重使用，同一个业务单号2次使用会抛出索引冲突 Duplicate entry '700091009111' for key 'uq_out_business_no' 确保唯一性。
         skuRechargeEntity.setOutBusinessNo("700091009111");
-        String orderId = raffleOrder.createSkuRechargeOrder(skuRechargeEntity);
+        String orderId = raffleOrder.createOrder(skuRechargeEntity);
         log.info("测试结果：{}", orderId);
     }
 
@@ -62,7 +62,7 @@ public class RaffleOrderTest {
                 skuRechargeEntity.setSku(9011L);
                 // outBusinessNo 作为幂等仿重使用，同一个业务单号2次使用会抛出索引冲突 Duplicate entry '700091009111' for key 'uq_out_business_no' 确保唯一性。
                 skuRechargeEntity.setOutBusinessNo(SnowflakeUUIDUtils.generateId(12));
-                String orderId = raffleOrder.createSkuRechargeOrder(skuRechargeEntity);
+                String orderId = raffleOrder.createOrder(skuRechargeEntity);
                 log.info("测试结果：{}", orderId);
             } catch (AppException e) {
                 log.warn(e.getInfo());
