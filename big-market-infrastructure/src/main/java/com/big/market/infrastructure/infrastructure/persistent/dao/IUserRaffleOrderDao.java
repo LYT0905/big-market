@@ -13,4 +13,16 @@ import java.util.List;
 @Mapper
 public interface IUserRaffleOrderDao {
     List<UserRaffleOrder> queryAllUserRaffleOrder();
+
+    /**
+     * 查询未使用的活动订单
+     * @return 用户抽奖订单实体对象
+     */
+    UserRaffleOrder queryNoUsedRaffleOrder(UserRaffleOrder userRaffleOrder);
+
+    /**
+     * 插入用户抽奖订单记录
+     * @param userRaffleOrder 用户抽奖订单表实体对象
+     */
+    void insert(UserRaffleOrder userRaffleOrder);
 }

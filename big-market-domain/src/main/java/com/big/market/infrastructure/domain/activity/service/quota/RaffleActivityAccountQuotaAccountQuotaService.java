@@ -1,6 +1,6 @@
 package com.big.market.infrastructure.domain.activity.service.quota;
 
-import com.big.market.infrastructure.domain.activity.model.aggregate.CreateOrderAggregate;
+import com.big.market.infrastructure.domain.activity.model.aggregate.CreateQuotaOrderAggregate;
 import com.big.market.infrastructure.domain.activity.model.entity.*;
 import com.big.market.infrastructure.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import com.big.market.infrastructure.domain.activity.model.valobj.OrderStateVO;
@@ -36,7 +36,7 @@ public class RaffleActivityAccountQuotaAccountQuotaService extends AbstractRaffl
      * @return 订单聚合对象
      */
     @Override
-    protected CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
+    protected CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
 
         ActivityOrderEntity activityOrderEntity = null;
         try {
@@ -60,7 +60,7 @@ public class RaffleActivityAccountQuotaAccountQuotaService extends AbstractRaffl
         }
 
 
-        return CreateOrderAggregate.builder()
+        return CreateQuotaOrderAggregate.builder()
                 .activityId(activitySkuEntity.getActivityId())
                 .userId(skuRechargeEntity.getUserId())
                 .dayCount(activityCountEntity.getDayCount())
@@ -75,7 +75,7 @@ public class RaffleActivityAccountQuotaAccountQuotaService extends AbstractRaffl
      * @param orderAggregate 订单聚合对象
      */
     @Override
-    protected void doSaveOrder(CreateOrderAggregate orderAggregate) {
+    protected void doSaveOrder(CreateQuotaOrderAggregate orderAggregate) {
         activityRepository.doSaveOrder(orderAggregate);
     }
 

@@ -31,4 +31,29 @@ public interface IRaffleActivityAccountDao {
      * @return 影响行数
      */
     int updateAccountQuota(RaffleActivityAccount raffleActivityAccount);
+
+    /**
+     * 查询用户总账户额度
+     * @return 活动账户实体对象
+     */
+    RaffleActivityAccount queryActivityAccountByUserId(RaffleActivityAccount raffleActivityAccount);
+
+    /**
+     * 更新用户账户总额度
+     * @param raffleActivityAccount
+     * @return
+     */
+    int updateActivityAccountSubtractionQuota(RaffleActivityAccount raffleActivityAccount);
+
+    /**
+     * 更新总账户额度中的月镜像额度
+     * @param raffleActivityAccountMonthImageQuota 抽奖活动账户表实体对象
+     */
+    void updateActivityAccountMonthSurplusImageQuota(RaffleActivityAccount raffleActivityAccountMonthImageQuota);
+
+    /**
+     * 更新总账户额度中的日镜像额度
+     * @param raffleActivityAccountDayImageQuota 抽奖活动账户表实体对象
+     */
+    void updateActivityAccountDaySurplusImageQuota(RaffleActivityAccount raffleActivityAccountDayImageQuota);
 }

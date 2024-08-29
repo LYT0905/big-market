@@ -1,6 +1,6 @@
 package com.big.market.infrastructure.domain.activity.service.quota;
 
-import com.big.market.infrastructure.domain.activity.model.aggregate.CreateOrderAggregate;
+import com.big.market.infrastructure.domain.activity.model.aggregate.CreateQuotaOrderAggregate;
 import com.big.market.infrastructure.domain.activity.model.entity.*;
 import com.big.market.infrastructure.domain.activity.repository.IActivityRepository;
 import com.big.market.infrastructure.domain.activity.service.IRaffleActivityAccountQuotaService;
@@ -52,15 +52,15 @@ public abstract class AbstractRaffleActivityAccountQuotaAccountQuota extends Raf
         actionChain.action(activitySkuEntity, activityEntity, activityCountEntity);
 
         // 构建订单聚合对象
-        CreateOrderAggregate createOrderAggregate = buildOrderAggregate(skuRechargeEntity, activitySkuEntity, activityEntity, activityCountEntity);
+        CreateQuotaOrderAggregate createQuotaOrderAggregate = buildOrderAggregate(skuRechargeEntity, activitySkuEntity, activityEntity, activityCountEntity);
 
         // 保存订单
-        doSaveOrder(createOrderAggregate);
+        doSaveOrder(createQuotaOrderAggregate);
 
         // 返回单号
-        return createOrderAggregate.getActivityOrderEntity().getOrderId();
+        return createQuotaOrderAggregate.getActivityOrderEntity().getOrderId();
     }
 
-    protected abstract CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity);
-    protected abstract void doSaveOrder(CreateOrderAggregate createOrderAggregate);
+    protected abstract CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity);
+    protected abstract void doSaveOrder(CreateQuotaOrderAggregate createQuotaOrderAggregate);
 }

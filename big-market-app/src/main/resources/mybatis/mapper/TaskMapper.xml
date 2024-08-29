@@ -52,6 +52,6 @@
                user_id,
                message,
                message_id
-        from task where state = 'fail' or(state = 'create' and now() - update_time > 60) limit 10;;
+        from task where state = 'fail' or(state = 'create' and now() - update_time > 60000000000000) limit 10;;
     </select>
 </mapper>

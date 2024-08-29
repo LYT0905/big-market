@@ -1,0 +1,722 @@
+24-08-24.20:59:15.619 [main            ] INFO  RaffleActivityAccountTest - Starting RaffleActivityAccountTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 36580 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-24.20:59:15.620 [main            ] INFO  RaffleActivityAccountTest - The following 1 profile is active: "dev"
+24-08-24.20:59:17.494 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-24.20:59:17.500 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-24.20:59:17.588 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 0 Redis repository interfaces.
+24-08-24.20:59:18.167 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.20:59:18.183 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.20:59:18.502 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$147a60e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.20:59:19.944 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-24.20:59:20.640 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.20:59:20.835 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.20:59:21.261 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-24.20:59:22.338 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-24.20:59:22.353 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-24.20:59:22.681 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-24.20:59:27.692 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-24.20:59:27.708 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-24.20:59:27.708 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-24.20:59:27.709 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-24.20:59:27.709 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-24.20:59:27.709 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-24.20:59:27.709 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-24.20:59:27.709 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@785aeba9
+24-08-24.20:59:27.866 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-24.20:59:27.978 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [8.138.41.137:5672]
+24-08-24.20:59:28.185 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6d598162:0/SimpleConnection@716cb4c0 [delegate=amqp://admin@8.138.41.137:5672/, localPort= 57654]
+24-08-24.20:59:28.528 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-24.20:59:28.528 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-24.20:59:28.556 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  SendAwardCustomer      - 监听用户奖品发送消息 topic:send_award message:{"data":{"awardId":101,"awardTitle":"OpenAI 增加使用次数","userId":"lyt"},"id":"18265393785","timeStamp":"2024-08-22 16:38:17.969"}
+24-08-24.20:59:28.559 [main            ] INFO  RaffleActivityAccountTest - Started RaffleActivityAccountTest in 13.516 seconds (JVM running for 15.099)
+24-08-24.20:59:29.761 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus,
+            create_time,
+            update_time
+        from raffle_activity_account;
+24-08-24.20:59:29.761 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.20:59:29.761 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus,
+            create_time,
+            update_time
+        from raffle_activity_account_0 ORDER BY id ASC ;
+24-08-24.20:59:29.761 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus,
+            create_time,
+            update_time
+        from raffle_activity_account_1 ORDER BY id ASC ;
+24-08-24.20:59:29.761 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus,
+            create_time,
+            update_time
+        from raffle_activity_account_2 ORDER BY id ASC ;
+24-08-24.20:59:29.761 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus,
+            create_time,
+            update_time
+        from raffle_activity_account_0 ORDER BY id ASC ;
+24-08-24.20:59:29.761 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus,
+            create_time,
+            update_time
+        from raffle_activity_account_1 ORDER BY id ASC ;
+24-08-24.20:59:29.761 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select id,
+            user_id,
+            activity_id,
+            total_count,
+            total_count_surplus,
+            day_count,
+            day_count_surplus,
+            month_count,
+            month_count_surplus,
+            create_time,
+            update_time
+        from raffle_activity_account_2 ORDER BY id ASC ;
+24-08-24.20:59:30.005 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-24.20:59:30.106 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-24.20:59:30.138 [pool-7-thread-1 ] INFO  ShardingSphere-SQL     - Logic SQL: select topic,
+               user_id,
+               message,
+               message_id
+        from task where state = 'fail' or(state = 'create' and now() - update_time > 60) limit 10;;
+24-08-24.20:59:30.138 [pool-7-thread-1 ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional[org.apache.shardingsphere.sql.parser.sql.common.segment.dml.pagination.limit.LimitSegment@7dea1cdf], lock=Optional.empty, window=Optional.empty)
+24-08-24.20:59:30.138 [pool-7-thread-1 ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select topic,
+               user_id,
+               message,
+               message_id
+, id AS ORDER_BY_DERIVED_0         from task where state = 'fail' or(state = 'create' and now() - update_time > 60) ORDER BY id ASC  limit 10;;
+24-08-24.20:59:30.138 [pool-7-thread-1 ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select topic,
+               user_id,
+               message,
+               message_id
+, id AS ORDER_BY_DERIVED_0         from task where state = 'fail' or(state = 'create' and now() - update_time > 60) ORDER BY id ASC  limit 10;;
+24-08-24.20:59:30.197 [pool-7-thread-2 ] INFO  EventPublisher         - 发送 MQ 消息 topic:send_award, message:{"data":{"awardId":101,"awardTitle":"OpenAI 增加使用次数","userId":"lyt"},"id":"18265393785","timeStamp":"2024-08-22 16:38:17.969"}
+24-08-24.20:59:30.214 [pool-7-thread-2 ] INFO  ShardingSphere-SQL     - Logic SQL: update task set state = 'completed', update_time = now()
+        where user_id = ? and message_id = ?;
+24-08-24.20:59:30.215 [pool-7-thread-2 ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-24.20:59:30.215 [pool-7-thread-2 ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: update task set state = 'completed', update_time = now()
+        where user_id = ? and message_id = ?; ::: [lyt, 18265393785]
+24-08-24.20:59:30.215 [pool-7-thread-2 ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update task set state = 'completed', update_time = now()
+        where user_id = ? and message_id = ?; ::: [lyt, 18265393785]
+24-08-24.20:59:30.224 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  SendAwardCustomer      - 监听用户奖品发送消息 topic:send_award message:{"data":{"awardId":101,"awardTitle":"OpenAI 增加使用次数","userId":"lyt"},"id":"18265393785","timeStamp":"2024-08-22 16:38:17.969"}
+24-08-24.20:59:30.349 [main            ] INFO  RaffleActivityAccountTest - 抽奖活动账户有[{"activityId":101,"createTime":"2024-08-15 06:29:02","dayCount":20,"dayCountSurplus":20,"id":1,"monthCount":20,"monthCountSurplus":20,"totalCount":20,"totalCountSurplus":20,"updateTime":"2024-08-15 06:45:33","userId":"lyt"}]
+24-08-24.20:59:30.410 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.20:59:30.435 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.20:59:30.435 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.20:59:30.451 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.20:59:31.259 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.20:59:31.261 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-24.20:59:31.261 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-24.20:59:31.261 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.20:59:31.262 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-24.20:59:31.264 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.20:59:31.264 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.20:59:31.319 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-24.20:59:31.327 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-24.20:59:31.327 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-24.20:59:31.334 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-24.22:31:15.776 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 46816 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-24.22:31:15.777 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-08-24.22:31:17.487 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-24.22:31:17.493 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-24.22:31:17.571 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 0 Redis repository interfaces.
+24-08-24.22:31:18.102 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:31:18.118 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:31:18.432 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$f7dda95a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:31:19.782 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-24.22:31:20.494 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.22:31:20.743 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.22:31:21.154 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-24.22:31:22.281 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-24.22:31:22.295 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-24.22:31:22.652 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-24.22:31:27.307 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-24.22:31:27.321 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-24.22:31:27.321 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-24.22:31:27.322 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-24.22:31:27.323 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-24.22:31:27.323 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-24.22:31:27.323 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-24.22:31:27.323 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@397fced4
+24-08-24.22:31:27.475 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-24.22:31:27.602 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [8.138.41.137:5672]
+24-08-24.22:31:27.783 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#10ef09e3:0/SimpleConnection@20f1c8ed [delegate=amqp://admin@8.138.41.137:5672/, localPort= 60651]
+24-08-24.22:31:28.126 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-24.22:31:28.126 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-24.22:31:28.143 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 12.867 seconds (JVM running for 14.005)
+24-08-24.22:31:29.234 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
+               activity_id,
+               activity_name,
+               activity_desc,
+               begin_date_time,
+               end_date_time,
+               stock_count,
+               stock_count_surplus,
+               activity_count_id,
+               strategy_id,
+               `state`,
+               create_time,
+               update_time
+        from raffle_activity where activity_id = ?;
+24-08-24.22:31:29.234 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:31:29.234 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+               activity_id,
+               activity_name,
+               activity_desc,
+               begin_date_time,
+               end_date_time,
+               stock_count,
+               stock_count_surplus,
+               activity_count_id,
+               strategy_id,
+               `state`,
+               create_time,
+               update_time
+        from raffle_activity where activity_id = ?; ::: [100301]
+24-08-24.22:31:29.395 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.22:31:29.417 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.22:31:29.417 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.22:31:30.003 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-24.22:31:30.064 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-08-24.22:31:30.072 [pool-7-thread-1 ] INFO  ShardingSphere-SQL     - Logic SQL: select topic,
+               user_id,
+               message,
+               message_id
+        from task where state = 'fail' or(state = 'create' and now() - update_time > 60) limit 10;;
+24-08-24.22:31:30.072 [pool-7-thread-1 ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional[org.apache.shardingsphere.sql.parser.sql.common.segment.dml.pagination.limit.LimitSegment@a4a0a4e], lock=Optional.empty, window=Optional.empty)
+24-08-24.22:31:30.072 [pool-7-thread-1 ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select topic,
+               user_id,
+               message,
+               message_id
+, id AS ORDER_BY_DERIVED_0         from task where state = 'fail' or(state = 'create' and now() - update_time > 60) ORDER BY id ASC  limit 10;;
+24-08-24.22:31:30.072 [pool-7-thread-1 ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select topic,
+               user_id,
+               message,
+               message_id
+, id AS ORDER_BY_DERIVED_0         from task where state = 'fail' or(state = 'create' and now() - update_time > 60) ORDER BY id ASC  limit 10;;
+24-08-24.22:31:30.092 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.22:31:30.165 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.22:31:30.166 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-24.22:31:30.167 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-24.22:31:30.167 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.22:31:30.167 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-24.22:31:30.169 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.22:31:30.169 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.22:31:30.201 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-24.22:31:30.210 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-24.22:31:30.210 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-24.22:31:30.219 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-24.22:32:35.229 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 4668 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-24.22:32:35.230 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-08-24.22:32:36.851 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-24.22:32:36.857 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-24.22:32:36.934 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
+24-08-24.22:32:37.445 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:32:37.462 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:32:37.719 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$a2891204] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:32:38.989 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-24.22:32:39.693 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.22:32:39.917 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.22:32:40.288 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-24.22:32:41.362 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-24.22:32:41.376 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-24.22:32:41.823 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-24.22:32:46.177 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-24.22:32:46.192 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-24.22:32:46.192 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-24.22:32:46.194 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-24.22:32:46.195 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-24.22:32:46.195 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-24.22:32:46.195 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-24.22:32:46.195 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3fd7f545
+24-08-24.22:32:46.356 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-24.22:32:46.479 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [8.138.41.137:5672]
+24-08-24.22:32:46.662 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#237e4ed9:0/SimpleConnection@629bee3b [delegate=amqp://admin@8.138.41.137:5672/, localPort= 60759]
+24-08-24.22:32:46.996 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-24.22:32:46.997 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-24.22:32:47.013 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 12.261 seconds (JVM running for 13.341)
+24-08-24.22:32:48.074 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select id,
+               activity_id,
+               activity_name,
+               activity_desc,
+               begin_date_time,
+               end_date_time,
+               stock_count,
+               stock_count_surplus,
+               activity_count_id,
+               strategy_id,
+               `state`,
+               create_time,
+               update_time
+        from raffle_activity where activity_id = ?;
+24-08-24.22:32:48.074 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:32:48.074 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds0 ::: select id,
+               activity_id,
+               activity_name,
+               activity_desc,
+               begin_date_time,
+               end_date_time,
+               stock_count,
+               stock_count_surplus,
+               activity_count_id,
+               strategy_id,
+               `state`,
+               create_time,
+               update_time
+        from raffle_activity where activity_id = ?; ::: [101]
+24-08-24.22:32:48.410 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select activity_name,
+               strategy_id,
+               order_id,
+               order_time,
+               order_state
+        from user_raffle_order where activity_id = ? and user_id = ? and order_state = 'create'
+24-08-24.22:32:48.410 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:32:48.410 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select activity_name,
+               strategy_id,
+               order_id,
+               order_time,
+               order_state
+        from user_raffle_order_0 where activity_id = ? and user_id = ? and order_state = 'create' ::: [101, lyt]
+24-08-24.22:32:48.509 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select total_count,
+               total_count_surplus,
+               day_count,
+               day_count_surplus,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account where user_id = ? and activity_id = ?
+24-08-24.22:32:48.509 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:32:48.509 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select total_count,
+               total_count_surplus,
+               day_count,
+               day_count_surplus,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_0 where user_id = ? and activity_id = ? ::: [lyt, 101]
+24-08-24.22:32:48.553 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select user_id,
+               activity_id,
+               `month`,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_month
+        where user_id = ?
+          and activity_id = ?
+          and `month` = ?;
+24-08-24.22:32:48.553 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:32:48.553 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select user_id,
+               activity_id,
+               `month`,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_month_0
+        where user_id = ?
+          and activity_id = ?
+          and `month` = ?; ::: [lyt, 101, 2024-08]
+24-08-24.22:32:48.758 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.22:32:48.780 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.22:32:48.780 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.22:32:48.907 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.22:32:49.030 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.22:32:49.032 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-24.22:32:49.032 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-24.22:32:49.032 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.22:32:49.033 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-24.22:32:49.034 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.22:32:49.035 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.22:32:49.067 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-24.22:32:49.075 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-24.22:32:49.075 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-24.22:32:49.083 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-24.22:33:25.835 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 50812 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-24.22:33:25.842 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-08-24.22:33:27.577 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-24.22:33:27.588 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-24.22:33:27.694 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 0 Redis repository interfaces.
+24-08-24.22:33:28.291 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:33:28.308 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:33:28.584 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$f99b752a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:33:29.917 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-24.22:33:30.608 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.22:33:30.917 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.22:33:31.303 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-24.22:33:32.322 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-24.22:33:32.343 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-24.22:33:32.721 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-24.22:33:39.273 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-24.22:33:39.295 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-24.22:33:39.295 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-24.22:33:39.297 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-24.22:33:39.298 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-24.22:33:39.298 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-24.22:33:39.298 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-24.22:33:39.298 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1c04dae9
+24-08-24.22:33:39.624 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-24.22:33:39.880 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [8.138.41.137:5672]
+24-08-24.22:33:40.136 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#15961527:0/SimpleConnection@3bc57af4 [delegate=amqp://admin@8.138.41.137:5672/, localPort= 60891]
+24-08-24.22:33:40.576 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-24.22:33:40.576 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-24.22:33:40.603 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 15.257 seconds (JVM running for 16.395)
+24-08-24.22:33:42.393 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select activity_name,
+               strategy_id,
+               order_id,
+               order_time,
+               order_state
+        from user_raffle_order where activity_id = ? and user_id = ? and order_state = 'create'
+24-08-24.22:33:42.393 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:33:42.393 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select activity_name,
+               strategy_id,
+               order_id,
+               order_time,
+               order_state
+        from user_raffle_order_0 where activity_id = ? and user_id = ? and order_state = 'create' ::: [101, lyt]
+24-08-24.22:33:42.574 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select total_count,
+               total_count_surplus,
+               day_count,
+               day_count_surplus,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account where user_id = ? and activity_id = ?
+24-08-24.22:33:42.574 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:33:42.575 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select total_count,
+               total_count_surplus,
+               day_count,
+               day_count_surplus,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_0 where user_id = ? and activity_id = ? ::: [lyt, 101]
+24-08-24.22:33:42.627 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select user_id,
+               activity_id,
+               `month`,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_month
+        where user_id = ?
+          and activity_id = ?
+          and `month` = ?;
+24-08-24.22:33:42.627 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:33:42.627 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select user_id,
+               activity_id,
+               `month`,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_month_0
+        where user_id = ?
+          and activity_id = ?
+          and `month` = ?; ::: [lyt, 101, 2024-08]
+24-08-24.22:33:42.702 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select user_id,
+               activity_id,
+               `day`,
+               day_count,
+               day_count_surplus
+        from raffle_activity_account_day
+        where user_id = ?
+          and activity_id = ?
+          and `day` = ?;
+24-08-24.22:33:42.703 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:33:42.703 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select user_id,
+               activity_id,
+               `day`,
+               day_count,
+               day_count_surplus
+        from raffle_activity_account_day_0
+        where user_id = ?
+          and activity_id = ?
+          and `day` = ?; ::: [lyt, 101, 2024-08-24]
+24-08-24.22:33:42.885 [main            ] INFO  SnowflakeUUIDUtils     - 12位数字的UUID:182735359748
+24-08-24.22:33:42.936 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account set total_count_surplus = total_count_surplus - 1,
+                                           day_count_surplus = day_count_surplus - 1,
+                                           month_count_surplus = month_count_surplus - 1, update_time = now()
+        where user_id = ? and activity_id = ?
+        and total_count_surplus > 0 and day_count_surplus > 0 and month_count_surplus > 0;
+24-08-24.22:33:42.936 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-24.22:33:42.936 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_0 set total_count_surplus = total_count_surplus - 1,
+                                           day_count_surplus = day_count_surplus - 1,
+                                           month_count_surplus = month_count_surplus - 1, update_time = now()
+        where user_id = ? and activity_id = ?
+        and total_count_surplus > 0 and day_count_surplus > 0 and month_count_surplus > 0; ::: [lyt, 101]
+24-08-24.22:33:43.039 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_account_month(
+            user_id, activity_id, month, month_count, month_count_surplus, create_time, update_time)
+        values (
+                   ?, ?, ?, ?, ?, now(), now())
+24-08-24.22:33:43.039 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-24.22:33:43.039 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_account_month_0(
+            user_id, activity_id, month, month_count, month_count_surplus, create_time, update_time, id)
+        values (?, ?, ?, ?, ?, now(), now(), ?) ::: [lyt, 101, 2024-08, 20, 19, 1034233254657896448]
+24-08-24.22:33:43.129 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account
+        set month_count_surplus = ?, update_time = now()
+        where user_id = ? and activity_id = ?
+24-08-24.22:33:43.129 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-24.22:33:43.129 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_0
+        set month_count_surplus = ?, update_time = now()
+        where user_id = ? and activity_id = ? ::: [19, lyt, 101]
+24-08-24.22:33:43.184 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into raffle_activity_account_day(
+            user_id, activity_id, day, day_count, day_count_surplus, create_time, update_time)
+        values
+            (?, ?, ?, ?, ?, now(), now())
+24-08-24.22:33:43.184 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-24.22:33:43.184 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into raffle_activity_account_day_0(
+            user_id, activity_id, day, day_count, day_count_surplus, create_time, update_time, id)
+        values
+            (?, ?, ?, ?, ?, now(), now(), ?) ::: [lyt, 101, 2024-08-24, 20, 19, 1034233255278653441]
+24-08-24.22:33:43.265 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account
+        set day_count_surplus = ?, update_time = now()
+        where user_id = ? and activity_id = ?
+24-08-24.22:33:43.265 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-24.22:33:43.265 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_0
+        set day_count_surplus = ?, update_time = now()
+        where user_id = ? and activity_id = ? ::: [19, lyt, 101]
+24-08-24.22:33:43.338 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into user_raffle_order(
+            user_id, activity_id, activity_name, strategy_id, order_id, order_time, order_state, create_time, update_time
+        )
+        values(
+                  ?, ?, ?, ?, ?, ?, ?, now(), now()
+              )
+24-08-24.22:33:43.338 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-24.22:33:43.338 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into user_raffle_order_0(
+            user_id, activity_id, activity_name, strategy_id, order_id, order_time, order_state, create_time, update_time
+        , id)
+        values(?, ?, ?, ?, ?, ?, ?, now(), now(), ?) ::: [lyt, 101, 测试, 100004, 182735359748, 2024-08-24 22:33:41.001, create, 1034233255924576256]
+24-08-24.22:33:43.742 [main            ] INFO  RaffleActivityPartakeServiceTest - 请求参数：{"activityId":101,"userId":"lyt"}
+24-08-24.22:33:43.742 [main            ] INFO  RaffleActivityPartakeServiceTest - 测试结果：null
+24-08-24.22:33:43.787 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.22:33:43.809 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.22:33:43.809 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.22:33:44.503 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.22:33:44.736 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.22:33:44.739 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-24.22:33:44.739 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-24.22:33:44.739 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.22:33:44.740 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-24.22:33:44.741 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.22:33:44.742 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.22:33:44.781 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-24.22:33:44.793 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-24.22:33:44.794 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-24.22:33:44.804 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
+24-08-24.22:36:03.441 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_171 on LAPTOP-6UTBSJGB with PID 39236 (started by 27132 in C:\Users\27132\Java\big-market\big-market-app)
+24-08-24.22:36:03.442 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-08-24.22:36:04.985 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-24.22:36:04.990 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-24.22:36:05.065 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 0 Redis repository interfaces.
+24-08-24.22:36:05.582 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:36:05.597 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.shardingsphere-org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration' of type [org.apache.shardingsphere.spring.boot.prop.SpringBootPropertiesConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:36:05.861 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration' of type [org.apache.shardingsphere.spring.boot.ShardingSphereAutoConfiguration$$EnhancerBySpringCGLIB$$27ee59b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+24-08-24.22:36:07.117 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-24.22:36:07.817 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.22:36:07.983 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 8.138.41.137/8.138.41.137:16379
+24-08-24.22:36:08.388 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-24.22:36:09.445 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-24.22:36:09.460 [main            ] INFO  HikariDataSource       - HikariPool-2 - Starting...
+24-08-24.22:36:09.788 [main            ] INFO  HikariDataSource       - HikariPool-2 - Start completed.
+24-08-24.22:36:14.945 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+24-08-24.22:36:14.963 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+24-08-24.22:36:14.963 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+24-08-24.22:36:14.964 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+24-08-24.22:36:14.965 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+24-08-24.22:36:14.965 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+24-08-24.22:36:14.965 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+24-08-24.22:36:14.965 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6565f3
+24-08-24.22:36:15.177 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-24.22:36:15.328 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [8.138.41.137:5672]
+24-08-24.22:36:15.549 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#776d50d6:0/SimpleConnection@b6db92b [delegate=amqp://admin@8.138.41.137:5672/, localPort= 61137]
+24-08-24.22:36:15.898 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+24-08-24.22:36:15.899 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+24-08-24.22:36:15.923 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 12.96 seconds (JVM running for 14.092)
+24-08-24.22:36:18.072 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select activity_name,
+               strategy_id,
+               order_id,
+               order_time,
+               order_state
+        from user_raffle_order where activity_id = ? and user_id = ? and order_state = 'create'
+24-08-24.22:36:18.072 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:36:18.072 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select activity_name,
+               strategy_id,
+               order_id,
+               order_time,
+               order_state
+        from user_raffle_order_0 where activity_id = ? and user_id = ? and order_state = 'create' ::: [101, lyt]
+24-08-24.22:36:18.452 [main            ] INFO  AbstractRaffleActivityPartake - 创建参与活动【已存在未消费】userId:lyt activityId:101 userRaffleEntity:{"activityName":"测试","orderId":"182735359748","orderState":"create","orderTime":"2024-08-24 22:33:41","strategyId":100004,"userId":"lyt"}
+24-08-24.22:36:18.471 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select total_count,
+               total_count_surplus,
+               day_count,
+               day_count_surplus,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account where user_id = ? and activity_id = ?
+24-08-24.22:36:18.471 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:36:18.471 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select total_count,
+               total_count_surplus,
+               day_count,
+               day_count_surplus,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_0 where user_id = ? and activity_id = ? ::: [lyt, 101]
+24-08-24.22:36:18.514 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select user_id,
+               activity_id,
+               `month`,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_month
+        where user_id = ?
+          and activity_id = ?
+          and `month` = ?;
+24-08-24.22:36:18.514 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:36:18.514 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select user_id,
+               activity_id,
+               `month`,
+               month_count,
+               month_count_surplus
+        from raffle_activity_account_month_0
+        where user_id = ?
+          and activity_id = ?
+          and `month` = ?; ::: [lyt, 101, 2024-08]
+24-08-24.22:36:18.551 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: select user_id,
+               activity_id,
+               `day`,
+               day_count,
+               day_count_surplus
+        from raffle_activity_account_day
+        where user_id = ?
+          and activity_id = ?
+          and `day` = ?;
+24-08-24.22:36:18.551 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLSelectStatement(limit=Optional.empty, lock=Optional.empty, window=Optional.empty)
+24-08-24.22:36:18.551 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: select user_id,
+               activity_id,
+               `day`,
+               day_count,
+               day_count_surplus
+        from raffle_activity_account_day_0
+        where user_id = ?
+          and activity_id = ?
+          and `day` = ?; ::: [lyt, 101, 2024-08-24]
+24-08-24.22:36:18.899 [main            ] INFO  SnowflakeUUIDUtils     - 12位数字的UUID:182735425185
+24-08-24.22:36:18.945 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account set total_count_surplus = total_count_surplus - 1,
+                                           day_count_surplus = day_count_surplus - 1,
+                                           month_count_surplus = month_count_surplus - 1, update_time = now()
+        where user_id = ? and activity_id = ?
+        and total_count_surplus > 0 and day_count_surplus > 0 and month_count_surplus > 0;
+24-08-24.22:36:18.946 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-24.22:36:18.946 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_0 set total_count_surplus = total_count_surplus - 1,
+                                           day_count_surplus = day_count_surplus - 1,
+                                           month_count_surplus = month_count_surplus - 1, update_time = now()
+        where user_id = ? and activity_id = ?
+        and total_count_surplus > 0 and day_count_surplus > 0 and month_count_surplus > 0; ::: [lyt, 101]
+24-08-24.22:36:19.019 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account_month
+        set month_count_surplus = month_count_surplus - 1,update_time = now()
+        where user_id = ? and activity_id = ?
+        and `month` = ? and month_count_surplus > 0
+24-08-24.22:36:19.019 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-24.22:36:19.019 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_month_0
+        set month_count_surplus = month_count_surplus - 1,update_time = now()
+        where user_id = ? and activity_id = ?
+        and `month` = ? and month_count_surplus > 0 ::: [lyt, 101, 2024-08]
+24-08-24.22:36:19.076 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: update raffle_activity_account_day
+        set day_count_surplus = day_count_surplus - 1, update_time = now()
+        where user_id = ? and activity_id = ? and day = ? and day_count_surplus > 0
+24-08-24.22:36:19.076 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLUpdateStatement(orderBy=Optional.empty, limit=Optional.empty)
+24-08-24.22:36:19.076 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: update raffle_activity_account_day_0
+        set day_count_surplus = day_count_surplus - 1, update_time = now()
+        where user_id = ? and activity_id = ? and day = ? and day_count_surplus > 0 ::: [lyt, 101, 2024-08-24]
+24-08-24.22:36:19.141 [main            ] INFO  ShardingSphere-SQL     - Logic SQL: insert into user_raffle_order(
+            user_id, activity_id, activity_name, strategy_id, order_id, order_time, order_state, create_time, update_time
+        )
+        values(
+                  ?, ?, ?, ?, ?, ?, ?, now(), now()
+              )
+24-08-24.22:36:19.141 [main            ] INFO  ShardingSphere-SQL     - SQLStatement: MySQLInsertStatement(setAssignment=Optional.empty, onDuplicateKeyColumns=Optional.empty)
+24-08-24.22:36:19.142 [main            ] INFO  ShardingSphere-SQL     - Actual SQL: ds1 ::: insert into user_raffle_order_0(
+            user_id, activity_id, activity_name, strategy_id, order_id, order_time, order_state, create_time, update_time
+        , id)
+        values(?, ?, ?, ?, ?, ?, ?, now(), now(), ?) ::: [lyt, 101, 测试, 100004, 182735425185, 2024-08-24 22:36:16.308, create, 1034233909392945152]
+24-08-24.22:36:19.249 [main            ] INFO  RaffleActivityPartakeServiceTest - 请求参数：{"activityId":101,"userId":"lyt"}
+24-08-24.22:36:19.249 [main            ] INFO  RaffleActivityPartakeServiceTest - 测试结果：{"activityId":101,"activityName":"测试","orderId":"182735425185","orderState":"create","orderTime":"2024-08-24 22:36:16.308","strategyId":100004,"userId":"lyt"}
+24-08-24.22:36:19.300 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.22:36:19.322 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.22:36:19.322 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-24.22:36:19.884 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.22:36:19.961 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-24.22:36:19.963 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+24-08-24.22:36:19.963 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+24-08-24.22:36:19.963 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+24-08-24.22:36:19.964 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+24-08-24.22:36:19.966 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.22:36:19.966 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-24.22:36:19.999 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-24.22:36:20.009 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-24.22:36:20.010 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown initiated...
+24-08-24.22:36:20.020 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-2 - Shutdown completed.
