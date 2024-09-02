@@ -1,4 +1,4 @@
-package com.big.market.infrastructure.domain.activity.model.entity;
+package com.big.market.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,14 +7,14 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author 莱特0905
- * @Description: 参与抽奖活动实体对象
- * @Date: 2024/08/23 16:08:46
+ * @Description: 活动抽奖请求实体
+ * @Date: 2024/09/02 19:15:39
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class PartakeRaffleActivityEntity {
+public class ActivityDrawRequestDTO {
     /**
      * 用户ID
      */
@@ -24,5 +24,6 @@ public class PartakeRaffleActivityEntity {
      * 活动ID
      */
     private Long activityId;
+
 
 }

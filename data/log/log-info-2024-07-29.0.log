@@ -31,7 +31,7 @@
 24-07-29.22:49:04.723 [http-nio-8091-exec-4] INFO  RaffleController       - 查询抽奖奖品列表配开始 strategyId：0
 24-07-29.22:49:04.959 [http-nio-8091-exec-4] ERROR RaffleController       - 查询抽奖奖品列表配置失败 strategyId：0
 java.lang.NullPointerException: null
-	at com.big.market.infrastructure.trigger.http.RaffleController.queryRaffleAwardList(RaffleController.java:91)
+	at com.big.market.infrastructure.trigger.http.RaffleStrategyController.queryRaffleAwardList(RaffleController.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -88,7 +88,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748)
 24-07-29.22:49:04.959 [http-nio-8091-exec-3] ERROR RaffleController       - 查询抽奖奖品列表配置失败 strategyId：0
 java.lang.NullPointerException: null
-	at com.big.market.infrastructure.trigger.http.RaffleController.queryRaffleAwardList(RaffleController.java:91)
+	at com.big.market.infrastructure.trigger.http.RaffleStrategyController.queryRaffleAwardList(RaffleController.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -196,7 +196,7 @@ java.lang.NullPointerException: null
 24-07-29.22:50:38.822 [http-nio-8091-exec-22] INFO  RaffleController       - 查询抽奖奖品列表配开始 strategyId：0
 24-07-29.22:50:38.982 [http-nio-8091-exec-22] ERROR RaffleController       - 查询抽奖奖品列表配置失败 strategyId：0
 java.lang.NullPointerException: null
-	at com.big.market.infrastructure.trigger.http.RaffleController.queryRaffleAwardList(RaffleController.java:91)
+	at com.big.market.infrastructure.trigger.http.RaffleStrategyController.queryRaffleAwardList(RaffleController.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -253,7 +253,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748)
 24-07-29.22:50:38.992 [http-nio-8091-exec-21] ERROR RaffleController       - 查询抽奖奖品列表配置失败 strategyId：0
 java.lang.NullPointerException: null
-	at com.big.market.infrastructure.trigger.http.RaffleController.queryRaffleAwardList(RaffleController.java:91)
+	at com.big.market.infrastructure.trigger.http.RaffleStrategyController.queryRaffleAwardList(RaffleController.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -570,7 +570,7 @@ com.big.market.infrastructure.types.exception.AppException: null
 	at com.big.market.infrastructure.domain.strategy.service.rule.chain.impl.DefaultLogicChain.logic(DefaultLogicChain.java:32)
 	at com.big.market.infrastructure.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:46)
 	at com.big.market.infrastructure.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:51)
-	at com.big.market.infrastructure.trigger.http.RaffleController.randomRaffle(RaffleController.java:134)
+	at com.big.market.infrastructure.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:134)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -785,7 +785,7 @@ com.big.market.infrastructure.types.exception.AppException: null
 24-07-29.23:17:43.982 [http-nio-8091-exec-6] INFO  RaffleController       - 查询抽奖奖品列表配开始 strategyId：0
 24-07-29.23:17:44.203 [http-nio-8091-exec-6] ERROR RaffleController       - 查询抽奖奖品列表配置失败 strategyId：0
 java.lang.NullPointerException: null
-	at com.big.market.infrastructure.trigger.http.RaffleController.queryRaffleAwardList(RaffleController.java:91)
+	at com.big.market.infrastructure.trigger.http.RaffleStrategyController.queryRaffleAwardList(RaffleController.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -842,7 +842,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748)
 24-07-29.23:17:44.204 [http-nio-8091-exec-4] ERROR RaffleController       - 查询抽奖奖品列表配置失败 strategyId：0
 java.lang.NullPointerException: null
-	at com.big.market.infrastructure.trigger.http.RaffleController.queryRaffleAwardList(RaffleController.java:91)
+	at com.big.market.infrastructure.trigger.http.RaffleStrategyController.queryRaffleAwardList(RaffleController.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

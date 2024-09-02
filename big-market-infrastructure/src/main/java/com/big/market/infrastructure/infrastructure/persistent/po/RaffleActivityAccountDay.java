@@ -2,6 +2,7 @@ package com.big.market.infrastructure.infrastructure.persistent.po;
 
 import lombok.Data;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -11,6 +12,9 @@ import java.util.Date;
  */
 @Data
 public class RaffleActivityAccountDay {
+
+    private SimpleDateFormat dateSimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
     /** 自增ID */
     private Integer id;
     /** 用户ID */
@@ -27,4 +31,8 @@ public class RaffleActivityAccountDay {
     private Date createTime;
     /** 更新时间 */
     private Date updateTime;
+    /** 当前日子的时期 */
+    public String currentDay() {
+        return dateSimpleDateFormat.format(new Date());
+    }
 }

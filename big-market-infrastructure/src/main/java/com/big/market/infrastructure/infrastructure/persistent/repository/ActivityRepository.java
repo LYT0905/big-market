@@ -23,7 +23,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -507,5 +509,27 @@ public class ActivityRepository implements IActivityRepository {
                 throw new AppException(ResponseCode.INDEX_DUP.getCode(), ResponseCode.INDEX_DUP.getInfo());
             }
         });
+    }
+
+    /**
+     * 根据活动 ID 查找活动 SKU 集合
+     * @param activityId 活动 ID
+     * @return 活动 SKU 集合
+     */
+    @Override
+    public List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId) {
+        List<RaffleActivitySku> raffleActivitySkus = raffleActivitySkuDao.queryActivitySkuListByActivityId(activityId);
+        List<ActivitySkuEntity> result = new ArrayList<>(raffleActivitySkus.size());
+        for (RaffleActivitySku activitySkus : raffleActivitySkus) {
+            ActivitySkuEntity activitySkuEntity = ActivitySkuEntity.builder()
+                    .activityCountId(activitySkus.getActivityCountId())
+                    .sku(activitySkus.getSku())
+                    .activityId(activitySkus.getActivityId())
+                    .stockCount(activitySkus.getStockCount())
+                    .stockCountSurplus(activitySkus.getStockCountSurplus())
+                    .build();
+            result.add(activitySkuEntity);
+        }
+        return result;
     }
 }

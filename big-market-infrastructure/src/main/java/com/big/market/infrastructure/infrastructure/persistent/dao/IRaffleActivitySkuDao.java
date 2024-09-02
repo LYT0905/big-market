@@ -33,4 +33,11 @@ public interface IRaffleActivitySkuDao {
      * @param sku
      */
     void clearActivitySkuStock(Long sku);
+
+    /**
+     * 根据活动 ID 查找活动 SKU 集合
+     * @param activityId 活动 ID
+     * @return 活动 SKU 集合
+     */
+    List<RaffleActivitySku> queryActivitySkuListByActivityId(Long activityId);
 }

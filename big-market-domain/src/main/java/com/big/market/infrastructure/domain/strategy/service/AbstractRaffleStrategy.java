@@ -75,6 +75,7 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         return RaffleAwardEntity.builder()
                 .sort(strategyAwardEntity.getSort())
                 .awardId(awardId)
+                .awardTitle(strategyAwardEntity.getAwardTitle())
                 .awardConfig(awardConfig)
                 .build();
     }

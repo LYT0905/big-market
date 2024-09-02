@@ -25,4 +25,11 @@ public interface IUserRaffleOrderDao {
      * @param userRaffleOrder 用户抽奖订单表实体对象
      */
     void insert(UserRaffleOrder userRaffleOrder);
+
+    /**
+     * 修改用户订单状态为已使用
+     * @param userRaffleOrder 用户抽奖订单表实体对象
+     * @return 影响行数
+     */
+    int updateUserRaffleOrderStatusUsed(UserRaffleOrder userRaffleOrder);
 }

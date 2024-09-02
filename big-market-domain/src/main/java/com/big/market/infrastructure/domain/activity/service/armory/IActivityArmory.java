@@ -8,6 +8,13 @@ package com.big.market.infrastructure.domain.activity.service.armory;
 public interface IActivityArmory {
 
     /**
+     * 根据活动 ID 装配活动 sku
+     * @param activityId 活动 ID
+     * @return 是否装配成功
+     */
+    boolean assembleActivitySkuByActivityId(Long activityId);
+
+    /**
      * 装配活动 sku
      * @param sku sku
      * @return 是否装配成功

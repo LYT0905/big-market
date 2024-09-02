@@ -6,6 +6,7 @@ import com.big.market.infrastructure.domain.activity.model.entity.*;
 import com.big.market.infrastructure.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author 莱特0905
@@ -127,4 +128,11 @@ public interface IActivityRepository {
      * @param createPartakeOrderAggregate 参与活动订单聚合对象
      */
     void saveCreatePartakeOrderAggregate(CreatePartakeOrderAggregate createPartakeOrderAggregate);
+
+    /**
+     * 根据活动 ID 查找活动 SKU 集合
+     * @param activityId 活动 ID
+     * @return 活动 SKU 集合
+     */
+    List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId);
 }

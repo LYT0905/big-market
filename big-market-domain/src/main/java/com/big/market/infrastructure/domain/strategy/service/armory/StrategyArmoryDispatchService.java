@@ -32,6 +32,16 @@ public class StrategyArmoryDispatchService implements IStrategyArmoryService, IS
     private IStrategyRepository strategyRepository;
 
     /**
+     * 根据 活动id 装配抽奖策略配置「触发的时机可以为活动审核通过后进行调用」
+     * @param activityId 活动id
+     */
+    @Override
+    public boolean assembleLotteryStrategyByActivityId(Long activityId) {
+        Long strategyId = strategyRepository.queryStrategyIdByActivityId(activityId);
+        return assembleLotteryStrategy(strategyId);
+    }
+
+    /**
      * 装配抽奖策略配置「触发的时机可以为活动审核通过后进行调用」
      * @param strategyId 策略id
      */

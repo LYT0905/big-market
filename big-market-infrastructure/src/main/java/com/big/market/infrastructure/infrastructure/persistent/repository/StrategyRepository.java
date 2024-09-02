@@ -1,6 +1,5 @@
 package com.big.market.infrastructure.infrastructure.persistent.repository;
 
-import com.big.market.infrastructure.domain.strategy.model.entity.RaffleAwardEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyAwardEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyEntity;
 import com.big.market.infrastructure.domain.strategy.model.entity.StrategyRuleEntity;
@@ -46,6 +45,10 @@ public class StrategyRepository implements IStrategyRepository {
     private IRuleTreeNodeDao ruleTreeNodeDao;
     @Resource
     private IRuleTreeNodeLineDao ruleTreeNodeLineDao;
+    @Resource
+    private IRaffleActivityDao raffleActivityDao;
+    @Resource
+    private IRaffleActivityAccountDayDao raffleActivityAccountDayDao;
 
     /**
      * 查询某策略id下所有策略奖品配置信息
@@ -411,5 +414,39 @@ public class StrategyRepository implements IStrategyRepository {
                 .build();
          redisService.setValue(cacheKey, strategyAwardEntity);
         return strategyAwardEntity;
+    }
+
+    /**
+     * 根据活动 ID 查找策略 ID
+     * @param activityId 活动 ID
+     * @return 策略 ID
+     */
+    @Override
+    public Long queryStrategyIdByActivityId(Long activityId) {
+        return raffleActivityDao.queryStrategyIdByActivityId(activityId);
+    }
+
+    /**
+     * 根据用户 ID 和 策略 ID 查找当天用户抽奖次数
+     * @param userId 用户 ID
+     * @param strategyId 策略 ID
+     * @return 抽奖次数
+     */
+    @Override
+    public Integer queryTodayUserRaffleCount(String userId, Long strategyId) {
+        // 查找活动 ID
+        Long activityId = raffleActivityDao.queryActivityIdByStrategyId(strategyId);
+        // 封装参数
+        RaffleActivityAccountDay raffleActivityAccountDayReq = new RaffleActivityAccountDay();
+        raffleActivityAccountDayReq.setUserId(userId);
+        raffleActivityAccountDayReq.setActivityId(activityId);
+        raffleActivityAccountDayReq.setDay(raffleActivityAccountDayReq.currentDay());
+
+        RaffleActivityAccountDay raffleActivityAccountDay = raffleActivityAccountDayDao.queryActivityAccountDayByUserId(raffleActivityAccountDayReq);
+        if (raffleActivityAccountDay == null){
+            return 0;
+        }
+        // 总次数 - 剩余的等于今日参与的次数
+        return raffleActivityAccountDay.getDayCount() - raffleActivityAccountDay.getDayCountSurplus();
     }
 }

@@ -7,9 +7,11 @@ import com.big.market.infrastructure.domain.award.model.entity.UserAwardRecordEn
 import com.big.market.infrastructure.domain.award.repository.IAwardRepository;
 import com.big.market.infrastructure.infrastructure.persistent.dao.ITaskDao;
 import com.big.market.infrastructure.infrastructure.persistent.dao.IUserAwardRecordDao;
+import com.big.market.infrastructure.infrastructure.persistent.dao.IUserRaffleOrderDao;
 import com.big.market.infrastructure.infrastructure.persistent.event.EventPublisher;
 import com.big.market.infrastructure.infrastructure.persistent.po.Task;
 import com.big.market.infrastructure.infrastructure.persistent.po.UserAwardRecord;
+import com.big.market.infrastructure.infrastructure.persistent.po.UserRaffleOrder;
 import com.big.market.infrastructure.types.enums.ResponseCode;
 import com.big.market.infrastructure.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -40,6 +42,8 @@ public class AwardRepository implements IAwardRepository {
     private EventPublisher eventPublisher;
     @Resource
     private ThreadPoolExecutor threadPoolExecutor;
+    @Resource
+    private IUserRaffleOrderDao userRaffleOrderDao;
 
     /**
      * 保存用户获奖记录
@@ -70,6 +74,10 @@ public class AwardRepository implements IAwardRepository {
         task.setMessage(JSON.toJSONString(taskEntity.getMessage()));
         task.setMessageId(taskEntity.getMessageId());
 
+        UserRaffleOrder userRaffleOrder = new UserRaffleOrder();
+        userRaffleOrder.setUserId(userAwardRecordEntity.getUserId());
+        userRaffleOrder.setOrderId(userAwardRecordEntity.getOrderId());
+
 
         transactionTemplate.execute(status -> {
             try{
@@ -77,6 +85,13 @@ public class AwardRepository implements IAwardRepository {
                 userAwardRecordDao.insert(userAwardRecord);
                 // 写入任务
                 taskDao.insert(task);
+                // 更新抽奖单状态
+                int count = userRaffleOrderDao.updateUserRaffleOrderStatusUsed(userRaffleOrder);
+                if (count != 1){
+                    status.setRollbackOnly();
+                    log.error("写入中奖记录，用户抽奖单已使用过，不可重复抽奖 userId: {} activityId: {} awardId: {}", userId, activityId, awardId);
+                    throw new AppException(ResponseCode.ACTIVITY_ORDER_ERROR.getCode(), ResponseCode.ACTIVITY_ORDER_ERROR.getInfo());
+                }
                 return 1;
             }catch (DuplicateKeyException ex){
                 status.setRollbackOnly();

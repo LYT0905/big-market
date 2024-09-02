@@ -2,8 +2,8 @@ package com.big.market.api;
 
 import com.big.market.api.dto.RaffleAwardListRequestDTO;
 import com.big.market.api.dto.RaffleAwardListResponseDTO;
-import com.big.market.api.dto.RaffleRequestDTO;
-import com.big.market.api.dto.RaffleResponseDTO;
+import com.big.market.api.dto.RaffleStrategyRequestDTO;
+import com.big.market.api.dto.RaffleStrategyResponseDTO;
 import com.big.market.infrastructure.types.model.Response;
 
 
@@ -14,7 +14,7 @@ import java.util.List;
  * @Description: 抽奖接口
  * @Date: 2024/07/27 20:49:49
  */
-public interface IRaffleService {
+public interface IRaffleStrategyService {
 
     /**
      * 策略装配接口
@@ -39,7 +39,7 @@ public interface IRaffleService {
      * @param requestDTO 请求参数
      * @return 抽奖结果
      */
-    Response<RaffleResponseDTO> randomRaffle(RaffleRequestDTO requestDTO);
+    Response<RaffleStrategyResponseDTO> randomRaffle(RaffleStrategyRequestDTO requestDTO);
 
 
 
