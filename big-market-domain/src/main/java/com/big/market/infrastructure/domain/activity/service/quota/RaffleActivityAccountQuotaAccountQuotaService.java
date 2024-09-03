@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author 莱特0905
@@ -86,16 +87,16 @@ public class RaffleActivityAccountQuotaAccountQuotaService extends AbstractRaffl
      * @throws InterruptedException 异常
      */
     @Override
-    public ActivitySkuStockKeyVO takeQueueValue() throws InterruptedException {
-        return activityRepository.takeQueueValue();
+    public ActivitySkuStockKeyVO takeQueueValue(Long sku) throws InterruptedException {
+        return activityRepository.takeQueueValue(sku);
     }
 
     /**
      * 清空队列
      */
     @Override
-    public void clearQueueValue() {
-        activityRepository.clearQueueValue();
+    public void clearQueueValue(Long sku) {
+        activityRepository.clearQueueValue(sku);
     }
 
     /**
@@ -127,5 +128,14 @@ public class RaffleActivityAccountQuotaAccountQuotaService extends AbstractRaffl
     @Override
     public Integer queryRaffleActivityAccountDayPartakeCount(String userId, Long activityId) {
         return activityRepository.queryRaffleActivityAccountDayPartakeCount(userId, activityId);
+    }
+
+    /**
+     * 查询活动商品列表
+     * @return 活动商品列表
+     */
+    @Override
+    public List<Long> querySkuList() {
+        return activityRepository.querySkuList();
     }
 }

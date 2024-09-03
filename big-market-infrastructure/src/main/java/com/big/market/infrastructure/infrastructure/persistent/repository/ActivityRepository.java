@@ -247,7 +247,7 @@ public class ActivityRepository implements IActivityRepository {
      */
     @Override
     public void activitySkuStockConsumeSendQueue(ActivitySkuStockKeyVO activitySkuStockKeyVO) {
-        String cacheKey = Constants.RedisKey.ACTIVITY_SKU_COUNT_QUERY_KEY;
+        String cacheKey = Constants.RedisKey.ACTIVITY_SKU_COUNT_QUERY_KEY + Constants.UNDERLINE + activitySkuStockKeyVO.getSku();
         RBlockingQueue<Object> blockingQueue = redissonService.getBlockingQueue(cacheKey);
         RDelayedQueue<Object> delayedQueue = redissonService.getDelayedQueue(blockingQueue);
         delayedQueue.offer(activitySkuStockKeyVO, 3, TimeUnit.SECONDS);
@@ -259,8 +259,22 @@ public class ActivityRepository implements IActivityRepository {
      * @return 奖品库存Key信息
      */
     @Override
+    @Deprecated
     public ActivitySkuStockKeyVO takeQueueValue() {
         String cacheKey = Constants.RedisKey.ACTIVITY_SKU_COUNT_QUERY_KEY;
+        RBlockingQueue<ActivitySkuStockKeyVO> destinationQueue = redissonService.getBlockingQueue(cacheKey);
+        return destinationQueue.poll();
+    }
+
+
+    /**
+     * 获取活动sku库存消耗队列
+     * @param sku 活动商品
+     * @return 奖品库存Key信息
+     */
+    @Override
+    public ActivitySkuStockKeyVO takeQueueValue(Long sku) {
+        String cacheKey = Constants.RedisKey.ACTIVITY_SKU_COUNT_QUERY_KEY + Constants.UNDERLINE + sku;
         RBlockingQueue<ActivitySkuStockKeyVO> blockingQueue = redissonService.getBlockingQueue(cacheKey);
         return blockingQueue.poll();
     }
@@ -268,9 +282,23 @@ public class ActivityRepository implements IActivityRepository {
     /**
      * 清空队列
      */
+    @Deprecated
     @Override
     public void clearQueueValue() {
         String cacheKey = Constants.RedisKey.ACTIVITY_SKU_COUNT_QUERY_KEY;
+        RBlockingQueue<Object> blockingQueue = redissonService.getBlockingQueue(cacheKey);
+        RDelayedQueue<Object> delayedQueue = redissonService.getDelayedQueue(blockingQueue);
+        delayedQueue.clear();
+        blockingQueue.clear();
+    }
+
+    /**
+     * 清空队列
+     * @param sku 活动商品
+     */
+    @Override
+    public void clearQueueValue(Long sku) {
+        String cacheKey = Constants.RedisKey.ACTIVITY_SKU_COUNT_QUERY_KEY + Constants.UNDERLINE + sku;
         RBlockingQueue<Object> blockingQueue = redissonService.getBlockingQueue(cacheKey);
         RDelayedQueue<Object> delayedQueue = redissonService.getDelayedQueue(blockingQueue);
         delayedQueue.clear();
@@ -295,6 +323,15 @@ public class ActivityRepository implements IActivityRepository {
     @Override
     public void clearActivitySkuStock(Long sku) {
         raffleActivitySkuDao.clearActivitySkuStock(sku);
+    }
+
+    /**
+     * 查询活动商品列表
+     * @return 活动商品列表
+     */
+    @Override
+    public List<Long> querySkuList() {
+        return raffleActivitySkuDao.querySkuList();
     }
 
     /**

@@ -72,9 +72,22 @@ public interface IActivityRepository {
     ActivitySkuStockKeyVO takeQueueValue();
 
     /**
+     * 获取活动sku库存消耗队列
+     * @param sku 活动商品
+     * @return 奖品库存Key信息
+     */
+    ActivitySkuStockKeyVO takeQueueValue(Long sku);
+
+    /**
      * 清空队列
      */
     void clearQueueValue();
+
+    /**
+     * 清空队列
+     * @param sku 活动商品
+     */
+    void clearQueueValue(Long sku);
 
     /**
      * 延迟队列 + 任务趋势更新活动sku库存
@@ -89,6 +102,12 @@ public interface IActivityRepository {
      * @param sku 活动商品
      */
     void clearActivitySkuStock(Long sku);
+
+    /**
+     * 查询活动商品列表
+     * @return 活动商品列表
+     */
+    List<Long> querySkuList();
 
     /**
      * 查询未使用的活动订单

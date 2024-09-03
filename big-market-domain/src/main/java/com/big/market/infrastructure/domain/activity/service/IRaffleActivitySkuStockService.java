@@ -2,6 +2,8 @@ package com.big.market.infrastructure.domain.activity.service;
 
 import com.big.market.infrastructure.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
+import java.util.List;
+
 /**
  * @author 莱特0905
  * @Description: 活动sku库存处理接口
@@ -15,12 +17,13 @@ public interface IRaffleActivitySkuStockService {
      * @return 奖品库存Key信息
      * @throws InterruptedException 异常
      */
-    ActivitySkuStockKeyVO takeQueueValue() throws InterruptedException;
+    ActivitySkuStockKeyVO takeQueueValue(Long sku) throws InterruptedException;
 
     /**
      * 清空队列
+     * @param sku 活动商品
      */
-    void clearQueueValue();
+    void clearQueueValue(Long sku);
 
     /**
      * 延迟队列 + 任务趋势更新活动sku库存
@@ -35,4 +38,10 @@ public interface IRaffleActivitySkuStockService {
      * @param sku 活动商品
      */
     void clearActivitySkuStock(Long sku);
+
+    /**
+     * 查询活动商品列表
+     * @return 活动商品列表
+     */
+    List<Long> querySkuList();
 }

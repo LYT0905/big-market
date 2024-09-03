@@ -40,4 +40,10 @@ public interface IRaffleActivitySkuDao {
      * @return 活动 SKU 集合
      */
     List<RaffleActivitySku> queryActivitySkuListByActivityId(Long activityId);
+
+    /**
+     * 查询活动商品列表
+     * @return 活动商品列表
+     */
+    List<Long> querySkuList();
 }

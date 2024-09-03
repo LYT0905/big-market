@@ -24,12 +24,14 @@ public class UpdateActivitySkuStockJob {
     public void exec(){
         try {
             log.info("定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】");
-            ActivitySkuStockKeyVO activitySkuStockKeyVO = skuStock.takeQueueValue();
-            if (activitySkuStockKeyVO == null){
-                return;
+            for (Long sku : skuStock.querySkuList()) {
+                ActivitySkuStockKeyVO activitySkuStockKeyVO = skuStock.takeQueueValue(sku);
+                if (activitySkuStockKeyVO == null){
+                    return;
+                }
+                log.info("定时任务，更新活动sku库存 sku:{} activityId:{}", activitySkuStockKeyVO.getSku(), activitySkuStockKeyVO.getActivityId());
+                skuStock.updateActivitySkuStock(sku);
             }
-            log.info("定时任务，更新活动sku库存 sku:{} activityId:{}", activitySkuStockKeyVO.getSku(), activitySkuStockKeyVO.getActivityId());
-            skuStock.updateActivitySkuStock(activitySkuStockKeyVO.getSku());
         }catch (Throwable ex){
             log.error("定时任务，更新活动sku库存失败", ex);
         }
