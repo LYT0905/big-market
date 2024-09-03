@@ -82,6 +82,7 @@ public class StrategyRepository implements IStrategyRepository {
                     .awardCountSurplus(strategyAward.getAwardCountSurplus())
                     .strategyId(strategyAward.getStrategyId())
                     .sort(strategyAward.getSort())
+                    .ruleModels(strategyAward.getRuleModels())
                     .build();
             strategyAwardEntities.add(strategyAwardEntity);
         }
@@ -325,6 +326,17 @@ public class StrategyRepository implements IStrategyRepository {
      */
     @Override
     public Boolean subtractionAwardCount(String cacheKey) {
+        return subtractionAwardCount(cacheKey, null);
+    }
+
+    /**
+     * 扣减库存
+     * @param cacheKey 缓存key
+     * @param endDateTime 活动结束时间
+     * @return 库存是否扣减成功
+     */
+    @Override
+    public Boolean subtractionAwardCount(String cacheKey, Date endDateTime) {
         // 对库存进行扣减，返回的是剩余的库存
         long surplus = redisService.decr(cacheKey);
         // 没有库存
@@ -334,7 +346,13 @@ public class StrategyRepository implements IStrategyRepository {
         }
         //  对此时的库存进行加锁，防止后续对这个库存进行操作
         String lockKey = cacheKey + Constants.UNDERLINE + surplus;
-        Boolean lock = redisService.setNx(lockKey);
+        Boolean lock;
+        if (endDateTime != null){
+            long expiredMillis = endDateTime.getTime() - System.currentTimeMillis() + TimeUnit.DAYS.toMillis(1);
+            lock = redisService.setNx(lockKey, expiredMillis, TimeUnit.MILLISECONDS);
+        }else {
+            lock = redisService.setNx(lockKey);
+        }
         if (!lock){
             log.error("库存{},加锁失败", surplus);
         }
@@ -448,5 +466,26 @@ public class StrategyRepository implements IStrategyRepository {
         }
         // 总次数 - 剩余的等于今日参与的次数
         return raffleActivityAccountDay.getDayCount() - raffleActivityAccountDay.getDayCountSurplus();
+    }
+
+    /**
+     * 根据规则树 ID 查询配置的抽奖次数限制
+     * @param treeIds 规则树 ID
+     * @return Map集合
+     */
+    @Override
+    public Map<String, Integer> queryAwardRuleLockCount(String[] treeIds) {
+        if (treeIds == null || treeIds.length == 0){
+            return new HashMap<>();
+        }
+        // 根据规则树 ID 查询次数限制
+        List<RuleTreeNode> ruleTreeNodes = ruleTreeNodeDao.queryRuleLocks(treeIds);
+        Map<String, Integer> result = new HashMap<>();
+        for (RuleTreeNode ruleTreeNode : ruleTreeNodes) {
+            String treeId = ruleTreeNode.getTreeId();
+            Integer ruleValue = Integer.valueOf(ruleTreeNode.getRuleValue());
+            result.put(treeId, ruleValue);
+        }
+        return result;
     }
 }

@@ -135,4 +135,12 @@ public interface IActivityRepository {
      * @return 活动 SKU 集合
      */
     List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId);
+
+    /**
+     * 查询用户当天抽奖次数
+     * @param userId 用户 ID
+     * @param activityId 活动 ID
+     * @return 抽奖次数
+     */
+    Integer queryRaffleActivityAccountDayPartakeCount(String userId, Long activityId);
 }

@@ -7,8 +7,10 @@ import com.big.market.infrastructure.domain.strategy.model.valobj.RuleTreeVO;
 import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import com.big.market.infrastructure.domain.strategy.model.valobj.StrategyRuleModelVO;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author LYT0905
@@ -106,6 +108,14 @@ public interface IStrategyRepository {
     Boolean subtractionAwardCount(String cacheKey);
 
     /**
+     * 扣减库存
+     * @param cacheKey 缓存key
+     * @param endDateTime 活动结束时间
+     * @return 库存是否扣减成功
+     */
+    Boolean subtractionAwardCount(String cacheKey, Date endDateTime);
+
+    /**
      * 奖品库存信息消费
      * @param strategyAwardStockKeyVO  策略奖品库存key标识对象
      */
@@ -148,4 +158,11 @@ public interface IStrategyRepository {
      * @return 抽奖次数
      */
     Integer queryTodayUserRaffleCount(String userId, Long strategyId);
+
+    /**
+     * 根据规则树 ID 查询配置的抽奖次数限制
+     * @param treeIds 规则树 ID
+     * @return Map集合
+     */
+    Map<String, Integer> queryAwardRuleLockCount(String[] treeIds);
 }

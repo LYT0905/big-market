@@ -92,6 +92,7 @@ public class RaffleActivityPartakeService extends AbstractRaffleActivityPartake{
                 .orderState(UserRaffleOrderStateVO.create)
                 .strategyId(activityEntity.getStrategyId())
                 .orderId(SnowflakeUUIDUtils.generateId(12))
+                .endDateTime(activityEntity.getEndDateTime())
                 .build();
     }
 }

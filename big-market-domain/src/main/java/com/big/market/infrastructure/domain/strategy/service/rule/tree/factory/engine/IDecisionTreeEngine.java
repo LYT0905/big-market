@@ -2,6 +2,8 @@ package com.big.market.infrastructure.domain.strategy.service.rule.tree.factory.
 
 import com.big.market.infrastructure.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 
+import java.util.Date;
+
 /**
  * @author LYT0905
  * @Description: 规则树组合接口
@@ -9,5 +11,5 @@ import com.big.market.infrastructure.domain.strategy.service.rule.tree.factory.D
  */
 public interface IDecisionTreeEngine {
 
-    DefaultTreeFactory.StrategyAwardVO process(String userId, Long strategyId, Integer awardId);
+    DefaultTreeFactory.StrategyAwardVO process(String userId, Long strategyId, Integer awardId, Date endDateTime);
 }

@@ -12,6 +12,8 @@ import com.big.market.infrastructure.types.exception.AppException;
 import io.micrometer.core.instrument.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Date;
+
 /**
  * @author LYT0905
  * @Description: 抽奖策略抽象类，定义抽奖的标准流程
@@ -56,7 +58,7 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         }
 
         // 3. 规则树抽奖过滤【奖品ID，会根据抽奖次数判断、库存判断、兜底兜里返回最终的可获得奖品信息】
-        DefaultTreeFactory.StrategyAwardVO logicTreeStrategyAwardVO = raffleLogicTree(userId, strategyId, logicChainStrategyAwardVO.getAwardId());
+        DefaultTreeFactory.StrategyAwardVO logicTreeStrategyAwardVO = raffleLogicTree(userId, strategyId, logicChainStrategyAwardVO.getAwardId(), raffleFactorEntity.getEndDateTime());
         log.info("抽奖策略计算-规则树 {} {} {} {}", userId, strategyId, logicTreeStrategyAwardVO.getAwardId(), logicTreeStrategyAwardVO.getAwardRuleValue());
 
 
@@ -95,4 +97,14 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
      * @return 过滤结果【奖品ID，会根据抽奖次数判断、库存判断、兜底兜里返回最终的可获得奖品信息】
      */
     protected abstract DefaultTreeFactory.StrategyAwardVO raffleLogicTree(String userId, Long strategyId, Integer awardId);
+
+    /**
+     * 抽奖结果过滤，决策树抽象方法
+     * @param userId 用户id
+     * @param awardId 奖品id
+     * @param strategyId 策略id
+     * @param endDateTime 活动结束时间
+     * @return 过滤结果【奖品ID，会根据抽奖次数判断、库存判断、兜底兜里返回最终的可获得奖品信息】
+     */
+    protected abstract DefaultTreeFactory.StrategyAwardVO raffleLogicTree(String userId, Long strategyId, Integer awardId, Date endDateTime);
 }

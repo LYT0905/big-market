@@ -2,6 +2,8 @@ package com.big.market.infrastructure.domain.strategy.service.rule.tree;
 
 import com.big.market.infrastructure.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 
+import java.util.Date;
+
 /**
  * @author LYT0905
  * @Description: 规则树接口
@@ -9,5 +11,5 @@ import com.big.market.infrastructure.domain.strategy.service.rule.tree.factory.D
  */
 public interface ILogicTreeNode {
 
-    DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue);
+    DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue, Date endDateTime);
 }

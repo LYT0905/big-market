@@ -168,13 +168,15 @@ public class StrategyArmoryDispatchService implements IStrategyArmoryService, IS
 
     /**
      * 扣减库存
-     * @param strategyId 策略id
-     * @param awardId 奖品id
+     *
+     * @param strategyId  策略id
+     * @param awardId     奖品id
+     * @param endDateTime 活动结束时间
      * @return 库存是否扣减成功
      */
     @Override
-    public Boolean subtractionAwardCount(Long strategyId, Integer awardId) {
+    public Boolean subtractionAwardCount(Long strategyId, Integer awardId, Date endDateTime) {
         String cacheKey = Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + strategyId + Constants.UNDERLINE + awardId;
-        return strategyRepository.subtractionAwardCount(cacheKey);
+        return strategyRepository.subtractionAwardCount(cacheKey, endDateTime);
     }
 }

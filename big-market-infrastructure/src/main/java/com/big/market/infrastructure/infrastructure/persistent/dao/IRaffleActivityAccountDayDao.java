@@ -32,4 +32,11 @@ public interface IRaffleActivityAccountDayDao {
      * @param raffleActivityAccountDay 抽奖活动账户表-日次数实体对象
      */
     void insertActivityAccountDay(RaffleActivityAccountDay raffleActivityAccountDay);
+
+    /**
+     * 查询用户当天抽奖次数
+     * @param raffleActivityAccountDay 请求参数
+     * @return 当天抽奖次数
+     */
+    Integer queryRaffleActivityAccountDayPartakeCount(RaffleActivityAccountDay raffleActivityAccountDay);
 }

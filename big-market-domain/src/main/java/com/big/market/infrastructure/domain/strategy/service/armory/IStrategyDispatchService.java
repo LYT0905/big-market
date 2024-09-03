@@ -1,5 +1,7 @@
 package com.big.market.infrastructure.domain.strategy.service.armory;
 
+import java.util.Date;
+
 /**
  * @author LYT0905
  * @Description: 策略抽奖调度
@@ -24,7 +26,8 @@ public interface IStrategyDispatchService {
      * 扣减库存
      * @param strategyId 策略id
      * @param awardId 奖品id
+     * @param endDateTime 活动结束时间
      * @return 库存是否扣减成功
      */
-    Boolean subtractionAwardCount(Long strategyId, Integer awardId);
+    Boolean subtractionAwardCount(Long strategyId, Integer awardId, Date endDateTime);
 }

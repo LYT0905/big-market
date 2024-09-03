@@ -7,6 +7,8 @@ import com.big.market.infrastructure.types.common.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 /**
  * @author LYT0905
  * @Description: 兜底奖励节点
@@ -16,7 +18,7 @@ import org.springframework.stereotype.Component;
 @Component("rule_luck_award")
 public class RuleLuckAwardLogicTreeNode implements ILogicTreeNode {
     @Override
-    public DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue) {
+    public DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue, Date endDateTime) {
         log.info("规则过滤-兜底奖品 userId:{} strategyId:{} awardId:{} ruleValue:{}", userId, strategyId, awardId, ruleValue);
 
 

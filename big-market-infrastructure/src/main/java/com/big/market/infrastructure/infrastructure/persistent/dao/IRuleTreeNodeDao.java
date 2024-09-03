@@ -13,5 +13,15 @@ import java.util.List;
  */
 @Mapper
 public interface IRuleTreeNodeDao {
+    /**
+     * 根据规则树 ID 查询规则树节点
+     * @param treeId 规则树 ID
+     * @return 规则树节点
+     */
     List<RuleTreeNode> queryRuleTreeNodeListByTreeId(@Param("treeId") String treeId);
+    /**
+     * 根据规则树 ID 查询次数限制
+     * @param treeIds 规则树 ID
+     */
+    List<RuleTreeNode> queryRuleLocks(String[] treeIds);
 }

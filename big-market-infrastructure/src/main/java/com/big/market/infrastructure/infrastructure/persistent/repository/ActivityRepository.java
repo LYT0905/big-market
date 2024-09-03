@@ -532,4 +532,20 @@ public class ActivityRepository implements IActivityRepository {
         }
         return result;
     }
+
+    /**
+     * 查询用户当天抽奖次数
+     * @param userId 用户 ID
+     * @param activityId 活动 ID
+     * @return 抽奖次数
+     */
+    @Override
+    public Integer queryRaffleActivityAccountDayPartakeCount(String userId, Long activityId) {
+        RaffleActivityAccountDay raffleActivityAccountDay = new RaffleActivityAccountDay();
+        raffleActivityAccountDay.setUserId(userId);
+        raffleActivityAccountDay.setActivityId(activityId);
+        raffleActivityAccountDay.setDay(raffleActivityAccountDay.currentDay());
+        Integer dayPartakeCount = raffleActivityAccountDayDao.queryRaffleActivityAccountDayPartakeCount(raffleActivityAccountDay);
+        return dayPartakeCount == null ? 0 : dayPartakeCount;
+    }
 }
